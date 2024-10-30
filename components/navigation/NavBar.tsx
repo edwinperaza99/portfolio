@@ -18,24 +18,50 @@ const NavBar = () => {
 			</button>
 			{/* Full-Screen Overlay */}
 			{isOpen && (
-				<div
-					className="fixed inset-0 bg-gray-900 text-white z-60 flex items-center justify-center"
-					onClick={toggleOverlay} // Clicking the overlay itself will close it
-				>
-					<ul className="grid grid-cols-5 grid-rows-5 uppercase w-screen h-screen max-h-screen max-w-screen text-black">
-						<li className="col-span-3 row-span-2 bg-yellow-200">
-							<Link href="/">Home</Link>
+				<div className="fixed inset-0 bg-gray-800 text-white z-60 flex items-center justify-center">
+					<ul className="grid grid-cols-5 grid-rows-5 uppercase w-screen h-screen max-h-screen max-w-screen cursor-pointer">
+						<li className="col-span-3 row-span-2">
+							<Link
+								href="/"
+								className="p-4 flex justify-end items-end w-full h-full border hover:bg-gray-900"
+								onClick={toggleOverlay}
+							>
+								Home
+							</Link>
 						</li>
-						<li className="col-span-2 row-span-3 bg-green-50">
-							<Link href="/about">About</Link>
+						<li className="col-span-2 row-span-3">
+							<Link
+								href="/about"
+								className="p-4 flex justify-start items-end w-full h-full border hover:bg-gray-900"
+								onClick={toggleOverlay}
+							>
+								About
+							</Link>
 						</li>
-						<li className="col-span-2 row-span-3 bg-purple-50">
-							<Link href="projects">Projects</Link>
+						<li className="col-span-2 row-span-3">
+							<Link
+								href="projects"
+								className="p-4 flex justify-end items-start w-full h-full border hover:bg-gray-900"
+								onClick={toggleOverlay}
+							>
+								Projects
+							</Link>
 						</li>
-						<li className="bg-slate-50">
+						<li
+							className="flex justify-center items-center border cursor-pointer hover:bg-gray-900"
+							onClick={toggleOverlay}
+						>
 							<GiHamburger />
 						</li>
-						<li className="col-span-3 row-span-2 bg-orange-400">Skills</li>
+						<li className="col-span-3 row-span-2">
+							<Link
+								href="/skills"
+								className="p-4 flex justify-start items-start w-full h-full border hover:bg-gray-900"
+								onClick={toggleOverlay}
+							>
+								Skills
+							</Link>
+						</li>
 					</ul>
 				</div>
 			)}
