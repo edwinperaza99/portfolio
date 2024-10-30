@@ -47,7 +47,7 @@ const NavBar = () => {
 			<AnimatePresence>
 				{isOpen && (
 					<motion.div
-						className="fixed inset-0 text-white z-60 flex items-center justify-center"
+						className="fixed inset-0 z-50 text-white flex items-center justify-center"
 						initial="closed"
 						animate="open"
 						exit="closed"
