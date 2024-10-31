@@ -53,14 +53,14 @@ const NavBar = () => {
 						exit="closed"
 						variants={overlayVariants}
 					>
-						<motion.ul className="grid grid-cols-5 grid-rows-5 uppercase w-screen h-screen cursor-pointer">
+						<motion.ul className="grid grid-cols-5 grid-rows-5 uppercase w-screen h-screen cursor-pointer text-4xl">
 							<motion.li
 								variants={itemVariants}
 								className="col-span-3 row-span-2"
 							>
 								<Link
 									href="/"
-									className="p-4 flex justify-end items-end w-full h-full border bg-gray-800 hover:bg-gray-900"
+									className="vertical-text p-4 flex justify-end items-end w-full h-full border bg-clay hover:bg-clay-900"
 									onClick={toggleOverlay}
 								>
 									Home
@@ -72,7 +72,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="/about"
-									className="p-4 flex justify-start items-end w-full h-full border bg-gray-800 hover:bg-gray-900"
+									className="vertical-text p-4 flex justify-start items-end w-full h-full border bg-rust hover:bg-rust-900"
 									onClick={toggleOverlay}
 								>
 									About
@@ -84,7 +84,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="projects"
-									className="p-4 flex justify-end items-start w-full h-full border bg-gray-800 hover:bg-gray-900"
+									className="vertical-text p-4 flex justify-end items-start w-full h-full border bg-forest hover:bg-forest-900"
 									onClick={toggleOverlay}
 								>
 									Projects
@@ -92,7 +92,7 @@ const NavBar = () => {
 							</motion.li>
 							<motion.li
 								variants={itemVariants}
-								className="flex justify-center items-center border cursor-pointer bg-gray-800 hover:bg-gray-900"
+								className="flex justify-center items-center border cursor-pointer hover:bg-gray-900 glass"
 								onClick={toggleOverlay}
 							>
 								<GiHamburger />
@@ -103,7 +103,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="/skills"
-									className="p-4 flex justify-start items-start w-full h-full border bg-gray-800 hover:bg-gray-900"
+									className="vertical-text p-4 flex justify-start items-start w-full h-full border bg-astronaut hover:bg-astronaut-950"
 									onClick={toggleOverlay}
 								>
 									Skills

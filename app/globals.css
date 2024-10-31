@@ -5,6 +5,10 @@
 :root {
 	--background: #ffffff;
 	--foreground: #171717;
+	--primary-light: #ffffff;
+	--primary-dark: #000000;
+	--secondary-light: #f3f3f3;
+	--secondary-dark: #333333;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -15,8 +19,6 @@
 } */
 
 body {
-	/* color: var(--foreground); */
-	/* background: var(--background); */
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -27,12 +29,18 @@ body {
 		linear-gradient(to bottom, #868686 0.5px, transparent 0.5px);
 }
 
-.glass-grid-bg {
+.glass {
 	background: rgba(255, 255, 255, 0.15);
-	/* border-radius: 4px; */
+	-webkit-backdrop-filter: blur(11px);
+	backdrop-filter: blur(11px);
+}
+
+.glass-grid-bg {
+	/* background: rgba(255, 255, 255, 0.15); */
+	background-blend-mode: normal, normal, screen;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	-webkit-backdrop-filter: blur(6.4px);
-	backdrop-filter: blur(20px);
+	backdrop-filter: blur(6.4px);
 	background-size: 8px 8px;
 	background-image: linear-gradient(
 			to right,
@@ -43,10 +51,43 @@ body {
 	border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.gradient-bg {
+.glass-grid-bg {
+	background:
+		/* Fade effect at the bottom */ linear-gradient(
+			to bottom,
+			rgba(255, 255, 255, 0) 60%,
+			rgba(255, 255, 255, 0.15) 100%
+		),
+		/* Grid pattern */
+			linear-gradient(to right, #ffffff55 0.5px, transparent 0.5px),
+		linear-gradient(to bottom, #ffffff55 0.5px, transparent 0.5px);
+	background-size: 100% 100%, 8px 8px, 8px 8px;
+	background-blend-mode: normal, normal, overlay; /* Overlay for fade effect */
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+}
+
+.gradient-bg-green {
 	background-image: radial-gradient(
 		circle,
 		rgba(95, 154, 154, 1) 0%,
 		rgba(4, 67, 68, 1) 100%
 	);
+}
+
+.gradient-bg-blue {
+	background-image: radial-gradient(
+		circle,
+		rgb(74, 117, 155) 0%,
+		rgba(27, 64, 121, 1) 100%
+	);
+}
+
+@media (max-width: 540px) {
+	.vertical-text {
+		writing-mode: vertical-lr;
+		text-orientation: upright;
+	}
 }
