@@ -36,7 +36,7 @@ const NavBar = () => {
 				title="menu-toggle"
 				onClick={toggleOverlay}
 				disabled={isOpen}
-				className={`fixed top-4 right-4 p-2 bg-gray-800 text-white rounded ${
+				className={`fixed top-4 z-50 right-4 p-2 bg-gray-800 text-white rounded ${
 					isOpen ? "cursor-not-allowed opacity-50" : ""
 				}`}
 			>
@@ -47,7 +47,7 @@ const NavBar = () => {
 			<AnimatePresence>
 				{isOpen && (
 					<motion.div
-						className="fixed inset-0 z-50 text-white flex items-center justify-center"
+						className="fixed inset-0 z-[1000] text-white flex items-center justify-center"
 						initial="closed"
 						animate="open"
 						exit="closed"
