@@ -83,7 +83,7 @@ const NavBar = () => {
 								className="col-span-2 row-span-3"
 							>
 								<Link
-									href="projects"
+									href="/featured-projects"
 									className="vertical-text p-4 flex justify-end items-start w-full h-full border bg-forest hover:bg-forest-900"
 									onClick={toggleOverlay}
 								>

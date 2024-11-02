@@ -1,4 +1,4 @@
-export default function Projects() {
+export default function FeaturedProjects() {
 	return (
 		<main className="min-h-screen flex flex-col gradient-bg-green text-white">
 			<header className="text-center my-4">
