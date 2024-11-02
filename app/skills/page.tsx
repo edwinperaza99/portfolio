@@ -10,22 +10,25 @@ export default function Skills() {
 			{skills.map((category) => (
 				<section
 					key={category.id}
-					className="container w-full flex flex-col gap-1 md:gap-2 mb-4 px-1"
+					className="container w-full flex flex-col gap-1 md:gap-2 mb-4 px-2"
 				>
 					<h2 className="text-2xl uppercase whitespace-nowrap">
 						{category.name}
 					</h2>
-					<article className="grid grid-cols-4 gap-1 md:gap-2">
+					<article className="grid grid-cols-1 min-[375px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 md:gap-2">
 						{category.skills.map((skill) => (
 							<div
 								key={skill.id}
-								className="w-full p-4 flex gap-3 items-center glass"
+								className="w-full p-2 sm:p-3 md:p-2 flex gap-3 items-center glass rounded"
 							>
-								<div className="glass p-2 rounded">
+								<div className="glass p-1 rounded">
 									<Image
 										src={skill.icon}
 										alt={`${skill.name} icon`}
 										loading="lazy"
+										width={30}
+										height={30}
+										className="drop-shadow-sm"
 									/>
 								</div>
 								<h3>{skill.name}</h3>
