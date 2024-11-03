@@ -21,7 +21,7 @@
 body {
 	background-color: var(--background-base);
 	color: var(--foreground-base);
-	font-family: Arial, Helvetica, sans-serif;
+	/* font-family: Arial, Helvetica, sans-serif; */
 }
 
 .grid-background {

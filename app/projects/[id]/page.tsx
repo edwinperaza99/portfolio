@@ -13,7 +13,7 @@ import {
 
 export function generateStaticParams() {
 	return projects.map((project) => ({
-		params: { id: project.id },
+		id: project.id,
 	}));
 }
 
@@ -60,9 +60,14 @@ export default function Project({ params }: { params: { id: string } }) {
 				<article className="flex flex-col gap-2">
 					<div className="">
 						<p>{project.description}</p>
-						<ul className="">
+						<ul className="flex gap-2">
 							{project.technologies.map((technology) => (
-								<li key={technology}>{technology}</li>
+								<li
+									className="p-2 border rounded-3xl glass text-sm"
+									key={technology}
+								>
+									{technology}
+								</li>
 							))}
 						</ul>
 					</div>

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navigation/NavBar";
+import { sub } from "framer-motion/client";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -12,6 +14,12 @@ const geistMono = localFont({
 	src: "./fonts/GeistMonoVF.woff",
 	variable: "--font-geist-mono",
 	weight: "100 900",
+});
+
+const mainFont = DM_Sans({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-main",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +33,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className={`${mainFont.className}`}>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
