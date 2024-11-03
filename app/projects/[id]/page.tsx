@@ -11,14 +11,19 @@ import {
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
 	return projects.map((project) => ({
 		params: { id: project.id },
 	}));
 }
 
-export default function Project({ params }: { params: { id: string } }) {
-	const project = projects.find((project) => project.id === params.id);
+export default async function Project({
+	params,
+}: {
+	params: Promise<{ id: string }>;
+}) {
+	const { id } = await params;
+	const project = projects.find((project) => project.id === id);
 
 	if (!project) {
 		notFound();
