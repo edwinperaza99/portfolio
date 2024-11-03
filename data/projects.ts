@@ -28,48 +28,39 @@ export const projects: Project[] = [
 		],
 	},
 	{
-		id: "portfolio1",
-		name: "Personal Portfolio",
+		id: "2",
+		name: "RBR Inventory Formatter",
 		category: "Web Development",
-		description: "My personal portfolio showcasing my projects and skills.",
+		description:
+			"Tools for the circulation desk at the Pollak Library, it facilitates the processing of the inventory list. The tools reduces the task etc",
 		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-		thumbnail: {
-			src: "/images/projects/portfolio-1.png",
-			height: 1080,
-			width: 1920,
-		},
+		thumbnail: RBR_Thumbnail,
 		images: [
 			{ src: "/images/projects/portfolio-1.png", height: 1080, width: 1920 },
 			{ src: "/images/projects/portfolio-2.png", height: 1080, width: 1920 },
 		],
 	},
 	{
-		id: "portfolio2",
-		name: "Personal Portfolio",
+		id: "3",
+		name: "RBR Inventory Formatter",
 		category: "Web Development",
-		description: "My personal portfolio showcasing my projects and skills.",
+		description:
+			"Tools for the circulation desk at the Pollak Library, it facilitates the processing of the inventory list. The tools reduces the task etc",
 		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-		thumbnail: {
-			src: "/images/projects/portfolio-1.png",
-			height: 1080,
-			width: 1920,
-		},
+		thumbnail: RBR_Thumbnail,
 		images: [
 			{ src: "/images/projects/portfolio-1.png", height: 1080, width: 1920 },
 			{ src: "/images/projects/portfolio-2.png", height: 1080, width: 1920 },
 		],
 	},
 	{
-		id: "portfolio3",
-		name: "Personal Portfolio",
+		id: "4",
+		name: "RBR Inventory Formatter",
 		category: "Web Development",
-		description: "My personal portfolio showcasing my projects and skills.",
+		description:
+			"Tools for the circulation desk at the Pollak Library, it facilitates the processing of the inventory list. The tools reduces the task etc",
 		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-		thumbnail: {
-			src: "/images/projects/portfolio-1.png",
-			height: 1080,
-			width: 1920,
-		},
+		thumbnail: RBR_Thumbnail,
 		images: [
 			{ src: "/images/projects/portfolio-1.png", height: 1080, width: 1920 },
 			{ src: "/images/projects/portfolio-2.png", height: 1080, width: 1920 },

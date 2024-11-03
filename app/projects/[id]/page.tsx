@@ -74,7 +74,7 @@ export default function Project({ params }: { params: { id: string } }) {
 					<div className="flex justify-center align-middle rounded-2xl glass-grid-bg">
 						<Image src={project.thumbnail} alt={project.name} className="" />
 					</div>
-					<div>
+					{/* <div>
 						{project.images.map((image) => (
 							<Image
 								key={image.src}
@@ -83,7 +83,7 @@ export default function Project({ params }: { params: { id: string } }) {
 								className=""
 							/>
 						))}
-					</div>
+					</div> */}
 				</article>
 			</section>
 		</main>
