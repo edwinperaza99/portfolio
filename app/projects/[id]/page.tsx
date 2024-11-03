@@ -13,11 +13,15 @@ import {
 
 export async function generateStaticParams() {
 	return projects.map((project) => ({
-		params: { id: project.id },
+		id: project.id,
 	}));
 }
 
-export default async function Project({ params }: { params: { id: string } }) {
+export default async function Project({
+	params,
+}: {
+	params: Promise<{ id: string }>;
+}) {
 	const { id } = await params;
 	const project = projects.find((project) => project.id === id);
 
