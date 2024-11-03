@@ -31,7 +31,6 @@ export default function Projects() {
 									src={project.thumbnail}
 									alt={project.name}
 									className="object-cover rounded-t-2xl group-hover:opacity-75 group-hover:scale-105 transition-transform"
-									layout="fill"
 								/>
 							</div>
 							<div className="p-4">
