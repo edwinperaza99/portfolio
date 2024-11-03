@@ -13,7 +13,7 @@ import {
 
 export function generateStaticParams() {
 	return projects.map((project) => ({
-		id: project.id,
+		params: { id: project.id },
 	}));
 }
 
