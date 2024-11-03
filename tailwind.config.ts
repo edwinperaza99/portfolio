@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+	darkMode: ["class"],
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,13 +10,12 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
-				background: "var(--background)",
-				foreground: "var(--foreground)",
+				background: "hsl(var(--background))",
+				foreground: "hsl(var(--foreground))",
 				"primary-light": "var(--primary-light)",
 				"primary-dark": "var(--primary-dark)",
 				"secondary-light": "var(--secondary-light)",
 				"secondary-dark": "var(--secondary-dark)",
-				// like blue
 				astronaut: {
 					DEFAULT: "#1B4079",
 					"50": "#eff8ff",
@@ -30,7 +30,6 @@ const config: Config = {
 					"900": "#1b4079",
 					"950": "#172d54",
 				},
-				// like green
 				forest: {
 					DEFAULT: "#5F9A9A",
 					"50": "#f4f9f9",
@@ -45,7 +44,6 @@ const config: Config = {
 					"900": "#26393b",
 					"950": "#121f21",
 				},
-				// energy green
 				monster: {
 					DEFAULT: "#BDF7B7",
 					"50": "#f2fdf0",
@@ -60,7 +58,6 @@ const config: Config = {
 					"900": "#175314",
 					"950": "#062e05",
 				},
-				// brown tones
 				clay: {
 					DEFAULT: "#8D6346",
 					"50": "#f7f4ef",
@@ -75,7 +72,6 @@ const config: Config = {
 					"900": "#523831",
 					"950": "#2f1d19",
 				},
-				// kinda pink?
 				rust: {
 					DEFAULT: "#904E55",
 					"50": "#fbf5f5",
@@ -90,7 +86,6 @@ const config: Config = {
 					"900": "#63383f",
 					"950": "#351c20",
 				},
-				// purple color
 				lilac: {
 					DEFAULT: "#C297B8",
 					"50": "#f9f6f9",
@@ -105,6 +100,44 @@ const config: Config = {
 					"900": "#5e3d52",
 					"950": "#37202f",
 				},
+				card: {
+					DEFAULT: "hsl(var(--card))",
+					foreground: "hsl(var(--card-foreground))",
+				},
+				popover: {
+					DEFAULT: "hsl(var(--popover))",
+					foreground: "hsl(var(--popover-foreground))",
+				},
+				primary: {
+					DEFAULT: "hsl(var(--primary))",
+					foreground: "hsl(var(--primary-foreground))",
+				},
+				secondary: {
+					DEFAULT: "hsl(var(--secondary))",
+					foreground: "hsl(var(--secondary-foreground))",
+				},
+				muted: {
+					DEFAULT: "hsl(var(--muted))",
+					foreground: "hsl(var(--muted-foreground))",
+				},
+				accent: {
+					DEFAULT: "hsl(var(--accent))",
+					foreground: "hsl(var(--accent-foreground))",
+				},
+				destructive: {
+					DEFAULT: "hsl(var(--destructive))",
+					foreground: "hsl(var(--destructive-foreground))",
+				},
+				border: "hsl(var(--border))",
+				input: "hsl(var(--input))",
+				ring: "hsl(var(--ring))",
+				chart: {
+					"1": "hsl(var(--chart-1))",
+					"2": "hsl(var(--chart-2))",
+					"3": "hsl(var(--chart-3))",
+					"4": "hsl(var(--chart-4))",
+					"5": "hsl(var(--chart-5))",
+				},
 			},
 			flex: {
 				"1.5": "1.5 1.5 0%",
@@ -118,8 +151,13 @@ const config: Config = {
 				"vertical-lr": "vertical-lr",
 				"vertical-rl": "vertical-rl",
 			},
+			borderRadius: {
+				lg: "var(--radius)",
+				md: "calc(var(--radius) - 2px)",
+				sm: "calc(var(--radius) - 4px)",
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require("tailwindcss-animate")],
 };
 export default config;
