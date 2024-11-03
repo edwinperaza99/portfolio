@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 import RBR_Thumbnail from "@/public/RBR/RBR_Thumbnail.png";
 
-interface Project {
+export type Project = {
 	id: string;
 	name: string;
 	category: string;
@@ -11,7 +11,7 @@ interface Project {
 	images: StaticImageData[];
 	deployUrl?: string;
 	githubUrl?: string;
-}
+};
 
 export const projects: Project[] = [
 	{
