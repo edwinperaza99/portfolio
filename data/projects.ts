@@ -22,10 +22,7 @@ export const projects: Project[] = [
 			"Tools for the circulation desk at the Pollak Library, it facilitates the processing of the inventory list. The tools reduces the task etc",
 		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
 		thumbnail: RBR_Thumbnail,
-		images: [
-			{ src: "/images/projects/portfolio-1.png", height: 1080, width: 1920 },
-			{ src: "/images/projects/portfolio-2.png", height: 1080, width: 1920 },
-		],
+		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 	},
 	{
 		id: "2",
@@ -35,10 +32,7 @@ export const projects: Project[] = [
 			"Tools for the circulation desk at the Pollak Library, it facilitates the processing of the inventory list. The tools reduces the task etc",
 		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
 		thumbnail: RBR_Thumbnail,
-		images: [
-			{ src: "/images/projects/portfolio-1.png", height: 1080, width: 1920 },
-			{ src: "/images/projects/portfolio-2.png", height: 1080, width: 1920 },
-		],
+		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 	},
 	{
 		id: "3",
@@ -48,10 +42,7 @@ export const projects: Project[] = [
 			"Tools for the circulation desk at the Pollak Library, it facilitates the processing of the inventory list. The tools reduces the task etc",
 		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
 		thumbnail: RBR_Thumbnail,
-		images: [
-			{ src: "/images/projects/portfolio-1.png", height: 1080, width: 1920 },
-			{ src: "/images/projects/portfolio-2.png", height: 1080, width: 1920 },
-		],
+		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 	},
 	{
 		id: "4",
@@ -61,9 +52,6 @@ export const projects: Project[] = [
 			"Tools for the circulation desk at the Pollak Library, it facilitates the processing of the inventory list. The tools reduces the task etc",
 		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
 		thumbnail: RBR_Thumbnail,
-		images: [
-			{ src: "/images/projects/portfolio-1.png", height: 1080, width: 1920 },
-			{ src: "/images/projects/portfolio-2.png", height: 1080, width: 1920 },
-		],
+		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 	},
 ];
