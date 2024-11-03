@@ -21,7 +21,7 @@ export default function Project({ params }: { params: { id: string } }) {
 	const project = projects.find((project) => project.id === params.id);
 
 	if (!project) {
-		return notFound();
+		notFound();
 	}
 
 	return (
