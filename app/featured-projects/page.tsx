@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FeaturedProjects() {
 	return (
 		<main className="min-h-screen flex flex-col gradient-bg-green text-white">
@@ -33,6 +35,7 @@ export default function FeaturedProjects() {
 					</div>
 					<div className="flex justify-center align-middle flex-1 rounded-2xl glass-grid-bg">
 						<h2>MORE</h2>
+						<Link href="/projects">See all projects</Link>
 					</div>
 				</div>
 			</section>
