@@ -1,6 +1,9 @@
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
-import RBR_Thumbnail from "@/public/RBR/RBR_Thumbnail.png";
+import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
+import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
+import Chatbot_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
+import PACMAN_Thumbnail from "@/public/PAC-MAN/pacman_thumbnail.png";
 
 export type Project = {
 	id: string;
@@ -106,7 +109,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["HTML", "CSS", "JavaScript"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: Hikken_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/Hikken",
 		deployUrl: "https://edwinperaza99.github.io/Hikken/",
@@ -138,7 +141,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["Python", "Tkinter", "Regex"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: Chatbot_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/CSUF-Chatbot",
 	},
@@ -197,7 +200,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["Python", "Pygame"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: PACMAN_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/PAC-MAN",
 	},

@@ -17,12 +17,10 @@ export default function Projects() {
 	);
 
 	return (
-		<main className="min-h-screen flex flex-col bg-black text-white">
+		<main className="min-h-screen flex flex-col bg-primary-dark text-white">
 			<section className="container px-1">
 				<header className="text-center my-4">
-					<h1 className="text-3xl uppercase whitespace-nowrap">
-						{selectedCategory} Projects
-					</h1>
+					<h1 className="text-3xl uppercase">{selectedCategory} Projects</h1>
 				</header>
 				{/* Category Filter ToggleGroup */}
 				<div className="text-center my-4">
@@ -60,7 +58,7 @@ export default function Projects() {
 					</ToggleGroup>
 				</div>
 			</section>
-			<section className="container px-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 sm:gap-2">
+			<section className="container px-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-2">
 				{/* iterate through all the projects  */}
 				{filteredProjects.map((project) => (
 					<article
@@ -70,7 +68,7 @@ export default function Projects() {
 						onMouseLeave={() => setHoveredProject(null)}
 					>
 						<Link href={`/projects/${project.id}`}>
-							<div className="flex justify-center align-middle flex-1 rounded-t-2xl glass-grid-bg aspect-video overflow-hidden">
+							<div className="flex justify-center align-middle flex-1 rounded-t-2xl glass-grid-bg aspect-[4/3] overflow-hidden">
 								<Image
 									src={project.thumbnail}
 									alt={project.name}
