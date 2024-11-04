@@ -66,9 +66,7 @@ export default async function Project({
 			</section>
 			{/* information section */}
 			<section className="container px-2 grid grid-cols-1 md:grid-cols-2 py-4 gap-10">
-				<article>
-					<p>{project.description}</p>
-				</article>
+				<article>{project.description}</article>
 				<article className="flex flex-col justify-center items-center gap-4">
 					<ul className="flex flex-wrap gap-2">
 						{project.technologies.map((technology) => (

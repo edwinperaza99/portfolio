@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { Laptop, Smartphone, Globe } from "lucide-react";
+import { Laptop, Smartphone, Globe, Brain, Gamepad2 } from "lucide-react";
 
 export default function Projects() {
 	const [hoveredProject, setHoveredProject] = useState<string | null>(null);
@@ -47,6 +47,15 @@ export default function Projects() {
 							aria-label="Show mobile projects"
 						>
 							<Smartphone className="h-5 w-5" />
+						</ToggleGroupItem>
+						<ToggleGroupItem value="AI" aria-label="Show AI projects">
+							<Brain className="h-5 w-5" />
+						</ToggleGroupItem>
+						<ToggleGroupItem
+							value="Game Development"
+							aria-label="Show game development projects"
+						>
+							<Gamepad2 className="h-5 w-5" />
 						</ToggleGroupItem>
 					</ToggleGroup>
 				</div>
