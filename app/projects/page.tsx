@@ -20,7 +20,9 @@ export default function Projects() {
 		<main className="min-h-screen flex flex-col bg-black text-white">
 			<section className="container px-1">
 				<header className="text-center my-4">
-					<h1 className="text-3xl uppercase whitespace-nowrap">All Projects</h1>
+					<h1 className="text-3xl uppercase whitespace-nowrap">
+						{selectedCategory} Projects
+					</h1>
 				</header>
 				{/* Category Filter ToggleGroup */}
 				<div className="text-center my-4">
