@@ -31,7 +31,7 @@ export default async function Project({
 
 	return (
 		<main className="min-h-screen flex flex-col bg-primary-dark text-white">
-			<section className="container px-1">
+			<section className="container px-2">
 				<header className="my-4">
 					<Breadcrumb className="dark">
 						<BreadcrumbList>
@@ -54,42 +54,63 @@ export default async function Project({
 							</BreadcrumbItem>
 						</BreadcrumbList>
 					</Breadcrumb>
-
-					<h1 className="text-3xl uppercase whitespace-nowrap">
-						{project.name}
-					</h1>
-					<h2 className="text-secondary-light">{project.category}</h2>
+					<div className="mt-4 max-w-full md:max-w-[50%]">
+						<h1 className="text-3xl md:text-5xl uppercase font-bold">
+							{project.name}
+						</h1>
+						<h2 className="text-secondary-light font-extralight">
+							{project.category}
+						</h2>
+					</div>
 				</header>
 			</section>
-			<section className="container px-1">
-				<article className="flex flex-col gap-2">
-					<div className="">
-						<p>{project.description}</p>
-						<ul className="flex gap-2">
-							{project.technologies.map((technology) => (
-								<li
-									className="p-2 border rounded-3xl glass text-sm"
-									key={technology}
-								>
-									{technology}
-								</li>
-							))}
-						</ul>
-					</div>
-					<div className="flex justify-center align-middle rounded-2xl glass-grid-bg">
-						<Image src={project.thumbnail} alt={project.name} className="" />
-					</div>
-					{/* <div>
-						{project.images.map((image) => (
-							<Image
-								key={image.src}
-								src={image}
-								alt={project.name}
-								className=""
-							/>
-						))}
-					</div> */}
+			{/* information section */}
+			<section className="container px-2 grid grid-cols-1 md:grid-cols-2 py-4 gap-10">
+				<article>
+					<p>{project.description}</p>
 				</article>
+				<article className="flex flex-col justify-center items-center gap-4">
+					<ul className="flex flex-wrap gap-2">
+						{project.technologies.map((technology) => (
+							<li
+								className="p-2 rounded-3xl text-sm font-normal bg-green-500 border border-green-600 text-white shadow-[0_0_10px_2px_rgba(0,255,0,0.6)]"
+								key={technology}
+							>
+								{technology}
+							</li>
+						))}
+					</ul>
+					{/* buttons section */}
+					<div className="w-full sm:w-[75%] flex space-between gap-2">
+						{project.deployUrl && (
+							<a
+								href={project.deployUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex-1 text-center p-2 border text-sm font-normal hover:bg-white hover:text-black"
+							>
+								Deployed
+							</a>
+						)}
+						{project.githubUrl && (
+							<a
+								href={project.githubUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex-1 text-center p-2 border text-sm font-normal hover:bg-white hover:text-black"
+							>
+								GitHub
+							</a>
+						)}
+					</div>
+				</article>
+			</section>
+			{/* images section  */}
+			<section className="container px-2 space-y-4">
+				<Image src={project.thumbnail} alt={project.name} className="" />
+				{project.images.map((image) => (
+					<Image key={image.src} src={image} alt={project.name} className="" />
+				))}
 			</section>
 		</main>
 	);

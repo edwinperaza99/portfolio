@@ -23,6 +23,8 @@ export const projects: Project[] = [
 		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
 		thumbnail: RBR_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		deployUrl: "https://rbr-inventory-formatter.vercel.app/",
+		githubUrl: "example.com",
 	},
 	{
 		id: "2",
