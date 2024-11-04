@@ -28,8 +28,8 @@ export const projects: Project[] = [
 	},
 	{
 		id: "2",
-		name: "RBR Inventory Formatter",
-		category: "Web Development",
+		name: "SoloLevel",
+		category: "Mobile Development",
 		description:
 			"Tools for the circulation desk at the Pollak Library, it facilitates the processing of the inventory list. The tools reduces the task etc",
 		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],

@@ -4,9 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { Laptop, Smartphone, Globe } from "lucide-react";
 
 export default function Projects() {
 	const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+	const [selectedCategory, setSelectedCategory] = useState<string>("All");
+
+	// Filter projects based on the selected category
+	const filteredProjects = projects.filter((project) =>
+		selectedCategory === "All" ? true : project.category === selectedCategory
+	);
 
 	return (
 		<main className="min-h-screen flex flex-col bg-black text-white">
@@ -14,11 +22,36 @@ export default function Projects() {
 				<header className="text-center my-4">
 					<h1 className="text-3xl uppercase whitespace-nowrap">All Projects</h1>
 				</header>
-				{/* filter section here  */}
+				{/* Category Filter ToggleGroup */}
+				<div className="text-center my-4">
+					<ToggleGroup
+						type="single"
+						value={selectedCategory}
+						onValueChange={(value) => setSelectedCategory(value || "All")}
+						aria-label="Filter by Category"
+						className="flex justify-center gap-4"
+					>
+						<ToggleGroupItem value="All" aria-label="Show all projects">
+							<Globe className="h-5 w-5" />
+						</ToggleGroupItem>
+						<ToggleGroupItem
+							value="Web Development"
+							aria-label="Show web development projects"
+						>
+							<Laptop className="h-5 w-5" />
+						</ToggleGroupItem>
+						<ToggleGroupItem
+							value="Mobile Development"
+							aria-label="Show mobile projects"
+						>
+							<Smartphone className="h-5 w-5" />
+						</ToggleGroupItem>
+					</ToggleGroup>
+				</div>
 			</section>
 			<section className="container px-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 sm:gap-2">
 				{/* iterate through all the projects  */}
-				{projects.map((project) => (
+				{filteredProjects.map((project) => (
 					<article
 						key={project.id}
 						className="flex flex-col glass rounded-2xl group"
