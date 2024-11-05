@@ -1,19 +1,21 @@
+import BucketList_Thumbnail from "@/public/BucketList/BucketList_thumbnail.png";
+import Calculator_Thumbnail from "@/public/Calculator/calculator_thumbnail.png";
+import Chatbot_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
+import CaC_Thumbnail from "@/public/CodeAgainstCancer/CaC_thumbnail.png";
+import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
+import iExpense_Thumbnail from "@/public/iExpense/iExpense_thumbnail.png";
+import Instafilter_Thumbnail from "@/public/Instafilter/Instafilter_thumbnail.png";
+import MioPortfolio_Thumbnail from "@/public/MioPortfolio/MioPortfolio_thumbnail.png";
+import NataliaSalon_Thumbnail from "@/public/NataliaSalon/NataliaSalon_thumbnail.png";
+import PACMAN_Thumbnail from "@/public/PAC-MAN/pacman_thumbnail.png";
+import PhotoGallery_Thumbnail from "@/public/PhotoGallery/PhotoGallery_thumbnail.png";
+import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
+import RPS_Thumbnail from "@/public/RPS/RPS_thumbnail.png";
+import SpaceInvaders_Thumbnail from "@/public/SpaceInvaders/SpaceInvaders_thumbnail.png";
+import WordScramble_Thumbnail from "@/public/WordScramble/WordScramble_thumbnail.png";
+import SoloLevel_Thumbnail from "@/public/SoloLevel/SoloLevel_thumbnail.png";
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
-import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
-import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
-import Chatbot_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
-import PACMAN_Thumbnail from "@/public/PAC-MAN/pacman_thumbnail.png";
-import RPS_Thumbnail from "@/public/RPS/RPS_thumbnail.png";
-import Calculator_Thumbnail from "@/public/Calculator/calculator_thumbnail.png";
-import iExpense_Thumbnail from "@/public/iExpense/iExpense_thumbnail.png";
-import BucketList_Thumbnail from "@/public/BucketList/BucketList_thumbnail.png";
-import WordScramble_Thumbnail from "@/public/WordScramble/WordScramble_thumbnail.png";
-import Instafilter_Thumbnail from "@/public/Instafilter/Instafilter_thumbnail.png";
-import SpaceInvaders_Thumbnail from "@/public/SpaceInvaders/SpaceInvaders_thumbnail.png";
-import NataliaSalon_Thumbnail from "@/public/NataliaSalon/NataliaSalon_thumbnail.png";
-import PhotoGallery_Thumbnail from "@/public/PhotoGallery/PhotoGallery_thumbnail.png";
-import MioPortfolio_Thumbnail from "@/public/MioPortfolio/MioPortfolio_thumbnail.png";
 
 export type Project = {
 	id: string;
@@ -38,9 +40,9 @@ export const projects: Project[] = [
 					Natalia Salon and Beauty Supply is the official website for a beauty
 					salon and supply store, designed to provide clients with a seamless
 					online experience. Built with Next.js and styled with Tailwind CSS,
-					the site offers detailed information on the salon’s services, team
-					members, and contact details, along with a straightforward booking
-					system for clients to schedule appointments.
+					the site offers detailed information on the salon&apos;s services,
+					team members, and contact details, along with a straightforward
+					booking system for clients to schedule appointments.
 				</p>
 				<p>
 					The website includes a dedicated admin dashboard for updating product
@@ -49,7 +51,7 @@ export const projects: Project[] = [
 					enables easy product updates directly through the site without needing
 					external tools. By combining a dynamic frontend with efficient backend
 					routes, the platform offers a practical and maintainable solution
-					tailored to the salon's needs.
+					tailored to the salon&apos;s needs.
 				</p>
 			</>
 		),
@@ -68,10 +70,10 @@ export const projects: Project[] = [
 				<p>
 					Solo Level is a self-improvement app inspired by the themes of
 					progression and personal growth, akin to the journey of Sung Jinwoo in
-					popular manwha and anime series "Solo Leveling". The app integrates a
-					gamified level system where users can set daily challenges and earn
-					experience points upon completion, with a focus on fostering
-					consistency and discipline in personal goals.
+					popular manwha and anime series &quot;Solo Leveling&quot;. The app
+					integrates a gamified level system where users can set daily
+					challenges and earn experience points upon completion, with a focus on
+					fostering consistency and discipline in personal goals.
 				</p>
 				<p>
 					The app is built using SwiftUI and Firebase, combining a sleek and
@@ -85,7 +87,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["Swift", "SwiftUI", "Firebase"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: SoloLevel_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/SoloLevel",
 	},
@@ -96,10 +98,10 @@ export const projects: Project[] = [
 		description: (
 			<>
 				<p>
-					Mio's Portfolio is a personal portfolio website built using NextJS and
-					Tailwind CSS. The website showcases the projects, skills, and
-					experience of Mio, a scenic designer and artist. The site features a
-					modern design with a focus on visual elements and user experience,
+					Mio&apos;s Portfolio is a personal portfolio website built using
+					NextJS and Tailwind CSS. The website showcases the projects, skills,
+					and experience of Mio, a scenic designer and artist. The site features
+					a modern design with a focus on visual elements and user experience,
 				</p>
 			</>
 		),
@@ -134,7 +136,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["Django", "Bootstrap", "Jquery"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: CaC_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/DanOcho8/Code-Against-Cancer",
 	},
@@ -149,6 +151,35 @@ export const projects: Project[] = [
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		deployUrl: "https://rbr-inventory-formatter.vercel.app/",
 		githubUrl: "example.com",
+	},
+	{
+		id: "7",
+		name: "PAC-MAN",
+		category: "Game Development",
+		description: (
+			<>
+				<p>
+					Classic PAC-MAN game built with pygame. This project is a recreation
+					of the iconic arcade game, featuring the original gameplay mechanics
+					and design. Players can navigate the maze, collect pellets, and avoid
+					ghosts to achieve the highest score. The game includes multiple
+					levels, power-ups, and challenging AI to provide an engaging and
+					nostalgic experience.
+				</p>
+				<p>
+					Working with pygame allowed me to explore game development concepts,
+					such as collision detection, game loops, and sprite animations. I
+					focused on optimizing game performance, implementing player controls,
+					and designing interactive game elements to capture the essence of the
+					original PAC-MAN game. This project was a fun and educational journey
+					in game development and Python programming.
+				</p>
+			</>
+		),
+		technologies: ["Python", "Pygame"],
+		thumbnail: PACMAN_Thumbnail,
+		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		githubUrl: "https://github.com/edwinperaza99/PAC-MAN",
 	},
 	{
 		id: "2",
@@ -236,35 +267,7 @@ export const projects: Project[] = [
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/CSUF-Chatbot",
 	},
-	{
-		id: "7",
-		name: "PAC-MAN",
-		category: "Game Development",
-		description: (
-			<>
-				<p>
-					Classic PAC-MAN game built with pygame. This project is a recreation
-					of the iconic arcade game, featuring the original gameplay mechanics
-					and design. Players can navigate the maze, collect pellets, and avoid
-					ghosts to achieve the highest score. The game includes multiple
-					levels, power-ups, and challenging AI to provide an engaging and
-					nostalgic experience.
-				</p>
-				<p>
-					Working with pygame allowed me to explore game development concepts,
-					such as collision detection, game loops, and sprite animations. I
-					focused on optimizing game performance, implementing player controls,
-					and designing interactive game elements to capture the essence of the
-					original PAC-MAN game. This project was a fun and educational journey
-					in game development and Python programming.
-				</p>
-			</>
-		),
-		technologies: ["Python", "Pygame"],
-		thumbnail: PACMAN_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
-		githubUrl: "https://github.com/edwinperaza99/PAC-MAN",
-	},
+
 	{
 		id: "8",
 		name: "HotProspects",
