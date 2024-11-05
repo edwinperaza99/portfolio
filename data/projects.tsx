@@ -4,6 +4,7 @@ import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
 import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
 import Chatbot_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
 import PACMAN_Thumbnail from "@/public/PAC-MAN/pacman_thumbnail.png";
+import RPS_Thumbnail from "@/public/RPS/RPS_thumbnail.png";
 
 export type Project = {
 	id: string;
@@ -408,7 +409,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["HTML", "Tailwind CSS", "JavaScript"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: RPS_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project3",
 		deployUrl: "https://edwinperaza99.github.io/cpsc349-project3/",
