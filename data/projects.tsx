@@ -1,10 +1,14 @@
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
-import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
+import RBR_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
 import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
 import Chatbot_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
 import PACMAN_Thumbnail from "@/public/PAC-MAN/pacman_thumbnail.png";
 import RPS_Thumbnail from "@/public/RPS/RPS_thumbnail.png";
+import Calculator_Thumbnail from "@/public/Calculator/calculator_thumbnail.png";
+import iExpense_Thumbnail from "@/public/iExpense/iExpense_thumbnail.png";
+import BucketList_Thumbnail from "@/public/BucketList/BucketList_thumbnail.png";
+import WordScramble_Thumbnail from "@/public/WordScramble/WordScramble_thumbnail.png";
 
 export type Project = {
 	id: string;
@@ -260,7 +264,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["Swift", "SwiftUI", "MapKit", "Wikipedia API"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: BucketList_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/BucketList",
 	},
@@ -308,7 +312,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["Swift", "SwiftUI"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: iExpense_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/iExpense",
 	},
@@ -334,7 +338,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["Swift", "SwiftUI"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: WordScramble_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/WordScramble",
 	},
@@ -353,7 +357,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["Swift", "SwiftUI"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: Calculator_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/iPhone-calculator",
 	},
