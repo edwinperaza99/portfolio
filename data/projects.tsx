@@ -9,6 +9,9 @@ import Calculator_Thumbnail from "@/public/Calculator/calculator_thumbnail.png";
 import iExpense_Thumbnail from "@/public/iExpense/iExpense_thumbnail.png";
 import BucketList_Thumbnail from "@/public/BucketList/BucketList_thumbnail.png";
 import WordScramble_Thumbnail from "@/public/WordScramble/WordScramble_thumbnail.png";
+import Instafilter_Thumbnail from "@/public/Instafilter/Instafilter_thumbnail.png";
+import SpaceInvaders_Thumbnail from "@/public/SpaceInvaders/SpaceInvaders_thumbnail.png";
+import NataliaSalon_Thumbnail from "@/public/NataliaSalon/NataliaSalon_thumbnail.png";
 
 export type Project = {
 	id: string;
@@ -292,7 +295,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["Swift", "SwiftUI", "Core Image"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: Instafilter_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/Instafilter",
 	},
@@ -376,7 +379,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["Python", "Pygame"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: SpaceInvaders_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/space-invaders",
 	},
@@ -459,25 +462,34 @@ export const projects: Project[] = [
 	},
 	{
 		id: "19",
-		name: "Be Beauty's Website",
+		name: "Natalia's Salon and Beauty Supply Website",
 		category: "Web Development",
 		description: (
 			<>
 				<p>
-					Be Beauty is the official website for a beauty salon, built using
-					NextJS and Tailwind CSS. The website features information about the
-					salon's services, team members, and contact details, providing an
-					online platform for clients to learn more about the salon and book
-					appointments. The app features an admin dashboard for managing the
-					products and services.
+					Natalia Salon and Beauty Supply is the official website for a beauty
+					salon and supply store, designed to provide clients with a seamless
+					online experience. Built with Next.js and styled with Tailwind CSS,
+					the site offers detailed information on the salon’s services, team
+					members, and contact details, along with a straightforward booking
+					system for clients to schedule appointments.
+				</p>
+				<p>
+					The website includes a dedicated admin dashboard for updating product
+					inventory, allowing staff to manage the beauty supply offerings
+					displayed on the site. This dashboard, built using Next.js API routes,
+					enables easy product updates directly through the site without needing
+					external tools. By combining a dynamic frontend with efficient backend
+					routes, the platform offers a practical and maintainable solution
+					tailored to the salon's needs.
 				</p>
 			</>
 		),
-		technologies: ["NextJS", "Tailwind CSS", "MongoDB"],
-		thumbnail: RBR_Thumbnail,
+		technologies: ["NextJS", "Tailwind CSS", "MongoDB", "Prisma"],
+		thumbnail: NataliaSalon_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/be-beauty",
-		deployUrl: "https://be-beauty.vercel.app/",
+		deployUrl: "https://be-beauty.edwinperaza.com/",
 	},
 	{
 		id: "20",
