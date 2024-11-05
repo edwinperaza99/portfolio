@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
-import RBR_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
+import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
 import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
 import Chatbot_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
 import PACMAN_Thumbnail from "@/public/PAC-MAN/pacman_thumbnail.png";
@@ -12,6 +12,8 @@ import WordScramble_Thumbnail from "@/public/WordScramble/WordScramble_thumbnail
 import Instafilter_Thumbnail from "@/public/Instafilter/Instafilter_thumbnail.png";
 import SpaceInvaders_Thumbnail from "@/public/SpaceInvaders/SpaceInvaders_thumbnail.png";
 import NataliaSalon_Thumbnail from "@/public/NataliaSalon/NataliaSalon_thumbnail.png";
+import PhotoGallery_Thumbnail from "@/public/PhotoGallery/PhotoGallery_thumbnail.png";
+import MioPortfolio_Thumbnail from "@/public/MioPortfolio/MioPortfolio_thumbnail.png";
 
 export type Project = {
 	id: string;
@@ -26,6 +28,116 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+	{
+		id: "19",
+		name: "Natalia's Salon and Beauty Supply Website",
+		category: "Web Development",
+		description: (
+			<>
+				<p>
+					Natalia Salon and Beauty Supply is the official website for a beauty
+					salon and supply store, designed to provide clients with a seamless
+					online experience. Built with Next.js and styled with Tailwind CSS,
+					the site offers detailed information on the salon’s services, team
+					members, and contact details, along with a straightforward booking
+					system for clients to schedule appointments.
+				</p>
+				<p>
+					The website includes a dedicated admin dashboard for updating product
+					inventory, allowing staff to manage the beauty supply offerings
+					displayed on the site. This dashboard, built using Next.js API routes,
+					enables easy product updates directly through the site without needing
+					external tools. By combining a dynamic frontend with efficient backend
+					routes, the platform offers a practical and maintainable solution
+					tailored to the salon's needs.
+				</p>
+			</>
+		),
+		technologies: ["NextJS", "Tailwind CSS", "MongoDB", "Prisma"],
+		thumbnail: NataliaSalon_Thumbnail,
+		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		githubUrl: "https://github.com/edwinperaza99/be-beauty",
+		deployUrl: "https://be-beauty.edwinperaza.com/",
+	},
+	{
+		id: "6",
+		name: "SoloLevel",
+		category: "Mobile Development",
+		description: (
+			<>
+				<p>
+					Solo Level is a self-improvement app inspired by the themes of
+					progression and personal growth, akin to the journey of Sung Jinwoo in
+					popular manwha and anime series "Solo Leveling". The app integrates a
+					gamified level system where users can set daily challenges and earn
+					experience points upon completion, with a focus on fostering
+					consistency and discipline in personal goals.
+				</p>
+				<p>
+					The app is built using SwiftUI and Firebase, combining a sleek and
+					intuitive user interface with real-time data storage and
+					authentication. Users can create accounts, set daily tasks, and track
+					their progress over time, with the app providing motivational messages
+					and rewards for achieving milestones. This project was a valuable
+					learning experience in mobile development, UI/UX design, and
+					integrating cloud services for data management.
+				</p>
+			</>
+		),
+		technologies: ["Swift", "SwiftUI", "Firebase"],
+		thumbnail: RBR_Thumbnail,
+		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		githubUrl: "https://github.com/edwinperaza99/SoloLevel",
+	},
+	{
+		id: "20",
+		name: "Mio's Portfolio",
+		category: "Web Development",
+		description: (
+			<>
+				<p>
+					Mio's Portfolio is a personal portfolio website built using NextJS and
+					Tailwind CSS. The website showcases the projects, skills, and
+					experience of Mio, a scenic designer and artist. The site features a
+					modern design with a focus on visual elements and user experience,
+				</p>
+			</>
+		),
+		technologies: ["NextJs", "Tailwind CSS", "TypeScript"],
+		thumbnail: MioPortfolio_Thumbnail,
+		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		githubUrl: "https://github.com/edwinperaza99/portfolio-mio",
+		deployUrl: "https://www.okadamio.com/",
+	},
+	{
+		id: "3",
+		name: "Code Against Cancer",
+		category: "Web Development",
+		description: (
+			<>
+				<p>
+					Code Against Cancer is an app designed to support cancer patients with
+					accessible information and resources focused on nutrition. The app
+					offers a recipe section that excludes ingredients potentially harmful
+					to cancer patients and provides resources tailored to specific cancer
+					types, making dietary planning easier and safer.
+				</p>
+				<p>
+					This was my first project working with Django, where I focused on
+					using its features to build a structured and maintainable application.
+					I also integrated external APIs, such as the YouTube API for relevant
+					video content and the PubMed API for accessing research articles, to
+					provide users with reliable, up-to-date information. Combined with
+					Bootstrap and jQuery, these integrations helped create a smooth,
+					user-friendly experience.
+				</p>
+			</>
+		),
+		technologies: ["Django", "Bootstrap", "Jquery"],
+		thumbnail: RBR_Thumbnail,
+		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		githubUrl: "https://github.com/DanOcho8/Code-Against-Cancer",
+	},
 	{
 		id: "1",
 		name: "RBR Inventory Formatter",
@@ -64,35 +176,6 @@ export const projects: Project[] = [
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		deployUrl: "https://spotify-clone-mocha-kappa.vercel.app/",
 		githubUrl: "https://github.com/edwinperaza99/spotify-clone",
-	},
-	{
-		id: "3",
-		name: "Code Against Cancer",
-		category: "Web Development",
-		description: (
-			<>
-				<p>
-					Code Against Cancer is an app designed to support cancer patients with
-					accessible information and resources focused on nutrition. The app
-					offers a recipe section that excludes ingredients potentially harmful
-					to cancer patients and provides resources tailored to specific cancer
-					types, making dietary planning easier and safer.
-				</p>
-				<p>
-					This was my first project working with Django, where I focused on
-					using its features to build a structured and maintainable application.
-					I also integrated external APIs, such as the YouTube API for relevant
-					video content and the PubMed API for accessing research articles, to
-					provide users with reliable, up-to-date information. Combined with
-					Bootstrap and jQuery, these integrations helped create a smooth,
-					user-friendly experience.
-				</p>
-			</>
-		),
-		technologies: ["Django", "Bootstrap", "Jquery"],
-		thumbnail: RBR_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
-		githubUrl: "https://github.com/DanOcho8/Code-Against-Cancer",
 	},
 	{
 		id: "4",
@@ -152,36 +235,6 @@ export const projects: Project[] = [
 		thumbnail: Chatbot_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/CSUF-Chatbot",
-	},
-	{
-		id: "6",
-		name: "SoloLevel",
-		category: "Mobile Development",
-		description: (
-			<>
-				<p>
-					Solo Level is a self-improvement app inspired by the themes of
-					progression and personal growth, akin to the journey of Sung Jinwoo in
-					popular manwha and anime series "Solo Leveling". The app integrates a
-					gamified level system where users can set daily challenges and earn
-					experience points upon completion, with a focus on fostering
-					consistency and discipline in personal goals.
-				</p>
-				<p>
-					The app is built using SwiftUI and Firebase, combining a sleek and
-					intuitive user interface with real-time data storage and
-					authentication. Users can create accounts, set daily tasks, and track
-					their progress over time, with the app providing motivational messages
-					and rewards for achieving milestones. This project was a valuable
-					learning experience in mobile development, UI/UX design, and
-					integrating cloud services for data management.
-				</p>
-			</>
-		),
-		technologies: ["Swift", "SwiftUI", "Firebase"],
-		thumbnail: RBR_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
-		githubUrl: "https://github.com/edwinperaza99/SoloLevel",
 	},
 	{
 		id: "7",
@@ -455,60 +508,9 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["HTML", "Tailwind CSS", "Remake"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: PhotoGallery_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project1",
 		deployUrl: "https://edwinperaza99.github.io/cpsc349-project1/",
-	},
-	{
-		id: "19",
-		name: "Natalia's Salon and Beauty Supply Website",
-		category: "Web Development",
-		description: (
-			<>
-				<p>
-					Natalia Salon and Beauty Supply is the official website for a beauty
-					salon and supply store, designed to provide clients with a seamless
-					online experience. Built with Next.js and styled with Tailwind CSS,
-					the site offers detailed information on the salon’s services, team
-					members, and contact details, along with a straightforward booking
-					system for clients to schedule appointments.
-				</p>
-				<p>
-					The website includes a dedicated admin dashboard for updating product
-					inventory, allowing staff to manage the beauty supply offerings
-					displayed on the site. This dashboard, built using Next.js API routes,
-					enables easy product updates directly through the site without needing
-					external tools. By combining a dynamic frontend with efficient backend
-					routes, the platform offers a practical and maintainable solution
-					tailored to the salon's needs.
-				</p>
-			</>
-		),
-		technologies: ["NextJS", "Tailwind CSS", "MongoDB", "Prisma"],
-		thumbnail: NataliaSalon_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
-		githubUrl: "https://github.com/edwinperaza99/be-beauty",
-		deployUrl: "https://be-beauty.edwinperaza.com/",
-	},
-	{
-		id: "20",
-		name: "Mio's Portfolio",
-		category: "Web Development",
-		description: (
-			<>
-				<p>
-					Mio's Portfolio is a personal portfolio website built using NextJS and
-					Tailwind CSS. The website showcases the projects, skills, and
-					experience of Mio, a scenic designer and artist. The site features a
-					modern design with a focus on visual elements and user experience,
-				</p>
-			</>
-		),
-		technologies: ["NextJs", "Tailwind CSS", "TypeScript"],
-		thumbnail: RBR_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
-		githubUrl: "https://github.com/edwinperaza99/portfolio-mio",
-		deployUrl: "https://www.okadamio.com/",
 	},
 ];

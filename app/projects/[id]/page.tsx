@@ -106,8 +106,8 @@ export default async function Project({
 			{/* images section  */}
 			<section className="container px-2 space-y-4">
 				<Image src={project.thumbnail} alt={project.name} className="" />
-				{project.images.map((image) => (
-					<Image key={image.src} src={image} alt={project.name} className="" />
+				{project.images.map((image, index) => (
+					<Image key={index} src={image} alt={project.name} className="" />
 				))}
 			</section>
 		</main>
