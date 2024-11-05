@@ -6,6 +6,7 @@ import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
 import iExpense_Thumbnail from "@/public/iExpense/iExpense_thumbnail.png";
 import Instafilter_Thumbnail from "@/public/Instafilter/Instafilter_thumbnail.png";
 import MioPortfolio_Thumbnail from "@/public/MioPortfolio/MioPortfolio_thumbnail.png";
+import MovieTracker_Thumbnail from "@/public/MovieTracker/MovieTracker_thumbnail.png";
 import NataliaSalon_Thumbnail from "@/public/NataliaSalon/NataliaSalon_thumbnail.png";
 import PACMAN_Thumbnail from "@/public/PAC-MAN/pacman_thumbnail.png";
 import PhotoGallery_Thumbnail from "@/public/PhotoGallery/PhotoGallery_thumbnail.png";
@@ -33,7 +34,7 @@ export type Project = {
 export const projects: Project[] = [
 	{
 		id: "19",
-		name: "Natalia's Salon and Beauty Supply Website",
+		name: "Natalia's Website",
 		category: "Web Development",
 		description: (
 			<>
@@ -493,7 +494,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["HTML", "Tailwind CSS", "Remake"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: MovieTracker_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project2",
 	},

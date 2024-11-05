@@ -76,7 +76,7 @@ export default function Projects() {
 								/>
 							</div>
 							<div className="p-4">
-								<h2>{project.name}</h2>
+								<h2 className="text-xl">{project.name}</h2>
 								{/* Add conditional hover text with transition */}
 								<AnimatePresence mode="wait">
 									{hoveredProject === project.id ? (
