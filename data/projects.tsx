@@ -11,9 +11,10 @@ import PACMAN_Thumbnail from "@/public/PAC-MAN/pacman_thumbnail.png";
 import PhotoGallery_Thumbnail from "@/public/PhotoGallery/PhotoGallery_thumbnail.png";
 import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
 import RPS_Thumbnail from "@/public/RPS/RPS_thumbnail.png";
+import SantaPlease_Thumbnail from "@/public/SantaPlease/SantaPlease_thumbnail.png";
+import SoloLevel_Thumbnail from "@/public/SoloLevel/SoloLevel_thumbnail.png";
 import SpaceInvaders_Thumbnail from "@/public/SpaceInvaders/SpaceInvaders_thumbnail.png";
 import WordScramble_Thumbnail from "@/public/WordScramble/WordScramble_thumbnail.png";
-import SoloLevel_Thumbnail from "@/public/SoloLevel/SoloLevel_thumbnail.png";
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 
@@ -268,37 +269,37 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/CSUF-Chatbot",
 	},
 
-	{
-		id: "8",
-		name: "HotProspects",
-		category: "Mobile Development",
-		description: (
-			<>
-				<p>
-					HotProspects is a mobile app that helps users manage and track
-					potential leads and contacts. The app allows users to create and
-					organize lists of contacts, set reminders for follow-ups, and track
-					the progress of each lead. By providing a centralized platform for
-					managing leads, HotProspects streamlines the process of converting
-					prospects into clients and fosters better communication and engagement
-					with potential customers.
-				</p>
-				<p>
-					This project was developed using SwiftUI and Core Data, combining a
-					modern and intuitive user interface with efficient data storage and
-					management. Users can create custom lists, add contacts, and set
-					reminders for each lead, with the app offering a seamless experience
-					for tracking and organizing potential clients. HotProspects was a
-					valuable learning experience in mobile development, data management,
-					and user interface design.
-				</p>
-			</>
-		),
-		technologies: ["Swift", "SwiftUI", "Core Data"],
-		thumbnail: RBR_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
-		githubUrl: "https://github.com/edwinperaza99/HotProspects",
-	},
+	// {
+	// 	id: "8",
+	// 	name: "HotProspects",
+	// 	category: "Mobile Development",
+	// 	description: (
+	// 		<>
+	// 			<p>
+	// 				HotProspects is a mobile app that helps users manage and track
+	// 				potential leads and contacts. The app allows users to create and
+	// 				organize lists of contacts, set reminders for follow-ups, and track
+	// 				the progress of each lead. By providing a centralized platform for
+	// 				managing leads, HotProspects streamlines the process of converting
+	// 				prospects into clients and fosters better communication and engagement
+	// 				with potential customers.
+	// 			</p>
+	// 			<p>
+	// 				This project was developed using SwiftUI and Core Data, combining a
+	// 				modern and intuitive user interface with efficient data storage and
+	// 				management. Users can create custom lists, add contacts, and set
+	// 				reminders for each lead, with the app offering a seamless experience
+	// 				for tracking and organizing potential clients. HotProspects was a
+	// 				valuable learning experience in mobile development, data management,
+	// 				and user interface design.
+	// 			</p>
+	// 		</>
+	// 	),
+	// 	technologies: ["Swift", "SwiftUI", "Core Data"],
+	// 	thumbnail: RBR_Thumbnail,
+	// 	images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+	// 	githubUrl: "https://github.com/edwinperaza99/HotProspects",
+	// },
 	{
 		id: "9",
 		name: "BucketList",
@@ -453,7 +454,7 @@ export const projects: Project[] = [
 			</>
 		),
 		technologies: ["React", "Tailwind CSS", "Pocketbase"],
-		thumbnail: RBR_Thumbnail,
+		thumbnail: SantaPlease_Thumbnail,
 		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project4",
 	},

@@ -58,7 +58,7 @@ export default function Projects() {
 					</ToggleGroup>
 				</div>
 			</section>
-			<section className="container px-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-2">
+			<section className="container px-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
 				{/* iterate through all the projects  */}
 				{filteredProjects.map((project) => (
 					<article
