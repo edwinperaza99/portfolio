@@ -58,60 +58,73 @@ export default function Projects() {
 					</ToggleGroup>
 				</div>
 			</section>
-			<section className="container px-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-				{/* iterate through all the projects  */}
-				{filteredProjects.map((project) => (
-					<article
-						key={project.id}
-						className="flex flex-col glass rounded-2xl group"
-						onMouseEnter={() => setHoveredProject(project.id)}
-						onMouseLeave={() => setHoveredProject(null)}
-					>
-						<Link href={`/projects/${project.id}`}>
-							<div className="flex justify-center align-middle flex-1 rounded-t-2xl glass-grid-bg aspect-[4/3] overflow-hidden">
-								<Image
-									src={project.thumbnail}
-									alt={project.name}
-									className="object-cover rounded-t-2xl group-hover:opacity-75 group-hover:scale-105 transition-transform"
-								/>
-							</div>
-							<div className="p-4">
-								<h2 className="text-xl">{project.name}</h2>
-								{/* Add conditional hover text with transition */}
-								<AnimatePresence mode="wait">
-									{hoveredProject === project.id ? (
-										<motion.p
-											key="open-project"
-											initial={{ scale: 0.8, opacity: 0 }}
-											animate={{ scale: 1, opacity: 1 }}
-											// exit={{ scale: 0.8, opacity: 0 }}
-											transition={{
-												duration: 0.2,
-												type: "spring",
-												stiffness: 100,
-											}}
-											className=""
-										>
-											Click to learn more
-										</motion.p>
-									) : (
-										<motion.p
-											key="category"
-											initial={{ rotateX: -90, opacity: 0, perspective: 1000 }}
-											animate={{ rotateX: 0, opacity: 1, perspective: 1000 }}
-											exit={{ rotateX: 90, opacity: 0, perspective: 1000 }}
-											transition={{ duration: 0.1 }}
-											className=""
-										>
-											{project.category}
-										</motion.p>
-									)}
-								</AnimatePresence>
-							</div>
-						</Link>
-					</article>
-				))}
-			</section>
+			<AnimatePresence mode="wait">
+				<motion.section
+					key={selectedCategory}
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					exit={{ opacity: 0, y: 10 }}
+					transition={{ duration: 0.3 }}
+					className="container px-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
+				>
+					{/* iterate through all the projects  */}
+					{filteredProjects.map((project) => (
+						<article
+							key={project.id}
+							className="flex flex-col glass rounded-2xl group"
+							onMouseEnter={() => setHoveredProject(project.id)}
+							onMouseLeave={() => setHoveredProject(null)}
+						>
+							<Link href={`/projects/${project.id}`}>
+								<div className="flex justify-center align-middle flex-1 rounded-t-2xl glass-grid-bg aspect-[4/3] overflow-hidden">
+									<Image
+										src={project.thumbnail}
+										alt={project.name}
+										className="object-cover rounded-t-2xl group-hover:opacity-75 group-hover:scale-105 transition-transform"
+									/>
+								</div>
+								<div className="p-4">
+									<h2 className="text-xl">{project.name}</h2>
+									{/* Add conditional hover text with transition */}
+									<AnimatePresence mode="wait">
+										{hoveredProject === project.id ? (
+											<motion.p
+												key="open-project"
+												initial={{ scale: 0.8, opacity: 0 }}
+												animate={{ scale: 1, opacity: 1 }}
+												// exit={{ scale: 0.8, opacity: 0 }}
+												transition={{
+													duration: 0.2,
+													type: "spring",
+													stiffness: 100,
+												}}
+												className=""
+											>
+												Click to learn more
+											</motion.p>
+										) : (
+											<motion.p
+												key="category"
+												initial={{
+													rotateX: -90,
+													opacity: 0,
+													perspective: 1000,
+												}}
+												animate={{ rotateX: 0, opacity: 1, perspective: 1000 }}
+												exit={{ rotateX: 90, opacity: 0, perspective: 1000 }}
+												transition={{ duration: 0.1 }}
+												className=""
+											>
+												{project.category}
+											</motion.p>
+										)}
+									</AnimatePresence>
+								</div>
+							</Link>
+						</article>
+					))}
+				</motion.section>
+			</AnimatePresence>
 		</main>
 	);
 }

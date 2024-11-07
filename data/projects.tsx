@@ -33,7 +33,7 @@ export type Project = {
 
 export const projects: Project[] = [
 	{
-		id: "19",
+		id: "1",
 		name: "Natalia's Website",
 		category: "Web Development",
 		description: (
@@ -64,7 +64,7 @@ export const projects: Project[] = [
 		deployUrl: "https://be-beauty.edwinperaza.com/",
 	},
 	{
-		id: "6",
+		id: "2",
 		name: "SoloLevel",
 		category: "Mobile Development",
 		description: (
@@ -94,7 +94,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/SoloLevel",
 	},
 	{
-		id: "20",
+		id: "3",
 		name: "Mio's Portfolio",
 		category: "Web Development",
 		description: (
@@ -114,7 +114,7 @@ export const projects: Project[] = [
 		deployUrl: "https://www.okadamio.com/",
 	},
 	{
-		id: "3",
+		id: "4",
 		name: "Code Against Cancer",
 		category: "Web Development",
 		description: (
@@ -143,7 +143,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/DanOcho8/Code-Against-Cancer",
 	},
 	{
-		id: "1",
+		id: "5",
 		name: "RBR Inventory Formatter",
 		category: "Web Development",
 		description:
@@ -155,7 +155,7 @@ export const projects: Project[] = [
 		githubUrl: "example.com",
 	},
 	{
-		id: "7",
+		id: "6",
 		name: "PAC-MAN",
 		category: "Game Development",
 		description: (
@@ -184,7 +184,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/PAC-MAN",
 	},
 	{
-		id: "2",
+		id: "7",
 		name: "Spotify Clone",
 		category: "Web Development",
 		description: (
@@ -211,7 +211,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/spotify-clone",
 	},
 	{
-		id: "4",
+		id: "8",
 		name: "Hikken",
 		category: "Web Development",
 		description: (
@@ -239,7 +239,7 @@ export const projects: Project[] = [
 		deployUrl: "https://edwinperaza99.github.io/Hikken/",
 	},
 	{
-		id: "5",
+		id: "9",
 		name: "CSUF Chatbot",
 		category: "AI",
 		description: (
@@ -302,7 +302,7 @@ export const projects: Project[] = [
 	// 	githubUrl: "https://github.com/edwinperaza99/HotProspects",
 	// },
 	{
-		id: "9",
+		id: "10",
 		name: "BucketList",
 		category: "Mobile Development",
 		description: (
@@ -330,7 +330,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/BucketList",
 	},
 	{
-		id: "10",
+		id: "11",
 		name: "InstaFilter",
 		category: "Mobile Development",
 		description: (
@@ -358,7 +358,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/Instafilter",
 	},
 	{
-		id: "11",
+		id: "12",
 		name: "iExpense",
 		category: "Mobile Development",
 		description: (
@@ -378,7 +378,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/iExpense",
 	},
 	{
-		id: "12",
+		id: "13",
 		name: "WordScramble",
 		category: "Mobile Development",
 		description: (
@@ -404,7 +404,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/WordScramble",
 	},
 	{
-		id: "13",
+		id: "14",
 		name: "iPhone Calculator",
 		category: "Mobile Development",
 		description: (
@@ -423,7 +423,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/iPhone-calculator",
 	},
 	{
-		id: "14",
+		id: "15",
 		name: "Space Invaders",
 		category: "Game Development",
 		description: (
@@ -442,7 +442,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/space-invaders",
 	},
 	{
-		id: "15",
+		id: "16",
 		name: "Santa, Please!",
 		category: "Web Development",
 		description: (
@@ -460,7 +460,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project4",
 	},
 	{
-		id: "16",
+		id: "17",
 		name: "Rock, Paper, Scissors",
 		category: "Web Development",
 		description: (
@@ -480,7 +480,7 @@ export const projects: Project[] = [
 		deployUrl: "https://edwinperaza99.github.io/cpsc349-project3/",
 	},
 	{
-		id: "17",
+		id: "18",
 		name: "Movie Tracker App",
 		category: "Web Development",
 		description: (
@@ -499,7 +499,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project2",
 	},
 	{
-		id: "18",
+		id: "19",
 		name: "Photo Gallery Collection",
 		category: "Web Development",
 		description: (
