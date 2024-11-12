@@ -1,18 +1,54 @@
+// imports for BucketList
+import BucketList_1 from "@/public/BucketList/1.png";
+import BucketList_2 from "@/public/BucketList/2.png";
+import BucketList_3 from "@/public/BucketList/3.png";
+import BucketList_4 from "@/public/BucketList/4.png";
+import BucketList_5 from "@/public/BucketList/5.png";
 import BucketList_Thumbnail from "@/public/BucketList/BucketList_thumbnail.png";
 import Calculator_Thumbnail from "@/public/Calculator/calculator_thumbnail.png";
 import Chatbot_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
 import CaC_Thumbnail from "@/public/CodeAgainstCancer/CaC_thumbnail.png";
 import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
+// imports for iExpense
+import iExpense_1 from "@/public/iExpense/1.png";
+import iExpense_2 from "@/public/iExpense/2.png";
+import iExpense_3 from "@/public/iExpense/3.png";
 import iExpense_Thumbnail from "@/public/iExpense/iExpense_thumbnail.png";
 import Instafilter_Thumbnail from "@/public/Instafilter/Instafilter_thumbnail.png";
+// imports for Mio Portfolio
+import MioPortfolio_1 from "@/public/MioPortfolio/1.png";
+import MioPortfolio_2 from "@/public/MioPortfolio/2.png";
+import MioPortfolio_3 from "@/public/MioPortfolio/3.png";
+import MioPortfolio_4 from "@/public/MioPortfolio/4.png";
 import MioPortfolio_Thumbnail from "@/public/MioPortfolio/MioPortfolio_thumbnail.png";
 import MovieTracker_Thumbnail from "@/public/MovieTracker/MovieTracker_thumbnail.png";
+// imports for Natalia
+import Natalia_1 from "@/public/NataliaSalon/1.png";
+import Natalia_2 from "@/public/NataliaSalon/2.png";
+import Natalia_3 from "@/public/NataliaSalon/3.png";
+import Natalia_4 from "@/public/NataliaSalon/4.png";
+import Natalia_5 from "@/public/NataliaSalon/5.png";
+import Natalia_6 from "@/public/NataliaSalon/6.png";
 import NataliaSalon_Thumbnail from "@/public/NataliaSalon/NataliaSalon_thumbnail.png";
+// imports for PACMAN
+import PACMAN_1 from "@/public/PAC-MAN/1.png";
+import PACMAN_2 from "@/public/PAC-MAN/2.png";
+import PACMAN_3 from "@/public/PAC-MAN/3.png";
 import PACMAN_Thumbnail from "@/public/PAC-MAN/pacman_thumbnail.png";
 import PhotoGallery_Thumbnail from "@/public/PhotoGallery/PhotoGallery_thumbnail.png";
 import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
 import RPS_Thumbnail from "@/public/RPS/RPS_thumbnail.png";
 import SantaPlease_Thumbnail from "@/public/SantaPlease/SantaPlease_thumbnail.png";
+// imports for SoloLevel
+import SoloLevel_1 from "@/public/SoloLevel/1.png";
+import SoloLevel_2 from "@/public/SoloLevel/2.png";
+import SoloLevel_3 from "@/public/SoloLevel/3.png";
+import SoloLevel_4 from "@/public/SoloLevel/4.png";
+import SoloLevel_5 from "@/public/SoloLevel/5.png";
+import SoloLevel_6 from "@/public/SoloLevel/6.png";
+import SoloLevel_7 from "@/public/SoloLevel/7.png";
+import SoloLevel_8 from "@/public/SoloLevel/8.png";
+import SoloLevel_Thumbnail_2 from "@/public/SoloLevel/SoloLevel_thumbnail_2.png";
 import SoloLevel_Thumbnail from "@/public/SoloLevel/SoloLevel_thumbnail.png";
 import SpaceInvaders_Thumbnail from "@/public/SpaceInvaders/SpaceInvaders_thumbnail.png";
 import WordScramble_Thumbnail from "@/public/WordScramble/WordScramble_thumbnail.png";
@@ -59,7 +95,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["NextJS", "Tailwind CSS", "MongoDB", "Prisma"],
 		thumbnail: NataliaSalon_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [Natalia_1, Natalia_2, Natalia_3, Natalia_4, Natalia_5, Natalia_6],
 		githubUrl: "https://github.com/edwinperaza99/be-beauty",
 		deployUrl: "https://be-beauty.edwinperaza.com/",
 	},
@@ -90,7 +126,17 @@ export const projects: Project[] = [
 		),
 		technologies: ["Swift", "SwiftUI", "Firebase"],
 		thumbnail: SoloLevel_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [
+			SoloLevel_Thumbnail_2,
+			SoloLevel_1,
+			SoloLevel_2,
+			SoloLevel_3,
+			SoloLevel_4,
+			SoloLevel_5,
+			SoloLevel_6,
+			SoloLevel_7,
+			SoloLevel_8,
+		],
 		githubUrl: "https://github.com/edwinperaza99/SoloLevel",
 	},
 	{
@@ -109,7 +155,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["NextJs", "Tailwind CSS", "TypeScript"],
 		thumbnail: MioPortfolio_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [MioPortfolio_1, MioPortfolio_2, MioPortfolio_3, MioPortfolio_4],
 		githubUrl: "https://github.com/edwinperaza99/portfolio-mio",
 		deployUrl: "https://www.okadamio.com/",
 	},
@@ -139,7 +185,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["Django", "Bootstrap", "Jquery"],
 		thumbnail: CaC_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [CaC_Thumbnail],
 		githubUrl: "https://github.com/DanOcho8/Code-Against-Cancer",
 	},
 	{
@@ -150,7 +196,7 @@ export const projects: Project[] = [
 			"Tools for the circulation desk at the Pollak Library, it facilitates the processing of the inventory list. The tools reduces the task etc",
 		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
 		thumbnail: RBR_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [RBR_Thumbnail],
 		deployUrl: "https://rbr-inventory-formatter.vercel.app/",
 		githubUrl: "example.com",
 	},
@@ -180,7 +226,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["Python", "Pygame"],
 		thumbnail: PACMAN_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [PACMAN_1, PACMAN_2, PACMAN_3],
 		githubUrl: "https://github.com/edwinperaza99/PAC-MAN",
 	},
 	{
@@ -206,7 +252,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["Astro", "Tailwind CSS"],
 		thumbnail: RBR_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [],
 		deployUrl: "https://spotify-clone-mocha-kappa.vercel.app/",
 		githubUrl: "https://github.com/edwinperaza99/spotify-clone",
 	},
@@ -234,7 +280,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["HTML", "CSS", "JavaScript"],
 		thumbnail: Hikken_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [],
 		githubUrl: "https://github.com/edwinperaza99/Hikken",
 		deployUrl: "https://edwinperaza99.github.io/Hikken/",
 	},
@@ -266,7 +312,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["Python", "Tkinter", "Regex"],
 		thumbnail: Chatbot_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [],
 		githubUrl: "https://github.com/edwinperaza99/CSUF-Chatbot",
 	},
 
@@ -326,7 +372,13 @@ export const projects: Project[] = [
 		),
 		technologies: ["Swift", "SwiftUI", "MapKit", "Wikipedia API"],
 		thumbnail: BucketList_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [
+			BucketList_1,
+			BucketList_2,
+			BucketList_3,
+			BucketList_4,
+			BucketList_5,
+		],
 		githubUrl: "https://github.com/edwinperaza99/BucketList",
 	},
 	{
@@ -374,7 +426,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["Swift", "SwiftUI"],
 		thumbnail: iExpense_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [iExpense_1, iExpense_2, iExpense_3],
 		githubUrl: "https://github.com/edwinperaza99/iExpense",
 	},
 	{
@@ -400,7 +452,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["Swift", "SwiftUI"],
 		thumbnail: WordScramble_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [],
 		githubUrl: "https://github.com/edwinperaza99/WordScramble",
 	},
 	{
@@ -419,7 +471,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["Swift", "SwiftUI"],
 		thumbnail: Calculator_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [],
 		githubUrl: "https://github.com/edwinperaza99/iPhone-calculator",
 	},
 	{
@@ -438,7 +490,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["Python", "Pygame"],
 		thumbnail: SpaceInvaders_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [],
 		githubUrl: "https://github.com/edwinperaza99/space-invaders",
 	},
 	{
@@ -456,7 +508,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["React", "Tailwind CSS", "Pocketbase"],
 		thumbnail: SantaPlease_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project4",
 	},
 	{
@@ -495,7 +547,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["HTML", "Tailwind CSS", "Remake"],
 		thumbnail: MovieTracker_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project2",
 	},
 	{
@@ -514,7 +566,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["HTML", "Tailwind CSS", "Remake"],
 		thumbnail: PhotoGallery_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project1",
 		deployUrl: "https://edwinperaza99.github.io/cpsc349-project1/",
 	},
