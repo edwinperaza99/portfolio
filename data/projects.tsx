@@ -5,8 +5,14 @@ import BucketList_3 from "@/public/BucketList/3.png";
 import BucketList_4 from "@/public/BucketList/4.png";
 import BucketList_5 from "@/public/BucketList/5.png";
 import BucketList_Thumbnail from "@/public/BucketList/BucketList_thumbnail.png";
+// imports for calculator
+import Calculator_1 from "@/public/Calculator/1.png";
+import Calculator_2 from "@/public/Calculator/2.png";
+import Calculator_3 from "@/public/Calculator/3.png";
 import Calculator_Thumbnail from "@/public/Calculator/calculator_thumbnail.png";
+// imports for Chatbot
 import Chatbot_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
+// imports for Code Against Cancer
 import CaC_Thumbnail from "@/public/CodeAgainstCancer/CaC_thumbnail.png";
 import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
 // imports for iExpense
@@ -21,6 +27,15 @@ import MioPortfolio_2 from "@/public/MioPortfolio/2.png";
 import MioPortfolio_3 from "@/public/MioPortfolio/3.png";
 import MioPortfolio_4 from "@/public/MioPortfolio/4.png";
 import MioPortfolio_Thumbnail from "@/public/MioPortfolio/MioPortfolio_thumbnail.png";
+// imports for MovieTracker
+import MovieTracker_1 from "@/public/MovieTracker/1.png";
+import MovieTracker_2 from "@/public/MovieTracker/2.png";
+import MovieTracker_3 from "@/public/MovieTracker/3.png";
+import MovieTracker_4 from "@/public/MovieTracker/4.png";
+import MovieTracker_5 from "@/public/MovieTracker/5.png";
+import MovieTracker_6 from "@/public/MovieTracker/6.png";
+import MovieTracker_7 from "@/public/MovieTracker/7.png";
+import MovieTracker_8 from "@/public/MovieTracker/8.png";
 import MovieTracker_Thumbnail from "@/public/MovieTracker/MovieTracker_thumbnail.png";
 // imports for Natalia
 import Natalia_1 from "@/public/NataliaSalon/1.png";
@@ -35,9 +50,28 @@ import PACMAN_1 from "@/public/PAC-MAN/1.png";
 import PACMAN_2 from "@/public/PAC-MAN/2.png";
 import PACMAN_3 from "@/public/PAC-MAN/3.png";
 import PACMAN_Thumbnail from "@/public/PAC-MAN/pacman_thumbnail.png";
+// imports for PhotoGallery
+import PhotoGallery_1 from "@/public/PhotoGallery/1.png";
+import PhotoGallery_2 from "@/public/PhotoGallery/2.png";
+import PhotoGallery_3 from "@/public/PhotoGallery/3.png";
+import PhotoGallery_4 from "@/public/PhotoGallery/4.png";
+import PhotoGallery_5 from "@/public/PhotoGallery/5.png";
 import PhotoGallery_Thumbnail from "@/public/PhotoGallery/PhotoGallery_thumbnail.png";
+// imports for RBR
 import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
+// imports for RPS
+import RPS_1 from "@/public/RPS/1.png";
+import RPS_2 from "@/public/RPS/2.png";
+import RPS_3 from "@/public/RPS/3.png";
+import RPS_4 from "@/public/RPS/4.png";
+import RPS_5 from "@/public/RPS/5.png";
 import RPS_Thumbnail from "@/public/RPS/RPS_thumbnail.png";
+// imports for SantaPlease
+import SantaPlease_1 from "@/public/SantaPlease/1.png";
+import SantaPlease_2 from "@/public/SantaPlease/2.png";
+import SantaPlease_3 from "@/public/SantaPlease/3.png";
+import SantaPlease_4 from "@/public/SantaPlease/4.png";
+import SantaPlease_5 from "@/public/SantaPlease/5.png";
 import SantaPlease_Thumbnail from "@/public/SantaPlease/SantaPlease_thumbnail.png";
 // imports for SoloLevel
 import SoloLevel_1 from "@/public/SoloLevel/1.png";
@@ -50,7 +84,17 @@ import SoloLevel_7 from "@/public/SoloLevel/7.png";
 import SoloLevel_8 from "@/public/SoloLevel/8.png";
 import SoloLevel_Thumbnail_2 from "@/public/SoloLevel/SoloLevel_thumbnail_2.png";
 import SoloLevel_Thumbnail from "@/public/SoloLevel/SoloLevel_thumbnail.png";
+// imports for SpaceInvaders
+import SpaceInvaders_1 from "@/public/SpaceInvaders/1.png";
+import SpaceInvaders_2 from "@/public/SpaceInvaders/2.png";
 import SpaceInvaders_Thumbnail from "@/public/SpaceInvaders/SpaceInvaders_thumbnail.png";
+// imports for WordScramble
+import WordScramble_1 from "@/public/WordScramble/1.png";
+import WordScramble_2 from "@/public/WordScramble/2.png";
+import WordScramble_3 from "@/public/WordScramble/3.png";
+import WordScramble_4 from "@/public/WordScramble/4.png";
+import WordScramble_5 from "@/public/WordScramble/5.png";
+import WordScramble_6 from "@/public/WordScramble/6.png";
 import WordScramble_Thumbnail from "@/public/WordScramble/WordScramble_thumbnail.png";
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
@@ -452,7 +496,14 @@ export const projects: Project[] = [
 		),
 		technologies: ["Swift", "SwiftUI"],
 		thumbnail: WordScramble_Thumbnail,
-		images: [],
+		images: [
+			WordScramble_1,
+			WordScramble_2,
+			WordScramble_3,
+			WordScramble_4,
+			WordScramble_5,
+			WordScramble_6,
+		],
 		githubUrl: "https://github.com/edwinperaza99/WordScramble",
 	},
 	{
@@ -471,7 +522,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["Swift", "SwiftUI"],
 		thumbnail: Calculator_Thumbnail,
-		images: [],
+		images: [Calculator_1, Calculator_2, Calculator_3],
 		githubUrl: "https://github.com/edwinperaza99/iPhone-calculator",
 	},
 	{
@@ -490,7 +541,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["Python", "Pygame"],
 		thumbnail: SpaceInvaders_Thumbnail,
-		images: [],
+		images: [SpaceInvaders_1, SpaceInvaders_2],
 		githubUrl: "https://github.com/edwinperaza99/space-invaders",
 	},
 	{
@@ -508,7 +559,13 @@ export const projects: Project[] = [
 		),
 		technologies: ["React", "Tailwind CSS", "Pocketbase"],
 		thumbnail: SantaPlease_Thumbnail,
-		images: [],
+		images: [
+			SantaPlease_1,
+			SantaPlease_2,
+			SantaPlease_3,
+			SantaPlease_4,
+			SantaPlease_5,
+		],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project4",
 	},
 	{
@@ -527,7 +584,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["HTML", "Tailwind CSS", "JavaScript"],
 		thumbnail: RPS_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [RPS_1, RPS_2, RPS_3, RPS_4, RPS_5],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project3",
 		deployUrl: "https://edwinperaza99.github.io/cpsc349-project3/",
 	},
@@ -547,7 +604,16 @@ export const projects: Project[] = [
 		),
 		technologies: ["HTML", "Tailwind CSS", "Remake"],
 		thumbnail: MovieTracker_Thumbnail,
-		images: [],
+		images: [
+			MovieTracker_1,
+			MovieTracker_2,
+			MovieTracker_3,
+			MovieTracker_4,
+			MovieTracker_5,
+			MovieTracker_6,
+			MovieTracker_7,
+			MovieTracker_8,
+		],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project2",
 	},
 	{
@@ -566,7 +632,13 @@ export const projects: Project[] = [
 		),
 		technologies: ["HTML", "Tailwind CSS", "Remake"],
 		thumbnail: PhotoGallery_Thumbnail,
-		images: [],
+		images: [
+			PhotoGallery_1,
+			PhotoGallery_2,
+			PhotoGallery_3,
+			PhotoGallery_4,
+			PhotoGallery_5,
+		],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project1",
 		deployUrl: "https://edwinperaza99.github.io/cpsc349-project1/",
 	},
