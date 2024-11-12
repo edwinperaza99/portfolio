@@ -156,6 +156,25 @@ const config: Config = {
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
 			},
+			keyframes: {
+				"fade-in": {
+					"0%": { opacity: "0" },
+					"100%": { opacity: "1" },
+				},
+				"fade-out": {
+					"0%": { opacity: "1" },
+					"100%": { opacity: "0" },
+				},
+				"appear-top": {
+					from: { opacity: "0", transform: "translateY(0.5rem)" },
+					to: { opacity: "1", transform: "translateY(0%)" },
+				},
+			},
+			animation: {
+				"fade-in": "fade-in 0.3s ease-in-out",
+				"fade-out": "fade-out 0.3s ease-in-out",
+				"appear-top": "appear-top 750ms ease-out",
+			},
 		},
 	},
 	plugins: [require("tailwindcss-animate")],
