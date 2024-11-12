@@ -1,39 +1,36 @@
 "use client";
 
-// import { useState, useEffect } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-import { Play, Pause, SkipBack, SkipForward } from "lucide-react";
+import { Play, SkipBack, SkipForward } from "lucide-react";
 
 export default function MusicPlayer() {
 	return (
-		<div className="bg-slate-600 rounded-2xl w-fit">
-			<div className="flex flex-row md:flex-col justify-center items-center">
-				<div
-					className="w-40 h-40 rounded-2xl overflow-hidden"
-					id="song-thumbnail"
-				>
+		<div className="bg-slate-600 rounded-2xl md:max-w-sm mx-auto flex flex-col items-center shadow-lg p-6">
+			<div className="flex md:flex-col items-center gap-4">
+				<div className="aspect-square min-h-32 max-h-52 md:h-52 rounded-2xl overflow-hidden shadow-md">
 					<img
 						src="https://cdns-images.dzcdn.net/images/cover/8e29e68122d1b019e7be72c0a920744a/0x1900-000000-80-0-0.jpg"
 						alt="Album Cover"
-						className="w-full h-full object-cover rounded p-4"
+						className="w-full h-full object-cover"
 					/>
 				</div>
-				<div id="">
-					<div className="truncate p-4 overflow-hidden">
-						<h2 className="text-2xl truncate">Can&apos;t Stop</h2>
-						<p className="text-gray-300 truncate">Red Hot Chili Peppers</p>
-					</div>
+				<div id="song-info" className="text-center">
+					<h2 className="text-white text-lg font-semibold truncate">
+						Can&apos;t Stop
+					</h2>
+					<p className="text-gray-400 text-sm truncate">
+						Red Hot Chili Peppers
+					</p>
 				</div>
 			</div>
-			<div id="player-controls" className="flex justify-around p-4">
+			<div className="flex justify-center items-center gap-6 mt-6">
 				<button aria-label="Skip back">
-					<SkipBack stroke="white" fill="white" />
+					<SkipBack className="w-6 h-6 text-white" fill="white" />
 				</button>
-				<button aria-label="Play or Pause" className="rounded-full bg-white">
-					<Play fill="black" stroke="transparent" />
+				<button aria-label="Play or Pause" className="">
+					<Play className="w-8 h-8" fill="white" />
 				</button>
 				<button aria-label="Skip Forward">
-					<SkipForward fill="white" />
+					<SkipForward className="w-6 h-6 text-white" fill="white" />
 				</button>
 			</div>
 		</div>
