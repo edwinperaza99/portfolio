@@ -3,9 +3,8 @@ import MusicPlayer from "@/components/music-player/MusicPlayer";
 export default function About() {
 	return (
 		<main className="min-h-screen container flex justify-center items-center px-4">
-			<div className="flex flex-col-reverse md:flex-row gap-4">
-				<MusicPlayer />
-				<div className="space-y-2 text-gray-200 md:px-14 flex flex-col justify-center">
+			<div className="flex flex-col gap-4 max-w-5xl">
+				<div className="space-y-2 text-gray-200 px-4 md:px-8 flex flex-col justify-center">
 					<h1 className="text-3xl uppercase whitespace-nowrap font-bold text-white text-center md:text-start">
 						Hello! I&apos;m Edwin{" "}
 					</h1>
@@ -25,6 +24,7 @@ export default function About() {
 						to showcase my work and the projects I&apos;m proud of.
 					</p>
 				</div>
+				<MusicPlayer />
 			</div>
 		</main>
 	);
