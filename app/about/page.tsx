@@ -4,8 +4,8 @@ export default function About() {
 	return (
 		<main className="min-h-screen container flex justify-center items-center px-4">
 			<div className="flex flex-col gap-4 max-w-5xl">
-				<div className="space-y-2 text-gray-200 px-4 md:px-8 flex flex-col justify-center">
-					<h1 className="text-3xl uppercase whitespace-nowrap font-bold text-white text-center md:text-start">
+				<div className="space-y-2 text-gray-200 px-4 md:px-8">
+					<h1 className="text-5xl md:text-7xl font-bold text-white text-center">
 						Hello! I&apos;m Edwin{" "}
 					</h1>
 					<p className="text-sm">
