@@ -25,7 +25,7 @@ function Galaxy() {
 	}
 
 	const particles = useMemo(() => {
-		const count = 5000;
+		const count = 50000;
 		const positions = new Float32Array(count * 3); // 5000 particles
 		for (let i = 0; i < count; i++) {
 			// Using our custom Gaussian distribution function
@@ -55,7 +55,7 @@ function Galaxy() {
 		<Points
 			ref={pointsRef}
 			positions={particles}
-			limit={5000}
+			// limit={5000}
 			// rotation={[Math.PI / 2, 0, 0]}
 		>
 			<PointMaterial
@@ -74,51 +74,70 @@ export default function Hero() {
 
 	useEffect(() => {
 		let frame = 0;
-		const totalFrames = 100; // Total frames for smooth animation
+		const totalFrames = 500; // Adjusts the speed of the animation. Higher values make it slower.
 
-		// Ensure controls are fully ready before animation
+		// Modify these parameters to change the animation behavior
+		const startAzimuth = 0; // Starting horizontal rotation angle
+		const endAzimuth = (-3 * Math.PI) / 4; // Ending horizontal rotation angle, e.g., Math.PI / 2 for a 90-degree turn
+		const startPolar = 0; // Starting vertical angle (from above)
+		const endPolar = (-1 * Math.PI) / 4; // Ending vertical angle, e.g., Math.PI / 4 for a lower side view
+		const startDistance = 100; // Starting distance for zoom
+		const endDistance = 40; // Ending distance for zoom-in
+
 		const startAnimation = () => {
 			if (controlsRef.current) {
 				const animateOrbit = () => {
 					if (controlsRef.current) {
-						// Calculate interpolated angles
+						const progress = frame / totalFrames;
+
+						// Animate azimuth and polar angles
 						const azimuthalAngle = THREE.MathUtils.lerp(
-							0,
-							Math.PI / 4,
-							frame / totalFrames
+							startAzimuth,
+							endAzimuth,
+							progress
 						);
 						const polarAngle = THREE.MathUtils.lerp(
-							Math.PI / 2,
-							Math.PI / 3,
-							frame / totalFrames
+							startPolar,
+							endPolar,
+							progress
 						);
 
-						// Apply the angles and update controls
-						controlsRef.current.setAzimuthalAngle(azimuthalAngle);
-						controlsRef.current.setPolarAngle(polarAngle);
-						controlsRef.current.update();
+						// Animate distance for zoom effect
+						const distance = THREE.MathUtils.lerp(
+							startDistance,
+							endDistance,
+							progress
+						);
+						controlsRef.current.object.position.set(
+							distance * Math.sin(polarAngle) * Math.cos(azimuthalAngle),
+							distance * Math.sin(polarAngle) * Math.sin(azimuthalAngle),
+							distance * Math.cos(polarAngle)
+						);
 
-						// Increment frame count
+						controlsRef.current.update();
 						frame++;
+
+						// Continue animation until totalFrames
 						if (frame <= totalFrames) {
 							requestAnimationFrame(animateOrbit);
 						}
 					}
 				};
 
-				// Start the animation loop
+				// Start the animation
 				animateOrbit();
 			}
 		};
 
-		// Start the animation with a slight delay to ensure controlsRef is ready
+		// Delay the animation start slightly to ensure controls are ready
 		const animationTimeout = setTimeout(startAnimation, 100);
 		return () => clearTimeout(animationTimeout); // Cleanup on unmount
 	}, []);
+
 	return (
 		<section className="w-full h-full absolute inset-0">
 			<Canvas className="w-full h-full">
-				<PerspectiveCamera makeDefault position={[0, 0, 60]} fov={65} />
+				<PerspectiveCamera makeDefault position={[0, 0, 30]} fov={65} />
 				<ambientLight intensity={0.2} />
 				<pointLight position={[10, 10, 10]} />
 				{/* Add OrbitControls to allow user interaction */}
@@ -126,8 +145,8 @@ export default function Hero() {
 					ref={controlsRef}
 					enableZoom={true}
 					enablePan={false}
-					minDistance={20}
-					maxDistance={80}
+					minDistance={10}
+					maxDistance={100}
 				/>
 				<Galaxy />
 			</Canvas>
