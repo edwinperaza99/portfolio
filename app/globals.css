@@ -89,6 +89,24 @@ body {
 	);
 }
 
+.typing-effect::after {
+	content: "|"; /* This is the cursor */
+	display: inline-block;
+	margin-left: 2px; /* Space between text and cursor */
+	animation: blink 0.8s steps(2) infinite;
+}
+
+@keyframes blink {
+	0%,
+	50% {
+		opacity: 1;
+	}
+	51%,
+	100% {
+		opacity: 0;
+	}
+}
+
 @media (max-width: 540px) {
 	.vertical-text {
 		writing-mode: vertical-lr;
