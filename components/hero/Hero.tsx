@@ -10,7 +10,13 @@ import { useRef, useMemo, useEffect } from "react";
 import * as THREE from "three";
 import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 
-function Galaxy() {
+function Galaxy({
+	color = "#fffff",
+	count = 10000,
+}: {
+	color?: string;
+	count?: number;
+}) {
 	const pointsRef = useRef<THREE.Points>(null);
 
 	// Helper function for Gaussian distribution
@@ -25,8 +31,7 @@ function Galaxy() {
 	}
 
 	const particles = useMemo(() => {
-		const count = 50000;
-		const positions = new Float32Array(count * 3); // 5000 particles
+		const positions = new Float32Array(count * 3);
 		for (let i = 0; i < count; i++) {
 			// Using our custom Gaussian distribution function
 			const radius = Math.abs(randNormal(0, 2)) * 10; // Mean 0, std deviation 2
@@ -42,7 +47,7 @@ function Galaxy() {
 			positions.set([x, y, z], i * 3);
 		}
 		return positions;
-	}, []);
+	}, [count]);
 
 	// Rotate the galaxy
 	useFrame(() => {
@@ -60,10 +65,10 @@ function Galaxy() {
 		>
 			<PointMaterial
 				transparent
-				color="#ffffff"
+				color={color}
 				size={0.05}
 				sizeAttenuation={true}
-				depthWrite={false}
+				depthWrite={true}
 			/>
 		</Points>
 	);
@@ -78,9 +83,9 @@ export default function Hero() {
 
 		// Modify these parameters to change the animation behavior
 		const startAzimuth = 0; // Starting horizontal rotation angle
-		const endAzimuth = (-3 * Math.PI) / 4; // Ending horizontal rotation angle, e.g., Math.PI / 2 for a 90-degree turn
+		const endAzimuth = -Math.PI / 2.3; // Ending horizontal rotation angle, e.g., Math.PI / 2 for a 90-degree turn
 		const startPolar = 0; // Starting vertical angle (from above)
-		const endPolar = (-1 * Math.PI) / 4; // Ending vertical angle, e.g., Math.PI / 4 for a lower side view
+		const endPolar = Math.PI / 2.5; // Ending vertical angle, e.g., Math.PI / 4 for a lower side view
 		const startDistance = 100; // Starting distance for zoom
 		const endDistance = 40; // Ending distance for zoom-in
 
@@ -148,7 +153,9 @@ export default function Hero() {
 					minDistance={10}
 					maxDistance={100}
 				/>
-				<Galaxy />
+				<Galaxy color="#FF0000" count={1000} />
+				<Galaxy color="#ffffff" count={40000} />
+				<Galaxy color="#0a47ff" count={20000} />
 			</Canvas>
 		</section>
 	);

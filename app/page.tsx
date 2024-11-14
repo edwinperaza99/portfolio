@@ -9,11 +9,12 @@ export default function Home() {
 				<p className="text-base text-gray-300 uppercase whitespace-nowrap">
 					<TypingEffect
 						words={[
-							"Fullstack Engineer",
-							"Frontend Developer",
-							"Backend Developer",
-							"Ping Pong Enthusiast",
-							"Tech Lover",
+							"Front-end Developer",
+							"Problem Solver",
+							"Python Lover",
+							"Code Curious",
+							"Back-end Developer",
+							"Passionate Learner",
 						]}
 						typingSpeed={100}
 						pauseDuration={1500}
