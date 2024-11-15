@@ -79,15 +79,15 @@ export default function Hero() {
 
 	useEffect(() => {
 		let frame = 0;
-		const totalFrames = 500; // Adjusts the speed of the animation. Higher values make it slower.
+		const totalFrames = 150; // Adjusts the speed of the animation. Higher values make it slower.
 
 		// Modify these parameters to change the animation behavior
 		const startAzimuth = 0; // Starting horizontal rotation angle
 		const endAzimuth = -Math.PI / 2.3; // Ending horizontal rotation angle, e.g., Math.PI / 2 for a 90-degree turn
 		const startPolar = 0; // Starting vertical angle (from above)
 		const endPolar = Math.PI / 2.5; // Ending vertical angle, e.g., Math.PI / 4 for a lower side view
-		const startDistance = 100; // Starting distance for zoom
-		const endDistance = 40; // Ending distance for zoom-in
+		const startDistance = 40; // Starting distance for zoom
+		const endDistance = 20; // Ending distance for zoom-in
 
 		const startAnimation = () => {
 			if (controlsRef.current) {
@@ -151,7 +151,7 @@ export default function Hero() {
 					enableZoom={true}
 					enablePan={false}
 					minDistance={10}
-					maxDistance={100}
+					maxDistance={40}
 				/>
 				<Galaxy color="#FF0000" count={1000} />
 				<Galaxy color="#ffffff" count={40000} />
