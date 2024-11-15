@@ -1,6 +1,7 @@
 "use client";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
+	Sphere,
 	Points,
 	PointMaterial,
 	PerspectiveCamera,
@@ -52,7 +53,7 @@ function Galaxy({
 	// Rotate the galaxy
 	useFrame(() => {
 		if (pointsRef.current) {
-			pointsRef.current.rotation.z += 0.0005; // Adjust rotation speed if needed
+			pointsRef.current.rotation.z += 0.00005; // Adjust rotation speed if needed
 		}
 	});
 
@@ -69,8 +70,31 @@ function Galaxy({
 				size={0.05}
 				sizeAttenuation={true}
 				depthWrite={true}
+				opacity={0.9}
+				// blending={THREE.AdditiveBlending}
 			/>
 		</Points>
+	);
+}
+
+function NebulaSphere() {
+	const texture = useMemo(() => {
+		return new THREE.TextureLoader().load("/textures/8k_stars_milky_way.jpg");
+	}, []);
+
+	const sphereRef = useRef<THREE.Mesh>(null);
+
+	useFrame(() => {
+		if (sphereRef.current) {
+			sphereRef.current.rotation.y -= 0.0001; // Adjust rotation speed
+			sphereRef.current.rotation.x += 0.00005;
+		}
+	});
+
+	return (
+		<Sphere ref={sphereRef} args={[50, 64, 64]} scale={[-1, 1, 1]}>
+			<meshBasicMaterial map={texture} side={THREE.BackSide} />
+		</Sphere>
 	);
 }
 
@@ -143,6 +167,7 @@ export default function Hero() {
 		<section className="w-full h-full absolute inset-0">
 			<Canvas className="w-full h-full">
 				<PerspectiveCamera makeDefault position={[0, 0, 30]} fov={65} />
+
 				<ambientLight intensity={0.2} />
 				<pointLight position={[10, 10, 10]} />
 				{/* Add OrbitControls to allow user interaction */}
@@ -153,6 +178,7 @@ export default function Hero() {
 					minDistance={10}
 					maxDistance={40}
 				/>
+				<NebulaSphere />
 				<Galaxy color="#FF0000" count={1000} />
 				<Galaxy color="#ffffff" count={40000} />
 				<Galaxy color="#0a47ff" count={20000} />
