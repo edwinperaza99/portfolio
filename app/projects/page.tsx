@@ -17,7 +17,7 @@ export default function Projects() {
 	);
 
 	return (
-		<main className="min-h-screen flex flex-col bg-primary-dark text-white">
+		<main className="min-h-screen flex flex-col bg-primary-dark text-white green-bg-gradient">
 			<section className="container px-1">
 				<header className="text-center my-4">
 					<h1 className="text-3xl uppercase">{selectedCategory} Projects</h1>

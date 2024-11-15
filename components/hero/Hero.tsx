@@ -83,9 +83,9 @@ export default function Hero() {
 
 		// Modify these parameters to change the animation behavior
 		const startAzimuth = 0; // Starting horizontal rotation angle
-		const endAzimuth = -Math.PI / 2.3; // Ending horizontal rotation angle, e.g., Math.PI / 2 for a 90-degree turn
+		const endAzimuth = -Math.PI / 2.2; // Ending horizontal rotation angle, e.g., Math.PI / 2 for a 90-degree turn
 		const startPolar = 0; // Starting vertical angle (from above)
-		const endPolar = Math.PI / 2.5; // Ending vertical angle, e.g., Math.PI / 4 for a lower side view
+		const endPolar = Math.PI / 2.3; // Ending vertical angle, e.g., Math.PI / 4 for a lower side view
 		const startDistance = 40; // Starting distance for zoom
 		const endDistance = 20; // Ending distance for zoom-in
 

@@ -60,7 +60,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="/"
-									className="vertical-text p-4 flex justify-end items-end w-full h-full border bg-clay hover:bg-clay-900"
+									className="vertical-text p-4 flex justify-end items-end w-full h-full border bg-gray-800 hover:bg-gray-900"
 									onClick={toggleOverlay}
 								>
 									Home
@@ -72,7 +72,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="/about"
-									className="vertical-text p-4 flex justify-start items-end w-full h-full border bg-rust hover:bg-rust-900"
+									className="vertical-text p-4 flex justify-start items-end w-full h-full border bg-gray-800 hover:bg-gray-900"
 									onClick={toggleOverlay}
 								>
 									About
@@ -84,7 +84,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="/featured-projects"
-									className="vertical-text p-4 flex justify-end items-start w-full h-full border bg-forest hover:bg-forest-900"
+									className="vertical-text p-4 flex justify-end items-start w-full h-full border bg-gray-800 hover:bg-gray-900"
 									onClick={toggleOverlay}
 								>
 									Projects
@@ -103,7 +103,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="/skills"
-									className="vertical-text p-4 flex justify-start items-start w-full h-full border bg-astronaut hover:bg-astronaut-950"
+									className="vertical-text p-4 flex justify-start items-start w-full h-full border bg-gray-800 hover:bg-gray-900"
 									onClick={toggleOverlay}
 								>
 									Skills

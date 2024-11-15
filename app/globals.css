@@ -81,6 +81,14 @@ body {
 	);
 }
 
+.gradient-bg-purple {
+	background-image: radial-gradient(
+		circle,
+		rgb(90, 0, 90) 0%,
+		rgb(0, 0, 0) 100%
+	);
+}
+
 .gradient-bg-blue {
 	background-image: radial-gradient(
 		circle,
