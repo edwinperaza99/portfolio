@@ -122,6 +122,78 @@ body {
 	}
 }
 
+/* Glitch Text */
+.glitch {
+	position: relative;
+	overflow: hidden;
+}
+
+.glitch::before,
+.glitch::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: transparent; /* Prevent text from being visible directly */
+}
+
+.glitch::before {
+	text-shadow: 2px 0 magenta;
+	clip-path: inset(0 0 80% 0);
+	animation: glitch-before 10s infinite;
+}
+
+.glitch::after {
+	text-shadow: -2px 0 cyan;
+	clip-path: inset(80% 0 0 0);
+	animation: glitch-after 10s infinite;
+}
+
+/* Glitch animations with delay */
+@keyframes glitch-before {
+	0%,
+	85% {
+		/* 85% delay ensures glitch happens only briefly */
+		clip-path: inset(0 0 100% 0);
+		transform: translate(0, 0);
+	}
+	90% {
+		clip-path: inset(80% 0 0 0);
+		transform: translate(-2px, -2px);
+	}
+	95% {
+		clip-path: inset(10% 0 30% 0);
+		transform: translate(2px, 2px);
+	}
+	100% {
+		clip-path: inset(40% 0 10% 0);
+		transform: translate(-1px, -1px);
+	}
+}
+
+@keyframes glitch-after {
+	0%,
+	85% {
+		/* Same delay as before */
+		clip-path: inset(100% 0 0 0); /* Hidden during idle time */
+		transform: translate(0, 0);
+	}
+	90% {
+		clip-path: inset(10% 0 40% 0);
+		transform: translate(2px, 2px);
+	}
+	95% {
+		clip-path: inset(30% 0 10% 0);
+		transform: translate(-2px, -2px);
+	}
+	100% {
+		clip-path: inset(60% 0 20% 0);
+		transform: translate(1px, 1px);
+	}
+}
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;
