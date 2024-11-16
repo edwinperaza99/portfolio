@@ -7,7 +7,7 @@ import {
 	PerspectiveCamera,
 	OrbitControls,
 } from "@react-three/drei";
-import { useRef, useMemo, useEffect } from "react";
+import { useRef, useMemo, useEffect, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 
@@ -105,70 +105,165 @@ function NebulaSphere() {
 
 export default function Hero() {
 	const controlsRef = useRef<OrbitControlsImpl | null>(null);
+	const [userActive, setUserActive] = useState(false);
+	const [isInitialAnimation, setIsInitialAnimation] = useState(true); // Track the initial animation
+	const [previousTarget, setPreviousTarget] = useState<{
+		azimuth: number;
+		polar: number;
+		distance: number;
+	} | null>(null); // Track the last target to avoid repeats
+
+	// Define preset positions
+	const presetPositions = [
+		{ azimuth: -Math.PI / 2.2, polar: Math.PI / 2.3, distance: 20 }, // good
+		{ azimuth: Math.PI / 2, polar: Math.PI / 2, distance: 30 }, // good
+		{ azimuth: Math.PI / 2, polar: -Math.PI / 2, distance: 20 }, // good
+		{ azimuth: -Math.PI / 2, polar: -Math.PI / 2, distance: 30 },
+
+		{ azimuth: 0, polar: 0, distance: 40 },
+	];
 
 	useEffect(() => {
-		// Animation parameters
-		const startAzimuth = 0; // Starting horizontal rotation angle
-		const endAzimuth = -Math.PI / 2.2; // Ending horizontal rotation angle, e.g., Math.PI / 2 for a 90-degree turn
-		const startPolar = 0; // Starting vertical angle (from above)
-		const endPolar = Math.PI / 2.3; // Ending vertical angle, e.g., Math.PI / 4 for a lower side view
-		const startDistance = 40; // Starting distance for zoom
-		const endDistance = 20; // Ending distance for zoom-in
+		// Initial animation target
+		const initialTarget = {
+			azimuth: -Math.PI / 2.2,
+			polar: Math.PI / 2.3,
+			distance: 20,
+		};
+		let currentTarget = { ...initialTarget };
 
-		let elapsedTime = 0; // Tracks elapsed time for smooth animation
-		const totalDuration = 5; // Animation duration in seconds (Adjust this for faster/slower animations)
+		// Function to generate random target coordinates
+		const generateRandomTarget = () => {
+			const azimuth = Math.random() * 2 * Math.PI; // Random azimuthal angle
+			const polar = Math.random() * (Math.PI / 2); // Random polar angle
+			const distance = 20 + Math.random() * 20; // Random distance (20-40)
+			return { azimuth, polar, distance };
+		};
 
-		// Camera animation logic
-		const startAnimation = (delta: number) => {
+		// Function to get the next target
+		const getNextTarget = () => {
+			// Combine presets and random positions
+			const allPositions = [...presetPositions, generateRandomTarget()];
+			// Filter out the previous target to avoid repeats
+			const validPositions = allPositions.filter(
+				(pos) =>
+					!previousTarget ||
+					pos.azimuth !== previousTarget.azimuth ||
+					pos.polar !== previousTarget.polar ||
+					pos.distance !== previousTarget.distance
+			);
+			// Select a random valid target
+			return validPositions[Math.floor(Math.random() * validPositions.length)];
+		};
+
+		// Smooth animation logic
+		const startAnimation = (
+			delta: number,
+			target?: { azimuth: number; polar: number; distance: number }
+		) => {
 			if (controlsRef.current) {
-				elapsedTime += delta;
+				let elapsedTime = 0;
+				const totalDuration = 2; // Duration in seconds (adjust here for animation speed)
+				const animationTarget = target || getNextTarget();
+				const start = { ...currentTarget };
 
-				const progress = Math.min(elapsedTime / totalDuration, 1); // Clamp progress to 1
+				const animate = () => {
+					elapsedTime += delta;
+					const progress = Math.min(elapsedTime / totalDuration, 1);
 
-				// Interpolate azimuthal and polar angles
-				const azimuthalAngle = THREE.MathUtils.lerp(
-					startAzimuth,
-					endAzimuth,
-					progress
-				);
-				const polarAngle = THREE.MathUtils.lerp(startPolar, endPolar, progress);
+					// Interpolate target values
+					currentTarget.azimuth = THREE.MathUtils.lerp(
+						start.azimuth,
+						animationTarget.azimuth,
+						progress
+					);
+					currentTarget.polar = THREE.MathUtils.lerp(
+						start.polar,
+						animationTarget.polar,
+						progress
+					);
+					currentTarget.distance = THREE.MathUtils.lerp(
+						start.distance,
+						animationTarget.distance,
+						progress
+					);
 
-				// Interpolate distance for zoom effect
-				const distance = THREE.MathUtils.lerp(
-					startDistance,
-					endDistance,
-					progress
-				);
+					// Calculate new camera position
+					const { azimuth, polar, distance } = currentTarget;
+					if (controlsRef.current) {
+						controlsRef.current.object.position.set(
+							distance * Math.sin(polar) * Math.cos(azimuth),
+							distance * Math.sin(polar) * Math.sin(azimuth),
+							distance * Math.cos(polar)
+						);
 
-				// Update camera position
-				controlsRef.current.object.position.set(
-					distance * Math.sin(polarAngle) * Math.cos(azimuthalAngle),
-					distance * Math.sin(polarAngle) * Math.sin(azimuthalAngle),
-					distance * Math.cos(polarAngle)
-				);
+						controlsRef.current.update();
+					}
 
-				// Update controls
-				controlsRef.current.update();
+					if (progress < 1) {
+						requestAnimationFrame(animate);
+					} else {
+						// Update current target after animation finishes
+						currentTarget = { ...animationTarget };
+						setPreviousTarget(animationTarget); // Track last target
+					}
+				};
 
-				// Continue animation until completed
-				if (progress < 1) {
-					requestAnimationFrame(() => startAnimation(delta));
+				requestAnimationFrame(animate);
+			}
+		};
+
+		// Track user interaction
+		let idleTimeout: NodeJS.Timeout;
+		const resetIdleTimer = () => {
+			clearTimeout(idleTimeout);
+			setUserActive(true);
+			idleTimeout = setTimeout(() => setUserActive(false), 5000); // Idle timeout (adjust here for idle detection)
+		};
+
+		window.addEventListener("mousemove", resetIdleTimer);
+		window.addEventListener("touchstart", resetIdleTimer);
+
+		// Periodic animation
+		let animationTimeout: NodeJS.Timeout;
+		const startIdleAnimation = () => {
+			if (!userActive) {
+				if (isInitialAnimation) {
+					// Perform initial animation with shorter delay
+					startAnimation(0.016, initialTarget);
+					setIsInitialAnimation(false);
+					animationTimeout = setTimeout(startIdleAnimation, 7000); // Switch to longer delay
+				} else {
+					// Perform random animation with 7-second delay
+					startAnimation(0.016);
+					animationTimeout = setTimeout(startIdleAnimation, 7000);
 				}
 			}
 		};
 
-		// Start the animation after a delay
-		const animationTimeout = setTimeout(() => {
-			requestAnimationFrame(() => startAnimation(0.016)); // Assume 60 FPS initially
-		}, 100);
+		// Trigger first animation with shorter delay
+		animationTimeout = setTimeout(startIdleAnimation, 2000); // Initial shorter delay
 
-		return () => clearTimeout(animationTimeout); // Cleanup on unmount
-	}, []);
+		return () => {
+			clearTimeout(idleTimeout);
+			clearTimeout(animationTimeout);
+			window.removeEventListener("mousemove", resetIdleTimer);
+			window.removeEventListener("touchstart", resetIdleTimer);
+		};
+	}, [userActive, isInitialAnimation]);
 
 	return (
 		<section className="w-full h-full absolute inset-0">
 			<Canvas className="w-full h-full">
-				<PerspectiveCamera makeDefault position={[0, 0, 30]} fov={65} />
+				<PerspectiveCamera
+					makeDefault
+					position={[
+						20 * Math.sin(Math.PI / 2.3) * Math.cos(-Math.PI / 2.2), // X
+						20 * Math.sin(Math.PI / 2.3) * Math.sin(-Math.PI / 2.2), // Y
+						20 * Math.cos(Math.PI / 2.3), // Z
+					]}
+					fov={65}
+				/>
 
 				<ambientLight intensity={0.2} />
 				<pointLight position={[10, 10, 10]} />
