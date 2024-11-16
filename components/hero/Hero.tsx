@@ -107,21 +107,21 @@ export default function Hero() {
 	const controlsRef = useRef<OrbitControlsImpl | null>(null);
 	const [userActive, setUserActive] = useState(false);
 	const [isInitialAnimation, setIsInitialAnimation] = useState(true); // Track the initial animation
-	const [previousTarget, setPreviousTarget] = useState<{
+	const previousTargetRef = useRef<{
 		azimuth: number;
 		polar: number;
 		distance: number;
 	} | null>(null); // Track the last target to avoid repeats
 
-	// Define preset positions
-	const presetPositions = [
-		{ azimuth: -Math.PI / 2.2, polar: Math.PI / 2.3, distance: 20 }, // good
-		{ azimuth: Math.PI / 2, polar: Math.PI / 2, distance: 30 }, // good
-		{ azimuth: Math.PI / 2, polar: -Math.PI / 2, distance: 20 }, // good
-		{ azimuth: -Math.PI / 2, polar: -Math.PI / 2, distance: 30 },
-
-		{ azimuth: 0, polar: 0, distance: 40 },
-	];
+	// Use a ref for preset positions to avoid dependency issues
+	const presetPositionsRef = useRef([
+		{ azimuth: -Math.PI / 2.2, polar: Math.PI / 2.3, distance: 20 }, // good initial
+		{ azimuth: Math.PI / 2, polar: Math.PI / 2, distance: 30 }, // good diagonal
+		{ azimuth: Math.PI / 2, polar: -Math.PI / 2, distance: 20 }, // good diagonal inverted
+		{ azimuth: 0, polar: Math.PI / 2, distance: 40 }, // vertical
+		{ azimuth: 0, polar: 0, distance: 40 }, // top view
+		{ azimuth: -Math.PI / 2, polar: Math.PI / 2, distance: 30 },
+	]);
 
 	useEffect(() => {
 		// Initial animation target
@@ -143,14 +143,17 @@ export default function Hero() {
 		// Function to get the next target
 		const getNextTarget = () => {
 			// Combine presets and random positions
-			const allPositions = [...presetPositions, generateRandomTarget()];
+			const allPositions = [
+				...presetPositionsRef.current,
+				generateRandomTarget(),
+			];
 			// Filter out the previous target to avoid repeats
 			const validPositions = allPositions.filter(
 				(pos) =>
-					!previousTarget ||
-					pos.azimuth !== previousTarget.azimuth ||
-					pos.polar !== previousTarget.polar ||
-					pos.distance !== previousTarget.distance
+					!previousTargetRef.current ||
+					pos.azimuth !== previousTargetRef.current.azimuth ||
+					pos.polar !== previousTargetRef.current.polar ||
+					pos.distance !== previousTargetRef.current.distance
 			);
 			// Select a random valid target
 			return validPositions[Math.floor(Math.random() * validPositions.length)];
@@ -205,7 +208,7 @@ export default function Hero() {
 					} else {
 						// Update current target after animation finishes
 						currentTarget = { ...animationTarget };
-						setPreviousTarget(animationTarget); // Track last target
+						previousTargetRef.current = animationTarget; // Track last target
 					}
 				};
 
@@ -234,9 +237,9 @@ export default function Hero() {
 					setIsInitialAnimation(false);
 					animationTimeout = setTimeout(startIdleAnimation, 7000); // Switch to longer delay
 				} else {
-					// Perform random animation with 7-second delay
+					// Perform random/preset animation with 7-second delay
 					startAnimation(0.016);
-					animationTimeout = setTimeout(startIdleAnimation, 7000);
+					animationTimeout = setTimeout(startIdleAnimation, 10000);
 				}
 			}
 		};
