@@ -31,6 +31,7 @@ function Galaxy({
 		);
 	}
 
+	// Precompute particle positions
 	const particles = useMemo(() => {
 		const positions = new Float32Array(count * 3);
 		for (let i = 0; i < count; i++) {
@@ -51,9 +52,10 @@ function Galaxy({
 	}, [count]);
 
 	// Rotate the galaxy
-	useFrame(() => {
+	useFrame((state, delta) => {
+		// The `delta` parameter ensures consistent rotation speed across devices
 		if (pointsRef.current) {
-			pointsRef.current.rotation.z += 0.00005; // Adjust rotation speed if needed
+			pointsRef.current.rotation.z += 0.02 * delta; // Adjust speed multiplier here
 		}
 	});
 
@@ -79,15 +81,18 @@ function Galaxy({
 
 function NebulaSphere() {
 	const texture = useMemo(() => {
+		// Load the nebula texture
 		return new THREE.TextureLoader().load("/textures/8k_stars_milky_way.jpg");
 	}, []);
 
 	const sphereRef = useRef<THREE.Mesh>(null);
 
-	useFrame(() => {
+	// Rotate the background nebula sphere
+	useFrame((state, delta) => {
+		// Use delta to ensure consistent rotation speed
 		if (sphereRef.current) {
-			sphereRef.current.rotation.y -= 0.0001; // Adjust rotation speed
-			sphereRef.current.rotation.x += 0.00005;
+			sphereRef.current.rotation.y -= 0.01 * delta; // Adjust speed multiplier here
+			sphereRef.current.rotation.x += 0.005 * delta;
 		}
 	});
 
@@ -102,10 +107,7 @@ export default function Hero() {
 	const controlsRef = useRef<OrbitControlsImpl | null>(null);
 
 	useEffect(() => {
-		let frame = 0;
-		const totalFrames = 150; // Adjusts the speed of the animation. Higher values make it slower.
-
-		// Modify these parameters to change the animation behavior
+		// Animation parameters
 		const startAzimuth = 0; // Starting horizontal rotation angle
 		const endAzimuth = -Math.PI / 2.2; // Ending horizontal rotation angle, e.g., Math.PI / 2 for a 90-degree turn
 		const startPolar = 0; // Starting vertical angle (from above)
@@ -113,53 +115,53 @@ export default function Hero() {
 		const startDistance = 40; // Starting distance for zoom
 		const endDistance = 20; // Ending distance for zoom-in
 
-		const startAnimation = () => {
+		let elapsedTime = 0; // Tracks elapsed time for smooth animation
+		const totalDuration = 5; // Animation duration in seconds (Adjust this for faster/slower animations)
+
+		// Camera animation logic
+		const startAnimation = (delta: number) => {
 			if (controlsRef.current) {
-				const animateOrbit = () => {
-					if (controlsRef.current) {
-						const progress = frame / totalFrames;
+				elapsedTime += delta;
 
-						// Animate azimuth and polar angles
-						const azimuthalAngle = THREE.MathUtils.lerp(
-							startAzimuth,
-							endAzimuth,
-							progress
-						);
-						const polarAngle = THREE.MathUtils.lerp(
-							startPolar,
-							endPolar,
-							progress
-						);
+				const progress = Math.min(elapsedTime / totalDuration, 1); // Clamp progress to 1
 
-						// Animate distance for zoom effect
-						const distance = THREE.MathUtils.lerp(
-							startDistance,
-							endDistance,
-							progress
-						);
-						controlsRef.current.object.position.set(
-							distance * Math.sin(polarAngle) * Math.cos(azimuthalAngle),
-							distance * Math.sin(polarAngle) * Math.sin(azimuthalAngle),
-							distance * Math.cos(polarAngle)
-						);
+				// Interpolate azimuthal and polar angles
+				const azimuthalAngle = THREE.MathUtils.lerp(
+					startAzimuth,
+					endAzimuth,
+					progress
+				);
+				const polarAngle = THREE.MathUtils.lerp(startPolar, endPolar, progress);
 
-						controlsRef.current.update();
-						frame++;
+				// Interpolate distance for zoom effect
+				const distance = THREE.MathUtils.lerp(
+					startDistance,
+					endDistance,
+					progress
+				);
 
-						// Continue animation until totalFrames
-						if (frame <= totalFrames) {
-							requestAnimationFrame(animateOrbit);
-						}
-					}
-				};
+				// Update camera position
+				controlsRef.current.object.position.set(
+					distance * Math.sin(polarAngle) * Math.cos(azimuthalAngle),
+					distance * Math.sin(polarAngle) * Math.sin(azimuthalAngle),
+					distance * Math.cos(polarAngle)
+				);
 
-				// Start the animation
-				animateOrbit();
+				// Update controls
+				controlsRef.current.update();
+
+				// Continue animation until completed
+				if (progress < 1) {
+					requestAnimationFrame(() => startAnimation(delta));
+				}
 			}
 		};
 
-		// Delay the animation start slightly to ensure controls are ready
-		const animationTimeout = setTimeout(startAnimation, 100);
+		// Start the animation after a delay
+		const animationTimeout = setTimeout(() => {
+			requestAnimationFrame(() => startAnimation(0.016)); // Assume 60 FPS initially
+		}, 100);
+
 		return () => clearTimeout(animationTimeout); // Cleanup on unmount
 	}, []);
 
