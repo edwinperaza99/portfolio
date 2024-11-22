@@ -45,6 +45,23 @@ body {
 	}
 }
 
+.nav-link {
+	background-color: #0a0a0a;
+}
+
+.nav-link:hover {
+	background-image: url("/textures/8k_stars_milky_way.jpg");
+	background-repeat: repeat;
+	background-size: 100%;
+	background-position: center;
+	/* NOTE: great solution for fixing repeating backgrounds when the size is inconsistent */
+	background-attachment: fixed;
+	animation: zoom-bg 40s ease-in-out infinite;
+	position: relative; /* Ensures pseudo-elements align relative to the text */
+	color: white; /* Base text color */
+	overflow: hidden;
+}
+
 .grid-background {
 	/* background-color: rgba(29, 185, 84, 0.78); */
 	background-size: 10px 10px;

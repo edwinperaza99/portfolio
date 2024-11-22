@@ -60,7 +60,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="/"
-									className="vertical-text p-4 flex justify-end items-end w-full h-full border bg-gray-800 hover:bg-gray-900"
+									className="vertical-text p-4 flex justify-end items-end w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
 									Home
@@ -72,7 +72,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="/about"
-									className="vertical-text p-4 flex justify-start items-end w-full h-full border bg-gray-800 hover:bg-gray-900"
+									className="vertical-text p-4 flex justify-start items-end w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
 									About
@@ -84,7 +84,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="/featured-projects"
-									className="vertical-text p-4 flex justify-end items-start w-full h-full border bg-gray-800 hover:bg-gray-900"
+									className="vertical-text p-4 flex justify-end items-start w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
 									Projects
@@ -92,7 +92,7 @@ const NavBar = () => {
 							</motion.li>
 							<motion.li
 								variants={itemVariants}
-								className="flex justify-center items-center border cursor-pointer hover:bg-gray-900 glass"
+								className="flex justify-center items-center border cursor-pointer hover:opacity-80 glass"
 								onClick={toggleOverlay}
 							>
 								<GiHamburger />
@@ -103,7 +103,7 @@ const NavBar = () => {
 							>
 								<Link
 									href="/skills"
-									className="vertical-text p-4 flex justify-start items-start w-full h-full border bg-gray-800 hover:bg-gray-900"
+									className="vertical-text p-4 flex justify-start items-start w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
 									Skills
