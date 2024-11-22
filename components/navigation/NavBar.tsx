@@ -63,7 +63,9 @@ const NavBar = () => {
 									className="vertical-text p-4 flex justify-end items-end w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
-									Home
+									<span className="glitch" data-text="Home">
+										Home
+									</span>
 								</Link>
 							</motion.li>
 							<motion.li
@@ -75,7 +77,9 @@ const NavBar = () => {
 									className="vertical-text p-4 flex justify-start items-end w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
-									About
+									<span className="glitch" data-text="About">
+										About
+									</span>
 								</Link>
 							</motion.li>
 							<motion.li
@@ -87,7 +91,9 @@ const NavBar = () => {
 									className="vertical-text p-4 flex justify-end items-start w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
-									Projects
+									<span className="glitch" data-text="Projects">
+										Projects
+									</span>
 								</Link>
 							</motion.li>
 							<motion.li
@@ -106,7 +112,9 @@ const NavBar = () => {
 									className="vertical-text p-4 flex justify-start items-start w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
-									Skills
+									<span className="glitch" data-text="Skills">
+										Skills
+									</span>
 								</Link>
 							</motion.li>
 						</motion.ul>
