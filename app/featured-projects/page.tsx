@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function FeaturedProjects() {
 	return (
-		<main className="min-h-screen flex flex-col gradient-bg-green text-white">
+		<main className="min-h-screen flex flex-col text-white">
 			<header className="text-center my-4">
 				<h1 className="text-3xl uppercase whitespace-nowrap">Projects</h1>
 			</header>

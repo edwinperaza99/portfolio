@@ -30,7 +30,7 @@ export default async function Project({
 	}
 
 	return (
-		<main className="min-h-screen flex flex-col bg-primary-dark text-white">
+		<main className="min-h-screen flex flex-col text-white">
 			<section className="container px-2">
 				<header className="my-4">
 					<Breadcrumb className="dark">

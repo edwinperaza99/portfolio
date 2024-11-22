@@ -3,7 +3,7 @@ import { skills } from "@/data/skills";
 
 export default function Skills() {
 	return (
-		<main className="min-h-screen gradient-bg-blue flex flex-col text-primary-light">
+		<main className="min-h-screen flex flex-col text-primary-light">
 			<header className="text-center my-4">
 				<h1 className="text-3xl uppercase whitespace-nowrap">Skills</h1>
 			</header>
