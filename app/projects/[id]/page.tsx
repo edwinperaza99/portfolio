@@ -1,6 +1,6 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
-import Image from "next/image";
+import SwiperGallery from "@/components/projects/Swiper";
 
 import {
 	Breadcrumb,
@@ -103,12 +103,9 @@ export default async function Project({
 					</div>
 				</article>
 			</section>
-			{/* images section  */}
-			<section className="container px-2 space-y-4">
-				<Image src={project.thumbnail} alt={project.name} className="" />
-				{project.images.map((image, index) => (
-					<Image key={index} src={image} alt={project.name} className="" />
-				))}
+			{/* gallery section */}
+			<section className="container px-2">
+				<SwiperGallery images={project.images} />
 			</section>
 		</main>
 	);
