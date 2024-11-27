@@ -1,7 +1,7 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import SwiperGallery from "@/components/projects/Swiper";
-import { skillRegistry, resolveSkills } from "@/data/skills";
+import { resolveSkills } from "@/data/skills";
 import Image from "next/image";
 
 import {
