@@ -52,7 +52,7 @@ export default function Skills() {
 					<h2 className="text-2xl uppercase whitespace-nowrap">
 						{category.name}
 					</h2>
-					<article className="flex gap-1 md:gap-2">
+					<article className="flex flex-wrap gap-2 md:gap-4">
 						{resolveSkills(category.skills).map(
 							(skill) =>
 								skill && (
@@ -61,8 +61,13 @@ export default function Skills() {
 											<TooltipTrigger>
 												<div
 													key={skill.id}
-													className="p-4 flex gap-3 glass rounded-full"
-													style={{ backgroundColor: skill.color }}
+													className="skill p-4 flex gap-3 glass rounded-full"
+													// style={{ backgroundColor: skill.color }}
+													style={
+														{
+															"--skill-color": skill.color,
+														} as React.CSSProperties
+													}
 												>
 													<Image
 														src={skill.icon}

@@ -42,10 +42,10 @@ interface Skill {
 }
 
 export const skillRegistry: Skill[] = [
-	{ id: "c", name: "C", icon: CIcon, color: "#A8B9CC" },
-	{ id: "cpp", name: "C++", icon: CPPIcon, color: "#00599C" },
-	{ id: "python", name: "Python", icon: PythonIcon, color: "#FFD343" },
-	{ id: "swift", name: "Swift", icon: SwiftIcon, color: "#F05138" },
+	{ id: "c", name: "C", icon: CIcon, color: "#7fa1c7" },
+	{ id: "cpp", name: "C++", icon: CPPIcon, color: "#A8B9CC" },
+	{ id: "python", name: "Python", icon: PythonIcon, color: "#5ea9ff" },
+	{ id: "swift", name: "Swift", icon: SwiftIcon, color: "#f0cb38" },
 	{
 		id: "javascript",
 		name: "JavaScript",

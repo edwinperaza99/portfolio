@@ -88,8 +88,13 @@ export default async function Project({
 											<TooltipTrigger>
 												<div
 													key={skill.id}
-													className="p-4 flex gap-3 glass rounded-full"
-													style={{ backgroundColor: skill.color }}
+													className="skill p-4 flex gap-3 glass rounded-full"
+													// style={{ backgroundColor: skill.color }}
+													style={
+														{
+															"--skill-color": skill.color,
+														} as React.CSSProperties
+													}
 												>
 													<Image
 														src={skill.icon.src}
