@@ -52,6 +52,7 @@ export default function SwiperGallery({
 										width={image.width}
 										height={image.height}
 										className="cursor-pointer max-h-96 w-auto mx-auto object-contain"
+										placeholder="blur"
 									/>
 								)}
 							</Item>
