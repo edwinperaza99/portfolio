@@ -168,7 +168,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Swift", "SwiftUI", "Firebase"],
+		technologies: ["swift", "swiftui", "firebase"],
 		thumbnail: SoloLevel_Thumbnail,
 		images: [
 			SoloLevel_Thumbnail_2,

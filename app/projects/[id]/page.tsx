@@ -1,6 +1,8 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import SwiperGallery from "@/components/projects/Swiper";
+import { skillRegistry, resolveSkills } from "@/data/skills";
+import Image from "next/image";
 
 import {
 	Breadcrumb,
@@ -10,6 +12,13 @@ import {
 	BreadcrumbPage,
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export async function generateStaticParams() {
 	return projects.map((project) => ({
@@ -28,6 +37,8 @@ export default async function Project({
 	if (!project) {
 		notFound();
 	}
+
+	const resolvedTechnologies = resolveSkills(project.technologies);
 
 	return (
 		<main className="min-h-screen flex flex-col text-white">
@@ -68,16 +79,36 @@ export default async function Project({
 			<section className="container px-2 grid grid-cols-1 md:grid-cols-2 py-4 gap-10">
 				<article>{project.description}</article>
 				<article className="flex flex-col justify-center items-center gap-4">
-					<ul className="flex flex-wrap gap-2">
-						{project.technologies.map((technology) => (
-							<li
-								className="p-2 rounded-3xl text-sm font-normal bg-green-500 border border-green-600 text-white shadow-[0_0_10px_2px_rgba(0,255,0,0.6)]"
-								key={technology}
-							>
-								{technology}
-							</li>
-						))}
-					</ul>
+					<div className="flex flex-wrap gap-2">
+						{resolvedTechnologies.map(
+							(skill) =>
+								skill && (
+									<TooltipProvider key={skill.id}>
+										<Tooltip>
+											<TooltipTrigger>
+												<div
+													key={skill.id}
+													className="p-4 flex gap-3 glass rounded-full"
+													style={{ backgroundColor: skill.color }}
+												>
+													<Image
+														src={skill.icon.src}
+														alt={`${skill.name} icon`}
+														loading="lazy"
+														width={30}
+														height={30}
+														className="drop-shadow-3xl"
+													/>
+												</div>
+											</TooltipTrigger>
+											<TooltipContent>
+												<p>{skill.name}</p>
+											</TooltipContent>
+										</Tooltip>
+									</TooltipProvider>
+								)
+						)}
+					</div>
 					{/* buttons section */}
 					<div className="w-full sm:w-[75%] flex space-between gap-2">
 						{project.deployUrl && (
