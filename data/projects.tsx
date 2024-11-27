@@ -20,6 +20,11 @@ import iExpense_1 from "@/public/iExpense/1.png";
 import iExpense_2 from "@/public/iExpense/2.png";
 import iExpense_3 from "@/public/iExpense/3.png";
 import iExpense_Thumbnail from "@/public/iExpense/iExpense_thumbnail.png";
+// import instal filter
+import InstaFilter_1 from "@/public/Instafilter/1.png";
+import InstaFilter_2 from "@/public/Instafilter/2.png";
+import InstaFilter_3 from "@/public/Instafilter/3.png";
+import InstaFilter_4 from "@/public/Instafilter/4.png";
 import Instafilter_Thumbnail from "@/public/Instafilter/Instafilter_thumbnail.png";
 // imports for Mio Portfolio
 import MioPortfolio_1 from "@/public/MioPortfolio/1.png";
@@ -137,7 +142,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["NextJS", "Tailwind CSS", "MongoDB", "Prisma"],
+		technologies: ["nextjs", "typescript", "tailwindcss", "mongodb", "prisma"],
 		thumbnail: NataliaSalon_Thumbnail,
 		images: [Natalia_1, Natalia_2, Natalia_3, Natalia_4, Natalia_5, Natalia_6],
 		githubUrl: "https://github.com/edwinperaza99/be-beauty",
@@ -197,7 +202,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["NextJs", "Tailwind CSS", "TypeScript"],
+		technologies: ["nextjs", "typescript", "tailwindcss"],
 		thumbnail: MioPortfolio_Thumbnail,
 		images: [MioPortfolio_1, MioPortfolio_2, MioPortfolio_3, MioPortfolio_4],
 		githubUrl: "https://github.com/edwinperaza99/portfolio-mio",
@@ -227,7 +232,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Django", "Bootstrap", "Jquery"],
+		technologies: ["python", "django", "bootstrap", "jquery"],
 		thumbnail: CaC_Thumbnail,
 		images: [CaC_Thumbnail],
 		githubUrl: "https://github.com/DanOcho8/Code-Against-Cancer",
@@ -238,7 +243,7 @@ export const projects: Project[] = [
 		category: "Web Development",
 		description:
 			"Tools for the circulation desk at the Pollak Library, it facilitates the processing of the inventory list. The tools reduces the task etc",
-		technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+		technologies: ["nextjs", "typescript", "tailwindcss"],
 		thumbnail: RBR_Thumbnail,
 		images: [RBR_Thumbnail],
 		deployUrl: "https://rbr-inventory-formatter.vercel.app/",
@@ -268,7 +273,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Python", "Pygame"],
+		technologies: ["python", "pygame"],
 		thumbnail: PACMAN_Thumbnail,
 		images: [PACMAN_1, PACMAN_2, PACMAN_3],
 		githubUrl: "https://github.com/edwinperaza99/PAC-MAN",
@@ -294,7 +299,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Astro", "Tailwind CSS"],
+		technologies: ["astro", "tailwindcss"],
 		thumbnail: RBR_Thumbnail,
 		images: [],
 		deployUrl: "https://spotify-clone-mocha-kappa.vercel.app/",
@@ -322,7 +327,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["HTML", "CSS", "JavaScript"],
+		technologies: ["html", "css", "javascript"],
 		thumbnail: Hikken_Thumbnail,
 		images: [],
 		githubUrl: "https://github.com/edwinperaza99/Hikken",
@@ -354,7 +359,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Python", "Tkinter", "Regex"],
+		technologies: ["python", "tkinter", "regex"],
 		thumbnail: Chatbot_Thumbnail,
 		images: [],
 		githubUrl: "https://github.com/edwinperaza99/CSUF-Chatbot",
@@ -414,7 +419,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Swift", "SwiftUI", "MapKit", "Wikipedia API"],
+		technologies: ["swift", "swiftui", "MapKit", "Wikipedia API"],
 		thumbnail: BucketList_Thumbnail,
 		images: [
 			BucketList_1,
@@ -448,9 +453,9 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Swift", "SwiftUI", "Core Image"],
+		technologies: ["swift", "swiftui", "Core Image"],
 		thumbnail: Instafilter_Thumbnail,
-		images: [RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail, RBR_Thumbnail],
+		images: [InstaFilter_1, InstaFilter_2, InstaFilter_3, InstaFilter_4],
 		githubUrl: "https://github.com/edwinperaza99/Instafilter",
 	},
 	{
@@ -468,7 +473,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Swift", "SwiftUI"],
+		technologies: ["swift", "swiftui"],
 		thumbnail: iExpense_Thumbnail,
 		images: [iExpense_1, iExpense_2, iExpense_3],
 		githubUrl: "https://github.com/edwinperaza99/iExpense",
@@ -494,7 +499,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Swift", "SwiftUI"],
+		technologies: ["swift", "swiftui"],
 		thumbnail: WordScramble_Thumbnail,
 		images: [
 			WordScramble_1,
@@ -520,7 +525,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Swift", "SwiftUI"],
+		technologies: ["swift", "swiftui"],
 		thumbnail: Calculator_Thumbnail,
 		images: [Calculator_1, Calculator_2, Calculator_3],
 		githubUrl: "https://github.com/edwinperaza99/iPhone-calculator",
@@ -539,7 +544,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["Python", "Pygame"],
+		technologies: ["python", "Pygame"],
 		thumbnail: SpaceInvaders_Thumbnail,
 		images: [SpaceInvaders_1, SpaceInvaders_2],
 		githubUrl: "https://github.com/edwinperaza99/space-invaders",
@@ -557,7 +562,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["React", "Tailwind CSS", "Pocketbase"],
+		technologies: ["react", "tailwindcss", "pocketbase"],
 		thumbnail: SantaPlease_Thumbnail,
 		images: [
 			SantaPlease_1,
@@ -582,7 +587,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["HTML", "Tailwind CSS", "JavaScript"],
+		technologies: ["html", "tailwindcss", "javascript"],
 		thumbnail: RPS_Thumbnail,
 		images: [RPS_1, RPS_2, RPS_3, RPS_4, RPS_5],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project3",
@@ -602,7 +607,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["HTML", "Tailwind CSS", "Remake"],
+		technologies: ["html", "tailwindcss", "Remake"],
 		thumbnail: MovieTracker_Thumbnail,
 		images: [
 			MovieTracker_1,
@@ -630,7 +635,7 @@ export const projects: Project[] = [
 				</p>
 			</>
 		),
-		technologies: ["HTML", "Tailwind CSS", "Remake"],
+		technologies: ["html", "tailwindcss", "Eleventy"],
 		thumbnail: PhotoGallery_Thumbnail,
 		images: [
 			PhotoGallery_1,
