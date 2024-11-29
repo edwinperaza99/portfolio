@@ -232,42 +232,31 @@ body {
 
 /* styles for stack icons  */
 .skill {
-	--skill-color: #ffffff;
-	position: relative;
-	width: 3.5rem;
-	height: 3.5rem;
+	--skill-color: #ffffff; /* Set this dynamically */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 50%;
 	background: var(--skill-color);
-	box-shadow: 0 0 10px var(--skill-color), 0 0 20px var(--skill-color),
-		0 0 30px var(--skill-color);
+	box-shadow: 0 0 15px var(--skill-color), 0 0 30px var(--skill-color),
+		0 0 45px var(--skill-color);
 	transition: all 0.3s ease-in-out;
+	position: relative;
 }
 
 .skill:hover::before,
-.skill:focus-visible::before,
-.skill:active::before {
-	border-color: var(--skill-color);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-}
-
-.skill:hover::after,
-.skill:focus-visible::after,
-.skill:active::after {
-	box-shadow: 0 0 25px var(--skill-color), 0 0 50px var(--skill-color);
+.skill:hover::after {
+	box-shadow: 0 0 30px var(--skill-color), 0 0 60px var(--skill-color);
 }
 
 .skill::after {
 	content: "";
 	position: absolute;
-	width: 1rem;
-	height: 1rem;
+	width: 1.5rem; /* Slightly increased size for stronger effect */
+	height: 1.5rem;
 	border-radius: 50%;
-	box-shadow: 0 0 25px var(--skill-color);
+	box-shadow: 0 0 30px var(--skill-color), 0 0 45px var(--skill-color);
 	z-index: -2;
+	animation: glow 10s infinite alternate;
 }
 
 .skill::before {
@@ -275,11 +264,21 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	border: 1px solid transparent;
+	border: 2px solid var(--skill-color);
 	border-radius: 50%;
-	-webkit-backdrop-filter: blur(30px);
-	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
 	z-index: -1;
+}
+
+/* Glow Animation */
+@keyframes glow {
+	0% {
+		box-shadow: 0 0 30px var(--skill-color), 0 0 50px var(--skill-color);
+	}
+	100% {
+		box-shadow: 0 0 50px var(--skill-color), 0 0 75px var(--skill-color);
+	}
 }
 
 @layer base {

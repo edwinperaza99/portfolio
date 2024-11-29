@@ -50,7 +50,7 @@ export const skillRegistry: Skill[] = [
 		id: "javascript",
 		name: "JavaScript",
 		icon: JavaScriptIcon,
-		color: "#F7DF1E",
+		color: "#F0D84f",
 	},
 	{ id: "typescript", name: "TypeScript", icon: TypeScript, color: "#3178C6" },
 	{ id: "html", name: "HTML", icon: HTMLIcon, color: "#E34F26" },

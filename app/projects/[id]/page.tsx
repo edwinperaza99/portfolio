@@ -88,7 +88,7 @@ export default async function Project({
 											<TooltipTrigger>
 												<div
 													key={skill.id}
-													className="skill p-4 flex gap-3 glass rounded-full"
+													className="skill p-4 rounded-full"
 													// style={{ backgroundColor: skill.color }}
 													style={
 														{
