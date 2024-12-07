@@ -24,7 +24,7 @@ export default function About() {
 						to showcase my work and the projects I&apos;m proud of.
 					</p>
 				</div>
-				<MusicPlayer />
+				{/* <MusicPlayer /> */}
 			</div>
 		</main>
 	);
