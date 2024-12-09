@@ -1,4 +1,4 @@
-import MusicPlayer from "@/components/music-player/MusicPlayer";
+// import MusicPlayer from "@/components/music-player/MusicPlayer";
 
 export default function About() {
 	return (
