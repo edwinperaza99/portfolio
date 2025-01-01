@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image";
-
 import AstroIcon from "@/public/icons/Astro.svg";
 import BootstrapIcon from "@/public/icons/Bootstrap.svg";
 import CIcon from "@/public/icons/C.svg";
@@ -29,6 +27,7 @@ import SwiftUIIcon from "@/public/icons/SwiftUI.svg";
 import TailwindCSSIcon from "@/public/icons/TailwindCSS.svg";
 import TypeScript from "@/public/icons/TypeScript.svg";
 import XCodeIcon from "@/public/icons/Xcode.svg";
+import { StaticImageData } from "next/image";
 
 export function resolveSkills(skillIds: string[]) {
 	return skillIds.map((id) => skillRegistry.find((skill) => skill.id === id));
@@ -42,56 +41,71 @@ interface Skill {
 }
 
 export const skillRegistry: Skill[] = [
-	{ id: "c", name: "C", icon: CIcon, color: "#7fa1c7" },
-	{ id: "cpp", name: "C++", icon: CPPIcon, color: "#A8B9CC" },
-	{ id: "python", name: "Python", icon: PythonIcon, color: "#5ea9ff" },
-	{ id: "swift", name: "Swift", icon: SwiftIcon, color: "#f0cb38" },
+	{ id: "c", name: "C", icon: CIcon, color: "168, 185, 204" },
+	{ id: "cpp", name: "C++", icon: CPPIcon, color: "0, 89, 156" },
+	{ id: "python", name: "Python", icon: PythonIcon, color: "3, 61, 255" },
+	{ id: "swift", name: "Swift", icon: SwiftIcon, color: "252, 115, 67" },
 	{
 		id: "javascript",
 		name: "JavaScript",
 		icon: JavaScriptIcon,
-		color: "#F0D84f",
+		color: "247, 223, 30",
 	},
-	{ id: "typescript", name: "TypeScript", icon: TypeScript, color: "#3178C6" },
-	{ id: "html", name: "HTML", icon: HTMLIcon, color: "#E34F26" },
-	{ id: "css", name: "CSS", icon: CSSIcon, color: "#1572B6" },
-	{ id: "astro", name: "Astro", icon: AstroIcon, color: "#FF5A60" },
-	{ id: "bootstrap", name: "Bootstrap", icon: BootstrapIcon, color: "#7952B3" },
-	{ id: "react", name: "React", icon: ReactIcon, color: "#61DAFB" },
-	{ id: "nextjs", name: "Next.js", icon: NextJSIcon, color: "#000000" },
+	{
+		id: "typescript",
+		name: "TypeScript",
+		icon: TypeScript,
+		color: "0, 122, 204",
+	},
+	{ id: "html", name: "HTML", icon: HTMLIcon, color: "227, 76, 38" },
+	{ id: "css", name: "CSS", icon: CSSIcon, color: "38, 77, 228" },
+	{ id: "astro", name: "Astro", icon: AstroIcon, color: "255, 126, 90" },
+	{
+		id: "bootstrap",
+		name: "Bootstrap",
+		icon: BootstrapIcon,
+		color: "86, 61, 124",
+	},
+	{ id: "react", name: "React", icon: ReactIcon, color: "97, 219, 251" },
+	{ id: "nextjs", name: "Next.js", icon: NextJSIcon, color: "153, 153, 153" },
 	{
 		id: "tailwindcss",
 		name: "Tailwind CSS",
 		icon: TailwindCSSIcon,
-		color: "#38B2AC",
+		color: "6, 182, 212",
 	},
-	{ id: "nodejs", name: "Node.js", icon: NodeJSIcon, color: "#339933" },
-	{ id: "express", name: "Express", icon: ExpressIcon, color: "#000000" },
+	{ id: "nodejs", name: "Node.js", icon: NodeJSIcon, color: "51, 153, 51" },
+	{ id: "express", name: "Express", icon: ExpressIcon, color: "153, 153, 153" },
 	{ id: "python", name: "Python", icon: PythonIcon, color: "#3776AB" },
-	{ id: "django", name: "Django", icon: DjangoIcon, color: "#092E20" },
-	{ id: "fastapi", name: "FastAPI", icon: FastAPIIcon, color: "#009688" },
-	{ id: "firebase", name: "Firebase", icon: FirebaseIcon, color: "#FFCA28" },
-	{ id: "mongodb", name: "MongoDB", icon: MongoDBIcon, color: "#47A248" },
-	{ id: "mysql", name: "MySQL", icon: MySQLIcon, color: "#4479A1" },
-	{ id: "sqlite3", name: "SQLite3", icon: SQLite3Icon, color: "#003B57" },
-	{ id: "dynamodb", name: "DynamoDB", icon: DynamoDBIcon, color: "#4053D6" },
-	{ id: "git", name: "Git", icon: GitIcon, color: "#F05032" },
-	{ id: "github", name: "GitHub", icon: GitHubIcon, color: "#181717" },
-	{ id: "figma", name: "Figma", icon: FigmaIcon, color: "#F24E1E" },
-	{ id: "postman", name: "Postman", icon: PostmanIcon, color: "#FF6C37" },
+	{ id: "django", name: "Django", icon: DjangoIcon, color: "9, 46, 32" },
+	{ id: "fastapi", name: "FastAPI", icon: FastAPIIcon, color: "0, 150, 136" },
+	{
+		id: "firebase",
+		name: "Firebase",
+		icon: FirebaseIcon,
+		color: "255, 202, 40",
+	},
+	{ id: "mongodb", name: "MongoDB", icon: MongoDBIcon, color: "71, 162, 72" },
+	{
+		id: "dynamodb",
+		name: "DynamoDB",
+		icon: DynamoDBIcon,
+		color: "64, 83, 214",
+	},
+	{ id: "git", name: "Git", icon: GitIcon, color: "240, 80, 50" },
+	{ id: "github", name: "GitHub", icon: GitHubIcon, color: "153, 153, 153" },
+	{ id: "figma", name: "Figma", icon: FigmaIcon, color: "242, 78, 30" },
+	{ id: "postman", name: "Postman", icon: PostmanIcon, color: "255, 108, 55" },
 	{
 		id: "reactnative",
 		name: "React Native",
 		icon: ReactNative,
-		color: "#61DAFB",
+		color: "97, 219, 251",
 	},
-	{ id: "xcode", name: "Xcode", icon: XCodeIcon, color: "#147EFB" },
-	{ id: "swiftui", name: "SwiftUI", icon: SwiftUIIcon, color: "#0071E6" },
-	{ id: "firebase", name: "Firebase", icon: FirebaseIcon, color: "#FFCA28" },
-	{ id: "mongodb", name: "MongoDB", icon: MongoDBIcon, color: "#47A248" },
-	{ id: "mysql", name: "MySQL", icon: MySQLIcon, color: "#4479A1" },
-	{ id: "sqlite3", name: "SQLite3", icon: SQLite3Icon, color: "#003B57" },
-	{ id: "dynamodb", name: "DynamoDB", icon: DynamoDBIcon, color: "#4053D6" },
+	{ id: "xcode", name: "Xcode", icon: XCodeIcon, color: "20, 126, 251" },
+	{ id: "swiftui", name: "SwiftUI", icon: SwiftUIIcon, color: "0, 113, 230" },
+	{ id: "mysql", name: "MySQL", icon: MySQLIcon, color: "68, 121, 161" },
+	{ id: "sqlite3", name: "SQLite3", icon: SQLite3Icon, color: "0, 59, 87" },
 ];
 
 interface SkillCategory {

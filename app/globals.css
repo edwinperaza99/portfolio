@@ -230,31 +230,40 @@ body {
 	}
 }
 
-/* styles for stack icons  */
+/* styles for stack icons */
 .skill {
-	--skill-color: #ffffff; /* Set this dynamically */
+	--skill-color: 255, 255, 255; /* Set this dynamically */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: var(--skill-color);
-	box-shadow: 0 0 15px var(--skill-color), 0 0 30px var(--skill-color),
-		0 0 45px var(--skill-color);
+	width: 3.5rem;
+	height: 3.5rem;
+	background: rgba(
+		var(--skill-color),
+		0.3
+	); /* Initial transparent background */
+	border-radius: 50%;
+	box-shadow: 0 0 15px rgba(var(--skill-color), 0.3),
+		0 0 30px rgba(var(--skill-color), 0.3),
+		0 0 45px rgba(var(--skill-color), 0.3);
 	transition: all 0.3s ease-in-out;
 	position: relative;
 }
 
-.skill:hover::before,
-.skill:hover::after {
-	box-shadow: 0 0 30px var(--skill-color), 0 0 60px var(--skill-color);
+.skill:hover {
+	background: rgba(var(--skill-color), 0.5); /* More visible color */
+	box-shadow: 0 0 30px rgba(var(--skill-color), 0.6),
+		0 0 60px rgba(var(--skill-color), 0.8), 0 0 90px rgba(var(--skill-color), 1);
 }
 
 .skill::after {
 	content: "";
 	position: absolute;
-	width: 1.5rem; /* Slightly increased size for stronger effect */
+	width: 1.5rem;
 	height: 1.5rem;
 	border-radius: 50%;
-	box-shadow: 0 0 30px var(--skill-color), 0 0 45px var(--skill-color);
+	box-shadow: 0 0 30px rgba(var(--skill-color), 0.3),
+		0 0 45px rgba(var(--skill-color), 0.5);
 	z-index: -2;
 	animation: glow 10s infinite alternate;
 }
@@ -264,7 +273,7 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	border: 2px solid var(--skill-color);
+	border: 2px solid rgba(var(--skill-color), 0.3);
 	border-radius: 50%;
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
@@ -274,10 +283,14 @@ body {
 /* Glow Animation */
 @keyframes glow {
 	0% {
-		box-shadow: 0 0 30px var(--skill-color), 0 0 50px var(--skill-color);
+		box-shadow: 0 0 30px rgba(var(--skill-color), 0.3),
+			0 0 60px rgba(var(--skill-color), 0.4),
+			0 0 90px rgba(var(--skill-color), 0.5);
 	}
 	100% {
-		box-shadow: 0 0 50px var(--skill-color), 0 0 75px var(--skill-color);
+		box-shadow: 0 0 45px rgba(var(--skill-color), 0.5),
+			0 0 75px rgba(var(--skill-color), 0.6),
+			0 0 105px rgba(var(--skill-color), 0.8);
 	}
 }
 
