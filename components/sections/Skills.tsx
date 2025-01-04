@@ -37,9 +37,11 @@ export default function Skills() {
 													<TooltipTrigger>
 														<div
 															className="skill p-4 flex gap-3 glass rounded-full"
-															style={{
-																"--skill-color": skill.color,
-															}}
+															style={
+																{
+																	"--skill-color": skill.color,
+																} as React.CSSProperties
+															}
 														>
 															<Image
 																src={skill.icon}
@@ -80,9 +82,11 @@ export default function Skills() {
 													<TooltipTrigger>
 														<div
 															className="skill p-4 flex gap-3 glass rounded-full"
-															style={{
-																"--skill-color": skill.color,
-															}}
+															style={
+																{
+																	"--skill-color": skill.color,
+																} as React.CSSProperties
+															}
 														>
 															<Image
 																src={skill.icon}
