@@ -5,7 +5,7 @@ export default function FeaturedProjects() {
 	return (
 		// <div className="gradient-bg-purple">
 		<div className="flex flex-col text-white container px-4 my-8">
-			<h1 className="text-4xl uppercase mb-2">Projects</h1>
+			<h2 className="text-4xl uppercase mb-2">Projects</h2>
 			<section className="w-full grid gap-4 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-3">
 				<article className="rounded-2xl glass overflow-hidden group">
 					<Link href="/projects/1" className="flex flex-col h-full">
@@ -18,9 +18,9 @@ export default function FeaturedProjects() {
 							/>
 						</div>
 						<div className="p-4 bg-black bg-opacity-50 h-20">
-							<h2 className="text-xl md:text-base lg:text-xl font-bold">
+							<h3 className="text-xl md:text-base lg:text-xl font-bold">
 								BeBeauty
-							</h2>
+							</h3>
 							<p className="text-sm md:text-xs lg:text-sm">
 								Next.js | Tailwind | MongoDB
 							</p>
@@ -39,9 +39,9 @@ export default function FeaturedProjects() {
 							/>
 						</div>
 						<div className="p-4 bg-black bg-opacity-50 h-20">
-							<h2 className="text-xl md:text-base lg:text-xl font-bold">
+							<h3 className="text-xl md:text-base lg:text-xl font-bold">
 								SoloLevel
-							</h2>
+							</h3>
 							<p className="text-sm md:text-xs lg:text-sm">
 								Swift | Swift UI | Firebase
 							</p>
@@ -59,9 +59,9 @@ export default function FeaturedProjects() {
 							/>
 						</div>
 						<div className="p-4 bg-black bg-opacity-50 h-20">
-							<h2 className="text-xl md:text-base lg:text-xl font-bold">
+							<h3 className="text-xl md:text-base lg:text-xl font-bold">
 								Portfolio Mio
-							</h2>
+							</h3>
 							<p className="text-sm md:text-xs lg:text-sm">
 								Next.js | Tailwind CSS
 							</p>
@@ -79,9 +79,9 @@ export default function FeaturedProjects() {
 							/>
 						</div>
 						<div className="p-4 bg-black bg-opacity-50 h-20">
-							<h2 className="text-xl md:text-base lg:text-xl font-bold">
+							<h3 className="text-xl md:text-base lg:text-xl font-bold">
 								Code Against Cancer
-							</h2>
+							</h3>
 							<p className="text-sm md:text-xs lg:text-sm">
 								Django | Bootstrap | AWS | Docker
 							</p>
@@ -100,9 +100,9 @@ export default function FeaturedProjects() {
 							/>
 						</div>
 						<div className="p-4 bg-black bg-opacity-50 h-20">
-							<h2 className="text-xl md:text-base lg:text-xl font-bold">
+							<h3 className="text-xl md:text-base lg:text-xl font-bold">
 								PAC-MAN
-							</h2>
+							</h3>
 							<p className="text-sm md:text-xs lg:text-sm">Python | Pygame</p>
 						</div>
 					</Link>
@@ -119,9 +119,9 @@ export default function FeaturedProjects() {
 							/>
 						</div>
 						<div className="p-4 bg-black bg-opacity-50 h-20">
-							<h2 className="text-xl md:text-base lg:text-xl font-bold">
+							<h3 className="text-xl md:text-base lg:text-xl font-bold">
 								Hikken
-							</h2>
+							</h3>
 							<p className="text-sm md:text-xs lg:text-sm">
 								HTML | CSS | JavaScript
 							</p>

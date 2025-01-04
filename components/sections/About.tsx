@@ -12,9 +12,9 @@ export default function About() {
 						👋
 					</span>
 				</h1>
-				<h2 className="uppercase text-center text-lg md:text-xl">
+				<h3 className="uppercase text-center text-lg md:text-xl">
 					software engineer, full stack developer
-				</h2>
+				</h3>
 				{/* <p className="text-sm">
 					I&apos;m a soon-to-be graduate in Computer Science with a focus on
 					software engineering. Over the years, I&apos;ve honed my expertise in
