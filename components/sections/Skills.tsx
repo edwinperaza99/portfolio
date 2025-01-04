@@ -19,13 +19,13 @@ export default function Skills() {
 			<h2 className="text-4xl uppercase mb-2">Skills</h2>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 				{/* Column 1 */}
-				<div className="flex flex-col gap-4">
+				<div className="flex flex-col gap-2 md:gap-4">
 					{column1.map((category) => (
 						<section
 							key={category.id}
-							className="flex flex-col gap-4 rounded-lg glass p-4 shadow-md"
+							className="flex flex-col gap-2 md:gap-4 rounded-lg glass p-3 md:p-4 shadow-md"
 						>
-							<h3 className="text-lg md:text-xl uppercase text-center">
+							<h3 className="text-xl md:text-2xl uppercase text-center">
 								{category.name}
 							</h3>
 							<article className="flex flex-wrap gap-2 md:gap-4 justify-center">
@@ -62,13 +62,13 @@ export default function Skills() {
 					))}
 				</div>
 				{/* Column 2 */}
-				<div className="flex flex-col gap-4">
+				<div className="flex flex-col gap-2 md:gap-4">
 					{column2.map((category) => (
 						<section
 							key={category.id}
-							className="flex flex-col gap-4 rounded-lg glass p-4 shadow-md"
+							className="flex flex-col gap-2 md:gap-4 rounded-lg glass p-3 md:p-4 shadow-md"
 						>
-							<h3 className="text-lg md:text-xl uppercase text-center">
+							<h3 className="text-xl md:text-2xl uppercase text-center">
 								{category.name}
 							</h3>
 							<article className="flex flex-wrap gap-2 md:gap-4 justify-center">

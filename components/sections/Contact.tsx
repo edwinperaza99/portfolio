@@ -59,7 +59,7 @@ export default function Contact() {
 
 			<form
 				onSubmit={handleSubmit}
-				className="space-y-2 italic flex flex-col justify-center max-w-[700px] mx-auto pt-4"
+				className="space-y-2 italic flex flex-col justify-center max-w-[700px] mx-auto pt-4 px-4"
 			>
 				<input type="hidden" name="subject" value="Contact Form Submission" />
 				<input type="hidden" name="from_name" value="Portfolio Notifications" />
