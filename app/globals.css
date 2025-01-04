@@ -239,8 +239,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 3.5rem;
-	height: 3.5rem;
 	/* Initial transparent background */
 	background: rgba(var(--skill-color, 255, 255, 255), 0.3);
 	border-radius: 50%;
@@ -348,6 +346,14 @@ body {
 	80% {
 		transform: rotate(-4deg);
 	}
+}
+
+.glass-window {
+	background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+	-webkit-backdrop-filter: blur(10px); /* Safari */
+	backdrop-filter: blur(10px); /* Frosted glass effect */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow */
+	z-index: 10;
 }
 
 @layer base {
