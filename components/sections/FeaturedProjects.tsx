@@ -4,10 +4,8 @@ import Image from "next/image";
 export default function FeaturedProjects() {
 	return (
 		// <div className="gradient-bg-purple">
-		<div className="flex flex-col text-white container px-4">
-			<header className="my-8">
-				<h1 className="text-4xl uppercase">Projects</h1>
-			</header>
+		<div className="flex flex-col text-white container px-4 my-8">
+			<h1 className="text-4xl uppercase mb-2">Projects</h1>
 			<section className="w-full grid gap-4 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-3">
 				<article className="rounded-2xl glass overflow-hidden group">
 					<Link href="/projects/1" className="flex flex-col h-full">

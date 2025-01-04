@@ -15,10 +15,8 @@ export default function Skills() {
 	const column2 = skillCategories.slice(midIndex);
 
 	return (
-		<div className="container my-5 flex flex-col text-primary-light px-4">
-			<header className="my-4">
-				<h1 className="text-4xl uppercase whitespace-nowrap">Skills</h1>
-			</header>
+		<div className="container my-8 flex flex-col text-primary-light px-4">
+			<h2 className="text-4xl uppercase mb-2">Skills</h2>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 				{/* Column 1 */}
 				<div className="flex flex-col gap-4">
@@ -27,9 +25,9 @@ export default function Skills() {
 							key={category.id}
 							className="flex flex-col gap-4 rounded-lg glass p-4 shadow-md"
 						>
-							<h2 className="text-lg md:text-xl uppercase text-center">
+							<h3 className="text-lg md:text-xl uppercase text-center">
 								{category.name}
-							</h2>
+							</h3>
 							<article className="flex flex-wrap gap-2 md:gap-4 justify-center">
 								{resolveSkills(category.skills).map(
 									(skill) =>
@@ -70,9 +68,9 @@ export default function Skills() {
 							key={category.id}
 							className="flex flex-col gap-4 rounded-lg glass p-4 shadow-md"
 						>
-							<h2 className="text-lg md:text-xl uppercase text-center">
+							<h3 className="text-lg md:text-xl uppercase text-center">
 								{category.name}
-							</h2>
+							</h3>
 							<article className="flex flex-wrap gap-2 md:gap-4 justify-center">
 								{resolveSkills(category.skills).map(
 									(skill) =>
