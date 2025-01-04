@@ -420,3 +420,52 @@ body {
 		@apply bg-background text-foreground;
 	}
 }
+.border-animation {
+	--border-angle: 0turn; /* For animation */
+	--main-bg: conic-gradient(
+		from var(--border-angle),
+		#213,
+		#112 5%,
+		#112 60%,
+		#213 95%
+	);
+
+	border: solid 5px transparent;
+	border-radius: 1rem;
+	--gradient-border: conic-gradient(
+		from var(--border-angle),
+		transparent 25%,
+		#08f,
+		#f03 99%,
+		transparent
+	);
+
+	background: var(--main-bg) padding-box,
+		/* Inner background */ var(--gradient-border) border-box,
+		/* Border animation */ var(--main-bg) border-box; /* Duplicate for fallback */
+
+	animation: bg-spin 3s linear infinite;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	transition: transform 0.3s ease-in-out;
+	will-change: transform;
+}
+
+.border-animation:hover {
+	transform: scale(1.05);
+	/* Add an overlaying faster animation */
+	animation: bg-spin 1.5s linear infinite;
+}
+
+@keyframes bg-spin {
+	to {
+		--border-angle: 1turn;
+	}
+}
+
+@property --border-angle {
+	syntax: "<angle>";
+	inherits: true;
+	initial-value: 0turn;
+}

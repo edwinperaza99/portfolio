@@ -121,6 +121,16 @@ export const skillCategories: SkillCategory[] = [
 		skills: ["c", "cpp", "python", "swift", "javascript", "typescript"],
 	},
 	{
+		id: "mobile",
+		name: "Mobile Development",
+		skills: ["swift", "swiftui", "reactnative", "xcode"],
+	},
+	{
+		id: "backend",
+		name: "Back-End Skills",
+		skills: ["nodejs", "express", "python", "django", "fastapi"],
+	},
+	{
 		id: "frontend",
 		name: "Front-End Skills",
 		skills: [
@@ -134,16 +144,6 @@ export const skillCategories: SkillCategory[] = [
 			"tailwindcss",
 			"astro",
 		],
-	},
-	{
-		id: "backend",
-		name: "Back-End Skills",
-		skills: ["nodejs", "express", "python", "django", "fastapi"],
-	},
-	{
-		id: "mobile",
-		name: "Mobile Development",
-		skills: ["swift", "swiftui", "reactnative", "xcode"],
 	},
 	{
 		id: "database",
