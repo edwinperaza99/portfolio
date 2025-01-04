@@ -17,7 +17,7 @@ export default function Skills() {
 	return (
 		<div className="container my-8 flex flex-col text-primary-light px-4">
 			<h2 className="text-4xl uppercase mb-2">Skills</h2>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
 				{/* Column 1 */}
 				<div className="flex flex-col gap-2 md:gap-4">
 					{column1.map((category) => (
