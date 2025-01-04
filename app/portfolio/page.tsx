@@ -6,10 +6,18 @@ import Contact from "@/components/sections/Contact";
 export default function Portfolio() {
 	return (
 		<>
-			<About />
-			<FeaturedProjects />
-			<Skills />
-			<Contact />
+			<section id="about">
+				<About />
+			</section>
+			<section id="projects">
+				<FeaturedProjects />
+			</section>
+			<section id="skills">
+				<Skills />
+			</section>
+			<section id="contact">
+				<Contact />
+			</section>
 		</>
 	);
 }

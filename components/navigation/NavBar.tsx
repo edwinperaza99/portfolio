@@ -73,7 +73,7 @@ const NavBar = () => {
 								className="col-span-2 row-span-3"
 							>
 								<Link
-									href="/about"
+									href="/portfolio#about"
 									className="vertical-text p-4 flex justify-start items-end w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
@@ -87,7 +87,7 @@ const NavBar = () => {
 								className="col-span-2 row-span-3"
 							>
 								<Link
-									href="/featured-projects"
+									href="/portfolio#projects"
 									className="vertical-text p-4 flex justify-end items-start w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
@@ -108,7 +108,7 @@ const NavBar = () => {
 								className="col-span-3 row-span-2"
 							>
 								<Link
-									href="/skills"
+									href="/portfolio#skills"
 									className="vertical-text p-4 flex justify-start items-start w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
