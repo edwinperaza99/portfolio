@@ -161,6 +161,7 @@ body {
 /* Glitch Text */
 .glitch {
 	position: relative;
+	color: #fff;
 	overflow: hidden;
 }
 
@@ -168,65 +169,67 @@ body {
 .glitch::after {
 	content: attr(data-text);
 	position: absolute;
-	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	color: transparent; /* Prevent text from being visible directly */
+	transition: none;
 }
 
-.glitch::before {
-	text-shadow: 2px 0 magenta;
-	clip-path: inset(0 0 80% 0);
-	animation: glitch-before 10s infinite;
+.glitch:hover::before,
+.glitch:focus::before {
+	animation: glitchTop 2s linear infinite;
 }
 
-.glitch::after {
-	text-shadow: -2px 0 cyan;
-	clip-path: inset(80% 0 0 0);
-	animation: glitch-after 10s infinite;
+.glitch:hover::after,
+.glitch:focus::after {
+	animation: glitchBottom 1.5s linear infinite;
 }
 
-/* Glitch animations with delay */
-@keyframes glitch-before {
-	0%,
-	85% {
-		/* 85% delay ensures glitch happens only briefly */
-		clip-path: inset(0 0 100% 0);
-		transform: translate(0, 0);
+.glitch:hover,
+.glitch:focus {
+	animation: glitch 2s linear infinite;
+}
+
+/* Keyframes for glitch effect */
+@keyframes glitch {
+	2%,
+	64% {
+		transform: translate(2px, 0) skew(0deg);
 	}
-	90% {
-		clip-path: inset(80% 0 0 0);
-		transform: translate(-2px, -2px);
+	4%,
+	60% {
+		transform: translate(-2px, 0) skew(0deg);
 	}
-	95% {
-		clip-path: inset(10% 0 30% 0);
-		transform: translate(2px, 2px);
-	}
-	100% {
-		clip-path: inset(40% 0 10% 0);
-		transform: translate(-1px, -1px);
+	62% {
+		transform: translate(0, 0) skew(5deg);
 	}
 }
 
-@keyframes glitch-after {
-	0%,
-	85% {
-		/* Same delay as before */
-		clip-path: inset(100% 0 0 0); /* Hidden during idle time */
-		transform: translate(0, 0);
+@keyframes glitchTop {
+	2%,
+	64% {
+		transform: translate(2px, -2px);
 	}
-	90% {
-		clip-path: inset(10% 0 40% 0);
-		transform: translate(2px, 2px);
+	4%,
+	60% {
+		transform: translate(-2px, 2px);
 	}
-	95% {
-		clip-path: inset(30% 0 10% 0);
-		transform: translate(-2px, -2px);
+	62% {
+		transform: translate(13px, -1px) skew(-13deg);
 	}
-	100% {
-		clip-path: inset(60% 0 20% 0);
-		transform: translate(1px, 1px);
+}
+
+@keyframes glitchBottom {
+	2%,
+	64% {
+		transform: translate(-2px, 0);
+	}
+	4%,
+	60% {
+		transform: translate(-2px, 0);
+	}
+	62% {
+		transform: translate(-22px, 5px) skew(21deg);
 	}
 }
 
@@ -238,16 +241,15 @@ body {
 	align-items: center;
 	width: 3.5rem;
 	height: 3.5rem;
-	background: rgba(
-		var(--skill-color),
-		0.3
-	); /* Initial transparent background */
+	/* Initial transparent background */
+	background: rgba(var(--skill-color, 255, 255, 255), 0.3);
 	border-radius: 50%;
 	box-shadow: 0 0 15px rgba(var(--skill-color), 0.3),
 		0 0 30px rgba(var(--skill-color), 0.3),
 		0 0 45px rgba(var(--skill-color), 0.3);
 	transition: all 0.3s ease-in-out;
 	position: relative;
+	/* border: 2px solid rgba(var(--skill-color, 255, 255, 255), 0.3); */
 }
 
 .skill:hover {
@@ -273,7 +275,8 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	border: 2px solid rgba(var(--skill-color), 0.3);
+	border: 2px solid rgba(var(--skill-color, 255, 255, 255), 0.3);
+	opacity: 01; /* Explicitly set opacity */
 	border-radius: 50%;
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
@@ -291,6 +294,59 @@ body {
 		box-shadow: 0 0 45px rgba(var(--skill-color), 0.5),
 			0 0 75px rgba(var(--skill-color), 0.6),
 			0 0 105px rgba(var(--skill-color), 0.8);
+	}
+}
+
+/* glow effect for text */
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+.glow {
+	color: #a1d8ff; /* Light bluish text color */
+	text-shadow: 0 0 5px #00d4ff, /* Bright blue glow */ 0 0 15px #00d4ff,
+		0 0 25px #00aaff, 0 0 40px #0077ff,
+		/* Deep electric blue */ 0 0 60px #0047ff,
+		/* Darker bluish-purple */ 0 0 80px #0033aa, 0 0 98px #001a66; /* Cosmic dark blue */
+	-webkit-animation: pulse 5s infinite;
+	animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 20px #00aaff,
+			0 0 30px #0077ff, 0 0 50px #0047ff, 0 0 70px #0033aa, 0 0 90px #001a66;
+	}
+	50% {
+		text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00aaff,
+			0 0 50px #0077ff, 0 0 70px #0047ff, 0 0 90px #0033aa, 0 0 110px #001a66;
+	}
+	100% {
+		text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 20px #00aaff,
+			0 0 30px #0077ff, 0 0 50px #0047ff, 0 0 70px #0033aa, 0 0 90px #001a66;
+	}
+}
+
+.animate-wave {
+	display: inline-block;
+	animation: wave 2s infinite;
+	transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+	0%,
+	100% {
+		transform: rotate(0deg);
+	}
+	20% {
+		transform: rotate(14deg);
+	}
+	40% {
+		transform: rotate(-8deg);
+	}
+	60% {
+		transform: rotate(14deg);
+	}
+	80% {
+		transform: rotate(-4deg);
 	}
 }
 

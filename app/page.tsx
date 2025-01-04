@@ -24,10 +24,10 @@ export default function Home() {
 				</p>
 			</div>
 			<Link
-				href="/projects"
+				href="/portfolio"
 				className="absolute left-1/2 bottom-20 -translate-x-1/2 uppercase glass text-white z-50 px-4 py-2 rounded hover:opacity-90"
 			>
-				Projects
+				Get Started
 			</Link>
 			<Hero />
 		</main>
