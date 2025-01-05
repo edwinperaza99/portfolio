@@ -64,7 +64,7 @@ export default function About() {
 					software engineer, full stack developer
 				</h3>
 			</div>
-			<div className="grid grid-cols-1 sm:grid-cols-2 pt-20 gap-2">
+			<div className="grid grid-cols-1 sm:grid-cols-2 pt-20 gap-2 mb-20">
 				<div className="flex justify-center items-center">
 					<div
 						className={`w-64 h-64 relative cursor-pointer transition-opacity duration-500 ${
@@ -81,7 +81,7 @@ export default function About() {
 						/>
 					</div>
 				</div>
-				<div className="grid grid-cols-4">
+				<div className="grid grid-cols-4 gap-4">
 					<div className="glass p-2 md:p-4 rounded-lg text-sm space-y-2 col-span-5">
 						<p>
 							I&apos;m a Computer Science graduate from{" "}
@@ -104,33 +104,35 @@ export default function About() {
 						</p>
 					</div>
 					<Link
-						className="row-span-2 glass"
+						className="row-span-2 place-items-center"
 						href="https://www.linkedin.com/in/edwin-peraza/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<Image
 							src="/icons/GitHub.svg"
-							layout="fill"
 							alt="GitHub link"
-							className="p-4"
+							width={80}
+							height={80}
+							className="skill drop-shadow-3xl rounded-full p-4"
 						/>
 					</Link>
 					<Link
-						className="row-span-2 glass"
+						className="row-span-2"
 						href="https://www.linkedin.com/in/edwin-peraza/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<Image
 							src="/icons/LinkedIn.svg"
-							layout="fill"
 							alt="LinkedIn link"
-							className="p-4"
+							width={80}
+							height={80}
+							className="skill drop-shadow-3xl rounded-full p-4"
 						/>
 					</Link>
 					<Link
-						className="col-span-2 glass"
+						className="col-span-2 skill"
 						href="/Resume_Edwin_Peraza.pdf"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -138,8 +140,8 @@ export default function About() {
 					>
 						Resume
 					</Link>
-					<Link className="col-span-2 glass" href="/portfolio#contact">
-						Contact
+					<Link className="col-span-2 skill" href="/portfolio#contact">
+						Contact Me
 					</Link>
 				</div>
 			</div>
