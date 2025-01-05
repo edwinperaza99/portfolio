@@ -134,6 +134,7 @@ export default function About() {
 						href="/Resume_Edwin_Peraza.pdf"
 						target="_blank"
 						rel="noopener noreferrer"
+						prefetch={false}
 					>
 						Resume
 					</Link>
