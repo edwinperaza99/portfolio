@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-const memojiImages = ["/memoji/1.png", "/memoji/2.png", "/memoji/3.png"];
+const memojiImages = ["/memoji/1.PNG", "/memoji/2.PNG", "/memoji/3.PNG"];
 
 export default function About() {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -80,9 +81,9 @@ export default function About() {
 						/>
 					</div>
 				</div>
-				<div className="">
-					<div className="glass p-2 md:p-4 rounded-lg text-sm space-y-2">
-						<p className="text-sm">
+				<div className="grid grid-cols-4">
+					<div className="glass p-2 md:p-4 rounded-lg text-sm space-y-2 col-span-5">
+						<p>
 							I&apos;m a Computer Science graduate from{" "}
 							<a
 								href="https://www.fullerton.edu"
@@ -96,12 +97,49 @@ export default function About() {
 							creating engaging user experiences using React, Next.js,
 							TypeScript, and Tailwind CSS.
 						</p>
-						<p className="text-sm">
+						<p>
 							I&apos;m actively seeking opportunities in software engineering to
 							contribute to innovative, user-focused solutions. Check out my
 							portfolio to explore some of the projects I&apos;ve built.
 						</p>
 					</div>
+					<Link
+						className="row-span-2 glass"
+						href="https://www.linkedin.com/in/edwin-peraza/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Image
+							src="/icons/GitHub.svg"
+							layout="fill"
+							alt="GitHub link"
+							className="p-4"
+						/>
+					</Link>
+					<Link
+						className="row-span-2 glass"
+						href="https://www.linkedin.com/in/edwin-peraza/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Image
+							src="/icons/LinkedIn.svg"
+							layout="fill"
+							alt="LinkedIn link"
+							className="p-4"
+						/>
+					</Link>
+					<Link
+						className="col-span-2 glass"
+						href="/Resume_Edwin_Peraza.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Resume
+					</Link>
+					<Link className="col-span-2 glass" href="/portfolio#contact">
+						Contact
+					</Link>
 				</div>
 			</div>
 		</div>

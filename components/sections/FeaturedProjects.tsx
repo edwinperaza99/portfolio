@@ -89,7 +89,7 @@ export default function FeaturedProjects() {
 					</Link>
 				</article>
 
-				<article className="rounded-2xl glass overflow-hidden group">
+				{/* <article className="rounded-2xl glass overflow-hidden group">
 					<Link href="/projects/6" className="flex flex-col h-full">
 						<div className="relative aspect-[4/3] md:aspect-none md:flex-grow overflow-hidden">
 							<Image
@@ -106,7 +106,7 @@ export default function FeaturedProjects() {
 							<p className="text-sm md:text-xs lg:text-sm">Python | Pygame</p>
 						</div>
 					</Link>
-				</article>
+				</article> */}
 
 				<article className="rounded-2xl glass overflow-hidden group">
 					<Link href="/projects/8" className="flex flex-col h-full">
