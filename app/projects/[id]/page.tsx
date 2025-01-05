@@ -51,7 +51,7 @@ export default async function Project({
 							</BreadcrumbItem>
 							<BreadcrumbSeparator />
 							<BreadcrumbItem>
-								<BreadcrumbLink href="/featured-projects">
+								<BreadcrumbLink href="/portfolio#projects">
 									Featured Projects
 								</BreadcrumbLink>
 							</BreadcrumbItem>
