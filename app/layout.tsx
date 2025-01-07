@@ -4,6 +4,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navigation/NavBar";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -40,6 +41,7 @@ export default function RootLayout({
 				<NavBar />
 				{children}
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
