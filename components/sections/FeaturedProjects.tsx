@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FeaturedProjects() {
 	return (
@@ -132,7 +132,7 @@ export default function FeaturedProjects() {
 			<div className="flex justify-center mt-5">
 				<Link
 					href="/projects"
-					className="relative inline-block px-6 py-3 text-lg font-bold text-white rounded-lg border"
+					className="relative inline-block px-6 py-3 text-lg font-bold text-white rounded-lg border-animation"
 				>
 					View All Projects
 				</Link>
