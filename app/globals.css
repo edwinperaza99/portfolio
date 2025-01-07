@@ -49,6 +49,18 @@ body {
 	}
 }
 
+@media (max-width: 540px) {
+	@keyframes zoom-bg {
+		0%,
+		100% {
+			background-size: 110%;
+		}
+		50% {
+			background-size: 120%;
+		}
+	}
+}
+
 .nav-link {
 	background-color: #0a0a0a;
 }

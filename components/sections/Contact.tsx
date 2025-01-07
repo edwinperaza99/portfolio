@@ -74,10 +74,13 @@ export default function Contact() {
 					className="hidden"
 				/>
 
-				<div className="flex justify-center items-center g-4">
+				<a
+					href="mailto:edwin.peraza111@gmail.com"
+					className="flex justify-center items-center g-4"
+				>
 					<IoIosMail />
 					<h3 className="pl-2">edwin.peraza111@gmail.com</h3>
-				</div>
+				</a>
 
 				<div className="grid grid-cols-2 gap-6">
 					<div className="space-y-1">
