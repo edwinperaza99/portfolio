@@ -34,7 +34,7 @@ body {
 	background-position: center;
 	/* NOTE: great solution for fixing repeating backgrounds when the size is inconsistent */
 	background-attachment: fixed;
-	animation: zoom-bg 40s ease-in-out infinite;
+	/* animation: zoom-bg 40s ease-in-out infinite; */
 }
 
 @keyframes zoom-bg {
