@@ -82,7 +82,7 @@ function Galaxy({
 function NebulaSphere() {
 	const texture = useMemo(() => {
 		// Load the nebula texture
-		return new THREE.TextureLoader().load("/textures/8k_stars_milky_way.jpg");
+		return new THREE.TextureLoader().load("/textures/8k_stars_milky_way.webp");
 	}, []);
 
 	const sphereRef = useRef<THREE.Mesh>(null);
