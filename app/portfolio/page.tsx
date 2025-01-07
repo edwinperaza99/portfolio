@@ -1,7 +1,8 @@
 import About from "@/components/sections/About";
-import Skills from "@/components/sections/Skills";
-import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import Contact from "@/components/sections/Contact";
+import FeaturedProjects from "@/components/sections/FeaturedProjects";
+
+// import Skills from "@/components/sections/Skills";
 
 export default function Portfolio() {
 	return (
@@ -12,9 +13,9 @@ export default function Portfolio() {
 			<section id="projects">
 				<FeaturedProjects />
 			</section>
-			<section id="skills">
+			{/* <section id="skills">
 				<Skills />
-			</section>
+			</section> */}
 			<section id="contact">
 				<Contact />
 			</section>
