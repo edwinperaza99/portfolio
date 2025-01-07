@@ -29,8 +29,8 @@ body {
 	color: #ededed;
 	/* font-family: Arial, Helvetica, sans-serif; */
 	background-image: url("/textures/8k_stars_milky_way.webp");
-	background-repeat: repeat;
-	background-size: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-position: center;
 	/* NOTE: great solution for fixing repeating backgrounds when the size is inconsistent */
 	background-attachment: fixed;
