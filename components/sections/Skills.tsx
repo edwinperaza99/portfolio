@@ -1,12 +1,11 @@
-import Image from "next/image";
-import { skillCategories, resolveSkills } from "@/data/skills";
-
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { resolveSkills, skillCategories } from "@/data/skills";
+import Image from "next/image";
 
 export default function Skills() {
 	// Divide categories into two columns
@@ -36,7 +35,7 @@ export default function Skills() {
 												<Tooltip>
 													<TooltipTrigger>
 														<div
-															className="skill p-4 flex gap-3 glass rounded-full"
+															className=" p-4 flex gap-3 glass rounded-full"
 															style={
 																{
 																	"--skill-color": skill.color,
@@ -81,7 +80,7 @@ export default function Skills() {
 												<Tooltip>
 													<TooltipTrigger>
 														<div
-															className="skill p-4 flex gap-3 glass rounded-full"
+															className="p-4 flex gap-3 glass rounded-full"
 															style={
 																{
 																	"--skill-color": skill.color,
