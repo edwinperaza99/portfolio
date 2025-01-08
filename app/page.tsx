@@ -2,6 +2,7 @@ import Hero from "@/components/hero/Hero";
 import Title from "@/components/hero/Title";
 import TypingEffect from "@/components/hero/TypingEffect";
 import Link from "next/link";
+import { MotionDiv } from "@/components/MotionTags";
 
 export default function Home() {
 	return (
@@ -23,12 +24,18 @@ export default function Home() {
 					/>
 				</p>
 			</div>
-			<Link
-				href="/portfolio"
-				className="absolute left-1/2 bottom-20 -translate-x-1/2 uppercase glass text-white z-50 px-4 py-2 rounded hover:opacity-90"
+			<MotionDiv
+				initial={{ opacity: 0, y: 20 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1 }}
 			>
-				Get Started
-			</Link>
+				<Link
+					href="/portfolio"
+					className="absolute left-1/2 bottom-20 -translate-x-1/2 uppercase glass text-white z-50 px-4 py-2 rounded hover:opacity-90"
+				>
+					View Portfolio
+				</Link>
+			</MotionDiv>
 			<Hero />
 		</main>
 	);

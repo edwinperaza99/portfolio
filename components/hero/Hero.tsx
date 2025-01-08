@@ -10,6 +10,7 @@ import {
 import { useRef, useMemo, useEffect, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
+import { MotionSection } from "@/components/MotionTags";
 
 function Galaxy({
 	color = "#fffff",
@@ -256,7 +257,12 @@ export default function Hero() {
 	}, [userActive, isInitialAnimation]);
 
 	return (
-		<section className="w-full h-full absolute inset-0">
+		<MotionSection
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1 }}
+			className="w-full h-full absolute inset-0"
+		>
 			<Canvas className="w-full h-full">
 				<PerspectiveCamera
 					makeDefault
@@ -283,6 +289,6 @@ export default function Hero() {
 				<Galaxy color="#ffffff" count={40000} />
 				<Galaxy color="#0a47ff" count={20000} />
 			</Canvas>
-		</section>
+		</MotionSection>
 	);
 }

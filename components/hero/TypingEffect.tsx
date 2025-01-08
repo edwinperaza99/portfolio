@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { MotionSpan } from "@/components/MotionTags";
 
 type TypingEffectProps = {
 	words: string[];
@@ -53,5 +54,14 @@ export default function TypingEffect({
 		pauseDuration,
 	]);
 
-	return <span className="typing-effect">{displayedText}</span>;
+	return (
+		<MotionSpan
+			initial={{ opacity: 0, y: 20 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 1 }}
+			className="typing-effect"
+		>
+			{displayedText}
+		</MotionSpan>
+	);
 }

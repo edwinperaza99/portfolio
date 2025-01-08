@@ -1,10 +1,9 @@
-"use client";
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { MotionH1 } from "@/components/MotionTags";
 
 export default function Title({ children }: { children: ReactNode }) {
 	return (
-		<motion.h1
+		<MotionH1
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 1 }}
@@ -12,6 +11,6 @@ export default function Title({ children }: { children: ReactNode }) {
 			data-text={children}
 		>
 			{children}
-		</motion.h1>
+		</MotionH1>
 	);
 }
