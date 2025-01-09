@@ -1,143 +1,86 @@
 import Link from "next/link";
-import Image from "next/image";
+import ProjectCard from "@/components/ProjectCard";
+import { MotionDiv } from "@/components/MotionTags";
+import { Variants } from "framer-motion";
+
+interface Project {
+	href: string;
+	imgSrc: string;
+	imgAlt: string;
+	title: string;
+	description: string;
+	classes?: string;
+}
+
+const variants: Variants = {
+	hidden: { opacity: 0 },
+	visible: { opacity: 1 },
+};
 
 export default function FeaturedProjects() {
+	const projects: Project[] = [
+		{
+			href: "/projects/1",
+			imgSrc: "/NataliaSalon/NataliaSalon_thumbnail.png",
+			imgAlt: "NataliaSalon project",
+			title: "BeBeauty",
+			description: "Next.js | Tailwind | MongoDB",
+		},
+		{
+			href: "/projects/2",
+			imgSrc: "/SoloLevel/SoloLevel_thumbnail_2.png",
+			imgAlt: "SoloLevel",
+			title: "SoloLevel",
+			description: "Swift | Swift UI | Firebase",
+			classes: "md:col-span-2 md:row-span-2",
+		},
+		{
+			href: "/projects/3",
+			imgSrc: "/MioPortfolio/MioPortfolio_thumbnail.png",
+			imgAlt: "Portfolio Mio",
+			title: "Portfolio Mio",
+			description: "Next.js | Tailwind CSS",
+		},
+		{
+			href: "/projects/4",
+			imgSrc: "/CodeAgainstCancer/CaC_thumbnail.png",
+			imgAlt: "Code Against Cancer",
+			title: "Code Against Cancer",
+			description: "Django | Bootstrap | AWS | Docker",
+			classes: "md:col-span-2 md:row-span-2",
+		},
+		{
+			href: "/projects/8",
+			imgSrc: "/Hikken/Hikken_thumbnail.png",
+			imgAlt: "Hikken",
+			title: "Hikken",
+			description: "HTML | CSS | JavaScript",
+		},
+	];
+
 	return (
-		// <div className="gradient-bg-purple">
 		<div className="flex flex-col text-white container px-4 my-8">
 			<h2 className="text-4xl uppercase mb-2">Projects</h2>
 			<section className="w-full grid gap-4 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-3">
-				<article className="rounded-2xl glass overflow-hidden group">
-					<Link href="/projects/1" className="flex flex-col h-full">
-						<div className="glass-grid-bg relative aspect-[4/3] md:aspect-none md:flex-grow overflow-hidden">
-							<Image
-								src="/NataliaSalon/NataliaSalon_thumbnail.png"
-								alt="NataliaSalon project"
-								fill
-								className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-75"
-							/>
-						</div>
-						<div className="p-4">
-							<h3 className="text-xl md:text-base lg:text-xl font-bold">
-								BeBeauty
-							</h3>
-							<p className="text-sm md:text-xs lg:text-sm">
-								Next.js | Tailwind | MongoDB
-							</p>
-						</div>
-					</Link>
-				</article>
-
-				<article className="rounded-2xl glass overflow-hidden group md:col-span-2 md:row-span-2">
-					<Link href="/projects/2" className="flex flex-col h-full">
-						<div className="glass-grid-bg relative aspect-[4/3] md:aspect-none md:flex-grow overflow-hidden">
-							<Image
-								src="/SoloLevel/SoloLevel_thumbnail_2.png"
-								alt="SoloLevel"
-								fill
-								className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-75"
-							/>
-						</div>
-						<div className="p-4">
-							<h3 className="text-xl md:text-base lg:text-xl font-bold">
-								SoloLevel
-							</h3>
-							<p className="text-sm md:text-xs lg:text-sm">
-								Swift | Swift UI | Firebase
-							</p>
-						</div>
-					</Link>
-				</article>
-				<article className="rounded-2xl glass overflow-hidden group">
-					<Link href="/projects/3" className="flex flex-col h-full">
-						<div className="glass-grid-bg relative aspect-[4/3] md:aspect-none md:flex-grow overflow-hidden">
-							<Image
-								src="/MioPortfolio/MioPortfolio_thumbnail.png"
-								alt="Portfolio Mio"
-								fill
-								className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-75"
-							/>
-						</div>
-						<div className="p-4">
-							<h3 className="text-xl md:text-base lg:text-xl font-bold">
-								Portfolio Mio
-							</h3>
-							<p className="text-sm md:text-xs lg:text-sm">
-								Next.js | Tailwind CSS
-							</p>
-						</div>
-					</Link>
-				</article>
-				<article className="rounded-2xl glass overflow-hidden group md:col-span-2 md:row-span-2">
-					<Link href="/projects/4" className="flex flex-col h-full">
-						<div className="glass-grid-bg relative aspect-[4/3] md:aspect-none md:flex-grow overflow-hidden">
-							<Image
-								src="/CodeAgainstCancer/CaC_thumbnail.png"
-								alt="Code Against Cancer"
-								fill
-								className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-75"
-							/>
-						</div>
-						<div className="p-4">
-							<h3 className="text-xl md:text-base lg:text-xl font-bold">
-								Code Against Cancer
-							</h3>
-							<p className="text-sm md:text-xs lg:text-sm">
-								Django | Bootstrap | AWS | Docker
-							</p>
-						</div>
-					</Link>
-				</article>
-
-				{/* <article className="rounded-2xl glass overflow-hidden group">
-					<Link href="/projects/6" className="flex flex-col h-full">
-						<div className="glass-grid-bg relative aspect-[4/3] md:aspect-none md:flex-grow overflow-hidden">
-							<Image
-								src="/PAC-MAN/pacman_thumbnail_2.png"
-								alt="PAC-MAN"
-								fill
-								className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-75"
-							/>
-						</div>
-						<div className="p-4">
-							<h3 className="text-xl md:text-base lg:text-xl font-bold">
-								PAC-MAN
-							</h3>
-							<p className="text-sm md:text-xs lg:text-sm">Python | Pygame</p>
-						</div>
-					</Link>
-				</article> */}
-
-				<article className="rounded-2xl glass overflow-hidden group">
-					<Link href="/projects/8" className="flex flex-col h-full">
-						<div className="glass-grid-bg relative aspect-[4/3] md:aspect-none md:flex-grow overflow-hidden">
-							<Image
-								src="/Hikken/Hikken_thumbnail.png"
-								alt="Hikken"
-								fill
-								className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-75"
-							/>
-						</div>
-						<div className="p-4">
-							<h3 className="text-xl md:text-base lg:text-xl font-bold">
-								Hikken
-							</h3>
-							<p className="text-sm md:text-xs lg:text-sm">
-								HTML | CSS | JavaScript
-							</p>
-						</div>
-					</Link>
-				</article>
+				{projects.map((project, index) => (
+					<ProjectCard key={index} {...project} />
+				))}
 			</section>
-			<div className="flex justify-center mt-5">
+			<MotionDiv
+				variants={variants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: false, amount: 0 }}
+				transition={{ duration: 0.8, ease: "easeOut" }}
+				className="flex justify-center mt-5"
+			>
 				<Link
 					href="/projects"
 					className="relative inline-block px-6 py-3 text-lg font-bold text-white rounded-lg border-animation"
 				>
 					View All Projects
 				</Link>
-			</div>
+			</MotionDiv>
 		</div>
-		// </div>
 	);
 }

@@ -1,14 +1,12 @@
 "use client";
 import { projects } from "@/data/projects";
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Laptop, Smartphone, Globe, Brain, Gamepad2 } from "lucide-react";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Projects() {
-	const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 	const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
 	// Filter projects based on the selected category
@@ -69,60 +67,14 @@ export default function Projects() {
 				>
 					{/* iterate through all the projects  */}
 					{filteredProjects.map((project) => (
-						<article
+						<ProjectCard
 							key={project.id}
-							className="flex flex-col glass rounded-2xl group"
-							onMouseEnter={() => setHoveredProject(project.id)}
-							onMouseLeave={() => setHoveredProject(null)}
-						>
-							<Link href={`/projects/${project.id}`}>
-								<div className="flex justify-center align-middle flex-1 rounded-t-2xl glass-grid-bg aspect-[4/3] overflow-hidden">
-									<Image
-										src={project.thumbnail}
-										alt={project.name}
-										placeholder="blur"
-										className="object-cover rounded-t-2xl group-hover:opacity-75 group-hover:scale-105 transition-transform"
-									/>
-								</div>
-								<div className="p-4">
-									<h2 className="text-xl">{project.name}</h2>
-									{/* Add conditional hover text with transition */}
-									<AnimatePresence mode="wait">
-										{hoveredProject === project.id ? (
-											<motion.p
-												key="open-project"
-												initial={{ scale: 0.8, opacity: 0 }}
-												animate={{ scale: 1, opacity: 1 }}
-												// exit={{ scale: 0.8, opacity: 0 }}
-												transition={{
-													duration: 0.2,
-													type: "spring",
-													stiffness: 100,
-												}}
-												className=""
-											>
-												Click to learn more
-											</motion.p>
-										) : (
-											<motion.p
-												key="category"
-												initial={{
-													rotateX: -90,
-													opacity: 0,
-													perspective: 1000,
-												}}
-												animate={{ rotateX: 0, opacity: 1, perspective: 1000 }}
-												exit={{ rotateX: 90, opacity: 0, perspective: 1000 }}
-												transition={{ duration: 0.1 }}
-												className=""
-											>
-												{project.category}
-											</motion.p>
-										)}
-									</AnimatePresence>
-								</div>
-							</Link>
-						</article>
+							href={`/projects/${project.id}`}
+							imgSrc={project.thumbnail.src}
+							imgAlt={project.name}
+							title={project.name}
+							description={project.category}
+						/>
 					))}
 				</motion.section>
 			</AnimatePresence>
