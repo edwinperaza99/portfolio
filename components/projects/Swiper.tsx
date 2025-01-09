@@ -18,7 +18,7 @@ export default function SwiperGallery({
 }) {
 	return (
 		<Gallery>
-			<div className="w-fit max-w-4xl mx-auto glass p-4">
+			<div className="max-w-4xl mx-auto">
 				<Swiper
 					loop={true}
 					spaceBetween={10}

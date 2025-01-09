@@ -3,10 +3,12 @@ import Title from "@/components/hero/Title";
 import TypingEffect from "@/components/hero/TypingEffect";
 import Link from "next/link";
 import { MotionDiv } from "@/components/motionUtils";
+import NavBar from "@/components/navigation/NavBar";
 
 export default function Home() {
 	return (
 		<main className="min-h-dvh relative bg-transparent">
+			<NavBar />
 			<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-50 select-none pointer-events-none">
 				<Title>Edwin Peraza</Title>
 				<p className="text-base font-bold text-gray-300 uppercase whitespace-nowrap">

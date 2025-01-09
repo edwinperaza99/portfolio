@@ -20,6 +20,7 @@ import {
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { MotionDiv, fadeInOut } from "@/components/motionUtils";
+import MainNavBar from "@/components/navigation/MainNavBar";
 
 export async function generateStaticParams() {
 	return projects.map((project) => ({
@@ -49,6 +50,7 @@ export default async function Project({
 			transition={{ duration: 0.8, ease: "easeOut" }}
 			className="min-h-screen flex flex-col text-white"
 		>
+			<MainNavBar />
 			<section className="container px-2">
 				<header className="my-4">
 					<Breadcrumb className="dark">

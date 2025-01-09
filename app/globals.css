@@ -28,13 +28,13 @@ body {
 	/* color: var(--foreground-base); */
 	color: #ededed;
 	/* font-family: Arial, Helvetica, sans-serif; */
-	background-image: url("/textures/8k_stars_milky_way.webp");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	/* background-image: url("/textures/8k_stars_milky_way.webp"); */
+	/* background-repeat: no-repeat; */
+	/* background-size: cover; */
+	/* background-position: center; */
 	/* NOTE: great solution for fixing repeating backgrounds when the size is inconsistent */
-	background-attachment: fixed;
-	animation: zoom-bg 40s ease-in-out infinite;
+	/* background-attachment: fixed; */
+	/* animation: zoom-bg 40s ease-in-out infinite; */
 }
 
 @keyframes zoom-bg {
