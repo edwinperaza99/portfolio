@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { IoIosMail } from "react-icons/io";
 import { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
+import { MotionSection, fadeInOut } from "@/components/motionUtils";
 
 export default function Contact() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
@@ -46,7 +47,14 @@ export default function Contact() {
 	}
 
 	return (
-		<section className="my-8">
+		<MotionSection
+			variants={fadeInOut}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: false, amount: 0 }}
+			transition={{ duration: 0.8, ease: "easeOut" }}
+			className="my-8"
+		>
 			<Toaster position="bottom-center" />
 
 			<div className="flex justify-center items-center">
@@ -114,6 +122,6 @@ export default function Contact() {
 					</Button>
 				</div>
 			</form>
-		</section>
+		</MotionSection>
 	);
 }

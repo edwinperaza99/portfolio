@@ -1,3 +1,4 @@
+import { MotionSection, fadeInOut } from "@/components/motionUtils";
 import {
 	Tooltip,
 	TooltipContent,
@@ -20,7 +21,12 @@ export default function Skills() {
 				{/* Column 1 */}
 				<div className="flex flex-col gap-2 md:gap-4">
 					{column1.map((category) => (
-						<section
+						<MotionSection
+							variants={fadeInOut}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: false, amount: 0 }}
+							transition={{ duration: 0.8, ease: "easeOut" }}
 							key={category.id}
 							className="flex flex-col gap-2 md:gap-4 rounded-lg glass p-3 md:p-4 shadow-md"
 						>
@@ -59,13 +65,18 @@ export default function Skills() {
 										)
 								)}
 							</article>
-						</section>
+						</MotionSection>
 					))}
 				</div>
 				{/* Column 2 */}
 				<div className="flex flex-col gap-2 md:gap-4">
 					{column2.map((category) => (
-						<section
+						<MotionSection
+							variants={fadeInOut}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: false, amount: 0 }}
+							transition={{ duration: 0.8, ease: "easeOut" }}
 							key={category.id}
 							className="flex flex-col gap-2 md:gap-4 rounded-lg glass p-3 md:p-4 shadow-md"
 						>
@@ -104,7 +115,7 @@ export default function Skills() {
 										)
 								)}
 							</article>
-						</section>
+						</MotionSection>
 					))}
 				</div>
 			</div>
