@@ -1,7 +1,6 @@
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
-import { MotionDiv } from "@/components/MotionTags";
-import { Variants } from "framer-motion";
+import { MotionDiv, fadeInOut } from "@/components/motionUtils";
 
 interface Project {
 	href: string;
@@ -11,11 +10,6 @@ interface Project {
 	description: string;
 	classes?: string;
 }
-
-const variants: Variants = {
-	hidden: { opacity: 0 },
-	visible: { opacity: 1 },
-};
 
 export default function FeaturedProjects() {
 	const projects: Project[] = [
@@ -67,7 +61,7 @@ export default function FeaturedProjects() {
 				))}
 			</section>
 			<MotionDiv
-				variants={variants}
+				variants={fadeInOut}
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: false, amount: 0 }}

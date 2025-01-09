@@ -10,7 +10,7 @@ import {
 import { useRef, useMemo, useEffect, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
-import { MotionSection } from "@/components/MotionTags";
+import { MotionSection } from "@/components/motionUtils";
 
 function Galaxy({
 	color = "#fffff",

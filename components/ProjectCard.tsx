@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MotionArticle } from "@/components/MotionTags";
-import { Variants } from "framer-motion";
+import { MotionArticle, fadeInOut } from "@/components/motionUtils";
 
 interface ProjectCardProps {
 	href: string;
@@ -11,11 +10,6 @@ interface ProjectCardProps {
 	description: string;
 	classes?: string;
 }
-
-const variants: Variants = {
-	hidden: { opacity: 0 },
-	visible: { opacity: 1 },
-};
 
 export default function ProjectCard({
 	href,
@@ -27,7 +21,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
 	return (
 		<MotionArticle
-			variants={variants}
+			variants={fadeInOut}
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: false, amount: 0.2 }}

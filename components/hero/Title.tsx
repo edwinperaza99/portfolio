@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { MotionH1 } from "@/components/MotionTags";
+import { MotionH1 } from "@/components/motionUtils";
 
 export default function Title({ children }: { children: ReactNode }) {
 	return (

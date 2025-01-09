@@ -2,7 +2,7 @@ import Hero from "@/components/hero/Hero";
 import Title from "@/components/hero/Title";
 import TypingEffect from "@/components/hero/TypingEffect";
 import Link from "next/link";
-import { MotionDiv } from "@/components/MotionTags";
+import { MotionDiv } from "@/components/motionUtils";
 
 export default function Home() {
 	return (

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { MotionSpan } from "@/components/MotionTags";
+import { MotionSpan } from "@/components/motionUtils";
 
 type TypingEffectProps = {
 	words: string[];
