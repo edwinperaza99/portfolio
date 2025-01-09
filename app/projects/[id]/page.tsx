@@ -19,6 +19,7 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { MotionDiv, fadeInOut } from "@/components/motionUtils";
 
 export async function generateStaticParams() {
 	return projects.map((project) => ({
@@ -41,7 +42,13 @@ export default async function Project({
 	const resolvedTechnologies = resolveSkills(project.technologies);
 
 	return (
-		<main className="min-h-screen flex flex-col text-white">
+		<MotionDiv
+			variants={fadeInOut}
+			initial="hidden"
+			animate="visible"
+			transition={{ duration: 0.8, ease: "easeOut" }}
+			className="min-h-screen flex flex-col text-white"
+		>
 			<section className="container px-2">
 				<header className="my-4">
 					<Breadcrumb className="dark">
@@ -143,6 +150,6 @@ export default async function Project({
 			<section className="container px-2">
 				<SwiperGallery images={project.images} />
 			</section>
-		</main>
+		</MotionDiv>
 	);
 }

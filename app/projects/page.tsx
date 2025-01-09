@@ -15,7 +15,7 @@ export default function Projects() {
 	);
 
 	return (
-		<main className="min-h-screen flex flex-col text-white">
+		<div className="min-h-screen flex flex-col text-white">
 			<section className="container px-1">
 				<header className="text-center my-4">
 					<h1 className="text-3xl uppercase">{selectedCategory} Projects</h1>
@@ -78,6 +78,6 @@ export default function Projects() {
 					))}
 				</motion.section>
 			</AnimatePresence>
-		</main>
+		</div>
 	);
 }
