@@ -60,11 +60,11 @@ export default function Contact() {
 			<Toaster position="bottom-center" />
 
 			<div className="flex justify-center items-center">
-				<div className="bg-[#9e876f] h-1 w-full"></div>
-				<h2 className="text-4xl px-2 text-white uppercase whitespace-nowrap">
+				<div className="bg-blue-300 h-0.5 w-full"></div>
+				<h2 className="text-5xl uppercase mb-2 font-bold bg-gradient-to-t from-white to-zinc-400 bg-clip-text text-transparent tracking-tight text-center">
 					Contact
 				</h2>
-				<div className="bg-[#9e876f] h-1 w-full"></div>
+				<div className="bg-blue-300 h-0.5 w-full"></div>
 			</div>
 
 			<form

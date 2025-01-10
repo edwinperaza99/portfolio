@@ -112,7 +112,7 @@ const MainNavBar = () => {
 				<button
 					title="menu-toggle"
 					onClick={toggleOverlay}
-					className="md:hidden p-2 text-white rounded"
+					className="md:hidden p-2 text-white hover:text-blue-300 transition-colors rounded"
 				>
 					<RxHamburgerMenu size={24} />
 				</button>
