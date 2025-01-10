@@ -121,7 +121,7 @@ const MainNavBar = () => {
 				<AnimatePresence>
 					{isOpen && (
 						<motion.div
-							className="fixed inset-0 z-[1000] bg-black bg-opacity-90 text-white flex items-center justify-center"
+							className="w-screen h-screen fixed inset-0 z-[1000] bg-black bg-opacity-90 text-white flex items-center justify-center"
 							initial="closed"
 							animate="open"
 							exit="closed"
