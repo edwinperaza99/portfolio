@@ -159,6 +159,7 @@ export default async function Project({
 			<section className="container px-2 space-y-2 md:space-y-4 py-6">
 				{project.images.map((image, index) => (
 					<MotionDiv
+						key={index}
 						variants={fadeInOut}
 						initial="hidden"
 						whileInView="visible"
@@ -166,7 +167,6 @@ export default async function Project({
 						transition={{ duration: 0.8, ease: "easeOut" }}
 					>
 						<Image
-							key={index}
 							src={image}
 							alt={`Image ${index}`}
 							width={image.width}
