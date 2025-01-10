@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GiHamburger } from "react-icons/gi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MotionDiv, slideInFromTop } from "@/components/motionUtils";
-import LetterE from "@/components/lottie/LetterE";
 
 const MainNavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -175,11 +174,10 @@ const MainNavBar = () => {
 								</motion.li>
 								<motion.li
 									variants={itemVariants}
-									className="flex justify-center items-center border cursor-pointer hover:opacity-80"
+									className="flex glass justify-center items-center border cursor-pointer hover:opacity-80"
 									onClick={toggleOverlay}
 								>
-									{/* <GiHamburger /> */}
-									<LetterE />
+									<GiHamburger />
 								</motion.li>
 								<motion.li
 									variants={itemVariants}
