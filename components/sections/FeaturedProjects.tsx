@@ -1,6 +1,11 @@
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
-import { MotionDiv, fadeInOut } from "@/components/motionUtils";
+import {
+	MotionDiv,
+	MotionH2,
+	fadeInOut,
+	slideInFromLeft,
+} from "@/components/motionUtils";
 
 interface Project {
 	href: string;
@@ -54,9 +59,16 @@ export default function FeaturedProjects() {
 
 	return (
 		<div className="flex flex-col text-white container px-4 my-8">
-			<h2 className="text-5xl uppercase mb-2 font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight">
+			<MotionH2
+				variants={slideInFromLeft}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: false, amount: 0.5 }}
+				transition={{ duration: 0.8, delay: 0.2 }}
+				className="text-5xl uppercase mb-2 font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight"
+			>
 				Projects
-			</h2>
+			</MotionH2>
 			<section className="w-full grid gap-4 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-3">
 				{projects.map((project, index) => (
 					<ProjectCard key={index} {...project} />

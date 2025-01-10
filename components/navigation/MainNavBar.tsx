@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { GiHamburger } from "react-icons/gi";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { MotionDiv, slideInFromTop } from "@/components/motionUtils";
+import LetterE from "@/components/lottie/LetterE";
 
 const MainNavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +57,14 @@ const MainNavBar = () => {
 				scrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
 			}`}
 		>
-			<div className="container flex items-center justify-between px-4 py-3 md:px-6 md:py-5">
+			<MotionDiv
+				variants={slideInFromTop}
+				initial="hidden"
+				animate="visible"
+				viewport={{ once: true }}
+				transition={{ duration: 0.8 }}
+				className="container flex items-center justify-between px-4 py-3 md:px-6 md:py-5"
+			>
 				{/* Left Side: Name as a Link */}
 				<Link
 					href="/landing"
@@ -169,7 +178,8 @@ const MainNavBar = () => {
 									className="flex justify-center items-center border cursor-pointer hover:opacity-80"
 									onClick={toggleOverlay}
 								>
-									<GiHamburger />
+									{/* <GiHamburger /> */}
+									<LetterE />
 								</motion.li>
 								<motion.li
 									variants={itemVariants}
@@ -187,7 +197,7 @@ const MainNavBar = () => {
 						</motion.div>
 					)}
 				</AnimatePresence>
-			</div>
+			</MotionDiv>
 		</nav>
 	);
 };
