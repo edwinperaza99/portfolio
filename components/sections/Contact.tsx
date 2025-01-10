@@ -8,6 +8,8 @@ import { IoIosMail } from "react-icons/io";
 import { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import { MotionSection, fadeInOut } from "@/components/motionUtils";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Contact() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
@@ -122,6 +124,36 @@ export default function Contact() {
 					</Button>
 				</div>
 			</form>
+			<div className="flex justify-center gap-6 mt-6">
+				<Link
+					className="row-span-2 place-items-center"
+					href="https://www.linkedin.com/in/edwin-peraza/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Image
+						src="/icons/GitHub.svg"
+						alt="GitHub link"
+						width={80}
+						height={80}
+						className="skill drop-shadow-3xl rounded-full p-4"
+					/>
+				</Link>
+				<Link
+					className="row-span-2"
+					href="https://www.linkedin.com/in/edwin-peraza/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Image
+						src="/icons/LinkedIn.svg"
+						alt="LinkedIn link"
+						width={80}
+						height={80}
+						className="skill drop-shadow-3xl rounded-full p-4"
+					/>
+				</Link>
+			</div>
 		</MotionSection>
 	);
 }

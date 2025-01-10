@@ -48,23 +48,8 @@ export default function About() {
 	}, []);
 
 	return (
-		<div className="container px-4 pt-32">
-			<div className="flex flex-col justify-center items-center space-y-2 text-gray-200 px-4 md:px-8">
-				<h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white text-center">
-					Hello! I&apos;m Edwin{" "}
-					<span
-						role="img"
-						aria-label="waving hand"
-						className="ml-1 animate-wave"
-					>
-						👋
-					</span>
-				</h1>
-				<h3 className="uppercase text-center text-lg md:text-xl">
-					software engineer, full stack developer
-				</h3>
-			</div>
-			<div className="grid grid-cols-1 sm:grid-cols-2 pt-20 gap-2 mb-20">
+		<div className="container px-4">
+			<div className="flex justify-center items-center gap-5">
 				<div className="flex justify-center items-center">
 					<div
 						className={`w-64 h-64 relative cursor-pointer transition-opacity duration-500 ${
@@ -81,8 +66,8 @@ export default function About() {
 						/>
 					</div>
 				</div>
-				<div className="grid grid-cols-4 gap-4">
-					<div className="glass p-2 md:p-4 rounded-lg text-sm space-y-2 col-span-5">
+				<div className="">
+					<div className="glass p-2 md:p-4 rounded-lg text-sm space-y-2 max-w-xl">
 						<p>
 							I&apos;m a Computer Science graduate from{" "}
 							<a
@@ -103,46 +88,6 @@ export default function About() {
 							portfolio to explore some of the projects I&apos;ve built.
 						</p>
 					</div>
-					<Link
-						className="row-span-2 place-items-center"
-						href="https://www.linkedin.com/in/edwin-peraza/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Image
-							src="/icons/GitHub.svg"
-							alt="GitHub link"
-							width={80}
-							height={80}
-							className="skill drop-shadow-3xl rounded-full p-4"
-						/>
-					</Link>
-					<Link
-						className="row-span-2"
-						href="https://www.linkedin.com/in/edwin-peraza/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Image
-							src="/icons/LinkedIn.svg"
-							alt="LinkedIn link"
-							width={80}
-							height={80}
-							className="skill drop-shadow-3xl rounded-full p-4"
-						/>
-					</Link>
-					<Link
-						className="col-span-2 skill"
-						href="/Resume_Edwin_Peraza.pdf"
-						target="_blank"
-						rel="noopener noreferrer"
-						prefetch={false}
-					>
-						Resume
-					</Link>
-					<Link className="col-span-2 skill" href="/portfolio#contact">
-						Contact Me
-					</Link>
 				</div>
 			</div>
 		</div>
