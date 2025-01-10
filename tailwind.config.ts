@@ -171,7 +171,7 @@ const config: Config = {
 				},
 			},
 			animation: {
-				"fade-in": "fade-in 0.3s ease-in-out",
+				"fade-in": "fade-in 750ms ease-in-out",
 				"fade-out": "fade-out 0.3s ease-in-out",
 				"appear-top": "appear-top 750ms ease-out",
 			},
