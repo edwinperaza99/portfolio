@@ -54,27 +54,31 @@ export default function FeaturedProjects() {
 
 	return (
 		<div className="flex flex-col text-white container px-4 my-8">
-			<h2 className="text-4xl uppercase mb-2">Projects</h2>
+			<h2 className="text-5xl uppercase mb-2 font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight">
+				Projects
+			</h2>
 			<section className="w-full grid gap-4 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-3">
 				{projects.map((project, index) => (
 					<ProjectCard key={index} {...project} />
 				))}
+				<div className="aspect-none md:aspect-[4/3] flex justify-center items-center">
+					<MotionDiv
+						variants={fadeInOut}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: false, amount: 0 }}
+						transition={{ duration: 0.8, ease: "easeOut" }}
+						className="flex justify-center mt-5 sm:mt-0"
+					>
+						<Link
+							href="/projects"
+							className="relative inline-block px-6 py-3 text-lg font-bold text-white rounded-lg border-animation"
+						>
+							View All Projects
+						</Link>
+					</MotionDiv>
+				</div>
 			</section>
-			<MotionDiv
-				variants={fadeInOut}
-				initial="hidden"
-				whileInView="visible"
-				viewport={{ once: false, amount: 0 }}
-				transition={{ duration: 0.8, ease: "easeOut" }}
-				className="flex justify-center mt-5"
-			>
-				<Link
-					href="/projects"
-					className="relative inline-block px-6 py-3 text-lg font-bold text-white rounded-lg border-animation"
-				>
-					View All Projects
-				</Link>
-			</MotionDiv>
 		</div>
 	);
 }

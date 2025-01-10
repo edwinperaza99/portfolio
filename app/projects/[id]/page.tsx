@@ -58,13 +58,11 @@ export default async function Project({
 					<Breadcrumb className="dark">
 						<BreadcrumbList>
 							<BreadcrumbItem>
-								<BreadcrumbLink href="/">Home</BreadcrumbLink>
+								<BreadcrumbLink href="/landing">Landing</BreadcrumbLink>
 							</BreadcrumbItem>
 							<BreadcrumbSeparator />
 							<BreadcrumbItem>
-								<BreadcrumbLink href="/portfolio#projects">
-									Portfolio
-								</BreadcrumbLink>
+								<BreadcrumbLink href="/">Home</BreadcrumbLink>
 							</BreadcrumbItem>
 							<BreadcrumbSeparator />
 							<BreadcrumbItem>
@@ -87,7 +85,7 @@ export default async function Project({
 				</header>
 			</section>
 			{/* information section */}
-			<section className="container px-2 grid grid-cols-1 md:grid-cols-2 py-4 gap-10">
+			<section className="container px-2 grid grid-cols-1 md:grid-cols-2 py-4 gap-6 md:gap-16">
 				<article className="space-y-2">{project.description}</article>
 				<article className="flex flex-col gap-4">
 					<h3 className="text-2xl">Development Stack</h3>

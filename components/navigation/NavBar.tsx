@@ -73,7 +73,7 @@ const NavBar = () => {
 								className="col-span-2 row-span-3"
 							>
 								<Link
-									href="/portfolio#about"
+									href="/#about"
 									className="vertical-text p-4 flex justify-start items-end w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
@@ -87,7 +87,7 @@ const NavBar = () => {
 								className="col-span-2 row-span-3"
 							>
 								<Link
-									href="/portfolio#projects"
+									href="/#projects"
 									className="vertical-text p-4 flex justify-end items-start w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
@@ -108,12 +108,12 @@ const NavBar = () => {
 								className="col-span-3 row-span-2"
 							>
 								<Link
-									href="/portfolio#skills"
+									href="/#contact"
 									className="vertical-text p-4 flex justify-start items-start w-full h-full border nav-link"
 									onClick={toggleOverlay}
 								>
-									<span className="glitch" data-text="Skills">
-										Skills
+									<span className="glitch" data-text="Contact">
+										Contact
 									</span>
 								</Link>
 							</motion.li>

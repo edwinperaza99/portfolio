@@ -8,18 +8,15 @@ export default function Hero() {
 	return (
 		<div className="bg-[image:radial-gradient(80%_50%_at_50%_-20%,hsl(206,81.9%,65.3%,0.5),rgba(255,255,255,0))] min-h-screen flex justify-center items-center flex-col">
 			<div className="container px-4 pt-32">
-				<div className="flex flex-col justify-center items-center space-y-2 text-gray-200 px-4 md:px-8 ">
+				<div className="flex flex-col justify-center items-center space-y-0 text-gray-200 px-2 md:px-8 ">
 					<GalaxyBackground direction="bottom-to-top" />
 					{/* // [mask-image:radial-gradient(75%_50%_at_top_center,white,transparent)]"> */}
-					<h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white text-center bg-gradient-to-br from-white to-zinc-500 bg-clip-text tracking-tight text-transparent">
-						Hello! I&apos;m Edwin{" "}
-						<span
-							role="img"
-							aria-label="waving hand"
-							className="ml-1 animate-wave text-white"
-						>
-							👋
-						</span>
+					<p className="text-6xl sm:text-6xl md:text-7xl font-bold text-center bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-transparent tracking-tight">
+						Hey!{" "}
+					</p>
+					<h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-center bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-transparent tracking-tight pb-4">
+						I&apos;m {/* <span className="text-nowrap"> */}
+						Edwin Peraza{" "}
 					</h1>
 					<TypingEffect
 						words={[
@@ -45,11 +42,11 @@ export default function Hero() {
 							</Link>
 						</Button>
 						<Button asChild>
-							<Link href="/contact">Contact Me</Link>
+							<Link href="/#contact">Contact Me</Link>
 						</Button>
 					</div>
 				</div>
-				<div className="pt-10">
+				<div className="pt-16">
 					<Scroll />
 				</div>
 			</div>

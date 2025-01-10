@@ -53,7 +53,7 @@ export default function Contact() {
 			variants={fadeInOut}
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ once: false, amount: 0 }}
+			viewport={{ once: false, amount: 0.5 }}
 			transition={{ duration: 0.8, ease: "easeOut" }}
 			className="my-8"
 		>

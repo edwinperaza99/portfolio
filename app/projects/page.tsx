@@ -20,7 +20,9 @@ export default function Projects() {
 			<MainNavBar />
 			<section className="container px-1 pt-14 md:pt-20">
 				<header className="text-center my-4">
-					<h1 className="text-3xl uppercase">{selectedCategory} Projects</h1>
+					<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase mb-2 font-bold bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-transparent tracking-tight">
+						{selectedCategory} Projects
+					</h1>
 				</header>
 				{/* Category Filter ToggleGroup */}
 				<div className="text-center my-4">

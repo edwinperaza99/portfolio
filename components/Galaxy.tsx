@@ -104,7 +104,7 @@ function NebulaSphere() {
 	);
 }
 
-export default function Landing() {
+export default function LandingGalaxy() {
 	const controlsRef = useRef<OrbitControlsImpl | null>(null);
 	const [userActive, setUserActive] = useState(false);
 	const [isInitialAnimation, setIsInitialAnimation] = useState(true); // Track the initial animation

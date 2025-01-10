@@ -15,8 +15,10 @@ export default function Skills() {
 	const column2 = skillCategories.slice(midIndex);
 
 	return (
-		<div className="container my-8 flex flex-col text-primary-light px-4">
-			<h2 className="text-4xl uppercase mb-2">Skills</h2>
+		<div className="container mb-8 flex flex-col text-primary-light px-4">
+			<h2 className="text-4xl uppercase mb-2 font-semibold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight">
+				Skills
+			</h2>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
 				{/* Column 1 */}
 				<div className="flex flex-col gap-2 md:gap-4">
@@ -30,7 +32,7 @@ export default function Skills() {
 							key={category.id}
 							className="flex flex-col gap-2 md:gap-4 rounded-lg glass p-3 md:p-4 shadow-md"
 						>
-							<h3 className="text-xl md:text-2xl uppercase text-center">
+							<h3 className="text-xl md:text-2xl uppercase mb-2 bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-transparent tracking-tight text-center">
 								{category.name}
 							</h3>
 							<article className="flex flex-wrap gap-2 md:gap-4 justify-center">
@@ -80,7 +82,7 @@ export default function Skills() {
 							key={category.id}
 							className="flex flex-col gap-2 md:gap-4 rounded-lg glass p-3 md:p-4 shadow-md"
 						>
-							<h3 className="text-xl md:text-2xl uppercase text-center">
+							<h3 className="text-xl md:text-2xl uppercase mb-2 bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-transparent tracking-tight text-center">
 								{category.name}
 							</h3>
 							<article className="flex flex-wrap gap-2 md:gap-4 justify-center">

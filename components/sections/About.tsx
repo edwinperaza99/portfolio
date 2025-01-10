@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { MotionSection, fadeInOut } from "@/components/motionUtils";
 
 const memojiImages = ["/memoji/1.PNG", "/memoji/2.PNG", "/memoji/3.PNG"];
 
@@ -47,8 +48,18 @@ export default function About() {
 	}, []);
 
 	return (
-		<div className="container px-4">
-			<div className="flex justify-center items-center gap-5">
+		<MotionSection
+			variants={fadeInOut}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: false, amount: 0.5 }}
+			transition={{ duration: 0.8, ease: "easeOut" }}
+			className="container px-4 py-6"
+		>
+			<h2 className="text-5xl uppercase mb-2 font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight text-center">
+				About Me
+			</h2>
+			<div className="flex justify-center items-center gap-5 flex-col md:flex-row">
 				<div className="flex justify-center items-center">
 					<div
 						className={`w-64 h-64 relative cursor-pointer transition-opacity duration-500 ${
@@ -66,7 +77,7 @@ export default function About() {
 					</div>
 				</div>
 				<div className="">
-					<div className="glass p-2 md:p-4 rounded-lg text-sm space-y-2 max-w-xl">
+					<div className="glass p-2 md:p-4 rounded-lg text-base space-y-2 max-w-xl">
 						<p>
 							I&apos;m a Computer Science graduate from{" "}
 							<a
@@ -89,6 +100,6 @@ export default function About() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</MotionSection>
 	);
 }
