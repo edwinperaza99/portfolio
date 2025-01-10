@@ -1,8 +1,8 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
-import SwiperGallery from "@/components/projects/Swiper";
 import { resolveSkills } from "@/data/skills";
 import Image from "next/image";
+import { IoRocketOutline, IoLogoGithub } from "react-icons/io5";
 
 import {
 	Breadcrumb,
@@ -12,6 +12,8 @@ import {
 	BreadcrumbPage,
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+
+import { Button } from "@/components/ui/button";
 
 import {
 	Tooltip,
@@ -51,7 +53,7 @@ export default async function Project({
 			className="min-h-screen flex flex-col text-white"
 		>
 			<MainNavBar />
-			<section className="container px-2">
+			<section className="container px-2 pt-14 md:pt-20">
 				<header className="my-4">
 					<Breadcrumb className="dark">
 						<BreadcrumbList>
@@ -61,12 +63,12 @@ export default async function Project({
 							<BreadcrumbSeparator />
 							<BreadcrumbItem>
 								<BreadcrumbLink href="/portfolio#projects">
-									Featured Projects
+									Portfolio
 								</BreadcrumbLink>
 							</BreadcrumbItem>
 							<BreadcrumbSeparator />
 							<BreadcrumbItem>
-								<BreadcrumbLink href="/projects">More</BreadcrumbLink>
+								<BreadcrumbLink href="/projects">Projects</BreadcrumbLink>
 							</BreadcrumbItem>
 							<BreadcrumbSeparator />
 							<BreadcrumbItem>
@@ -86,8 +88,9 @@ export default async function Project({
 			</section>
 			{/* information section */}
 			<section className="container px-2 grid grid-cols-1 md:grid-cols-2 py-4 gap-10">
-				<article>{project.description}</article>
-				<article className="flex flex-col justify-center items-center gap-4">
+				<article className="space-y-2">{project.description}</article>
+				<article className="flex flex-col gap-4">
+					<h3 className="text-2xl">Development Stack</h3>
 					<div className="flex flex-wrap gap-2">
 						{resolvedTechnologies.map(
 							(skill) =>
@@ -124,33 +127,56 @@ export default async function Project({
 						)}
 					</div>
 					{/* buttons section */}
-					<div className="w-full sm:w-[75%] flex space-between gap-2">
+					<div className="w-full flex space-between gap-2">
 						{project.deployUrl && (
-							<a
-								href={project.deployUrl}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex-1 text-center p-2 border text-sm font-normal hover:bg-white hover:text-black"
-							>
-								Deployed
-							</a>
+							<Button asChild size="lg" variant="secondary">
+								<a
+									href={project.deployUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<IoRocketOutline />
+									Live Demo
+								</a>
+							</Button>
 						)}
 						{project.githubUrl && (
-							<a
-								href={project.githubUrl}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex-1 text-center p-2 border text-sm font-normal hover:bg-white hover:text-black"
-							>
-								GitHub
-							</a>
+							<Button asChild size="lg" variant="secondary">
+								<a
+									href={project.githubUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<IoLogoGithub />
+									GitHub Repository
+								</a>
+							</Button>
 						)}
 					</div>
 				</article>
 			</section>
 			{/* gallery section */}
-			<section className="container px-2">
-				<SwiperGallery images={project.images} />
+			<section className="container px-2 space-y-2 md:space-y-4 py-6">
+				{project.images.map((image, index) => (
+					<MotionDiv
+						variants={fadeInOut}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: false, amount: 0.1 }}
+						transition={{ duration: 0.8, ease: "easeOut" }}
+					>
+						<Image
+							key={index}
+							src={image}
+							alt={`Image ${index}`}
+							width={image.width}
+							height={image.height}
+							objectFit="contain"
+							placeholder="blur"
+							loading="lazy"
+						/>
+					</MotionDiv>
+				))}
 			</section>
 		</MotionDiv>
 	);
