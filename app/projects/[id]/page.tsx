@@ -163,6 +163,7 @@ export default async function Project({
 						whileInView="visible"
 						viewport={{ once: false, amount: 0.1 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}
+						className="flex flex-row justify-center items-center"
 					>
 						<Image
 							src={image}

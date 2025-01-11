@@ -127,7 +127,7 @@ export default function Contact() {
 			<div className="flex justify-center gap-6 mt-6">
 				<Link
 					className="row-span-2 place-items-center"
-					href="https://www.linkedin.com/in/edwin-peraza/"
+					href="https://github.com/edwinperaza99"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
