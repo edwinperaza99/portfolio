@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { MotionSpan } from "@/components/motionUtils";
+import { fadeInOut, MotionSpan } from "@/components/motionUtils";
 
 type TypingEffectProps = {
 	words: string[];
@@ -56,9 +56,11 @@ export default function TypingEffect({
 
 	return (
 		<MotionSpan
-			initial={{ opacity: 0, y: 20 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 1 }}
+			variants={fadeInOut}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: false, amount: 0.8 }}
+			transition={{ duration: 0.5, delay: 0.2 }}
 			className="typing-effect"
 		>
 			{displayedText}
