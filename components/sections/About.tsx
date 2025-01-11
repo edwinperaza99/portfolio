@@ -1,5 +1,3 @@
-"use client";
-import { useState, useEffect, useRef } from "react";
 import {
 	MotionDiv,
 	MotionH2,
@@ -8,50 +6,9 @@ import {
 	slideInFromRight,
 } from "@/components/motionUtils";
 
-const memojiImages = ["/memoji/1.PNG", "/memoji/2.PNG", "/memoji/3.PNG"];
+import Image from "next/image";
 
 export default function About() {
-	const [currentImageIndex, setCurrentImageIndex] = useState(0);
-	const [isFading, setIsFading] = useState(false);
-	const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
-	// Function to change the image
-	const changeImage = () => {
-		setIsFading(true);
-		setTimeout(() => {
-			setCurrentImageIndex(
-				(prevIndex) => (prevIndex + 1) % memojiImages.length
-			);
-			setIsFading(false);
-		}, 500); // Matches the fade-in duration
-	};
-
-	// Handle timer reset and click
-	const handleImageClick = () => {
-		if (intervalRef.current) {
-			clearInterval(intervalRef.current);
-		}
-		changeImage();
-		startAutoChange(); // Restart the timer
-	};
-
-	// Start automatic image change
-	const startAutoChange = () => {
-		intervalRef.current = setInterval(changeImage, 8000);
-	};
-
-	// Initialize the interval on mount
-	useEffect(() => {
-		startAutoChange();
-
-		// Cleanup on unmount
-		return () => {
-			if (intervalRef.current) {
-				clearInterval(intervalRef.current);
-			}
-		};
-	}, []);
-
 	return (
 		<section className="container px-4 py-6">
 			<MotionH2
@@ -71,28 +28,16 @@ export default function About() {
 					whileInView="visible"
 					viewport={{ once: false, amount: 0.5 }}
 					transition={{ duration: 0.8, ease: "easeOut" }}
-					className="w-64 h-64 overflow-hidden rounded-full border-2 border-blue-300"
+					className="relative w-64 h-64 overflow-hidden rounded-full border-2 border-blue-300"
 				>
-					<img
-						src="https://media.licdn.com/dms/image/v2/D5603AQEh8X2yHa3GBA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710819723776?e=1741824000&v=beta&t=nnj8AEDStQa6Vd1G5_nfhJk9IEri7gAgzliX1NM9d0Y"
-						alt="Profile Pic"
+					<Image
+						src="/headshot.jpg"
+						alt="Head shot"
+						loading="lazy"
+						fill
 						className="object-cover w-full h-full scale-110 "
 					/>
 				</MotionDiv>
-				{/* <div
-						className={`w-64 h-64 relative cursor-pointer transition-opacity duration-500 ${
-							isFading ? "opacity-0" : "opacity-100"
-						}`}
-						onClick={handleImageClick}
-					>
-						<Image
-							src={memojiImages[currentImageIndex]}
-							alt={`Memoji ${currentImageIndex + 1}`}
-							layout="fill"
-							objectFit="contain"
-							priority
-						/>
-					</div> */}
 				<MotionDiv
 					variants={slideInFromRight}
 					initial="hidden"
