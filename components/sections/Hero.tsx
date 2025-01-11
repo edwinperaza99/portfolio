@@ -18,7 +18,6 @@ export default function Hero() {
 			<div className="container px-4 pt-32">
 				<div className="flex flex-col justify-center items-center space-y-0 text-gray-200 px-2 md:px-8 ">
 					<GalaxyBackground direction="bottom-to-top" />
-					{/* // [mask-image:radial-gradient(75%_50%_at_top_center,white,transparent)]"> */}
 					<MotionP
 						variants={slideInFromRight}
 						initial="hidden"
@@ -37,8 +36,7 @@ export default function Hero() {
 						transition={{ duration: 0.8, delay: 0.2 }}
 						className="text-5xl sm:text-6xl md:text-7xl font-bold text-center bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-transparent tracking-tight pb-4"
 					>
-						I&apos;m {/* <span className="text-nowrap"> */}
-						Edwin Peraza{" "}
+						I&apos;m Edwin Peraza{" "}
 					</MotionH1>
 					<TypingEffect
 						words={[
@@ -90,9 +88,11 @@ export default function Hero() {
 					whileInView="visible"
 					viewport={{ once: true, amount: 0.5 }}
 					transition={{ duration: 0.8, delay: 0.8 }}
-					className="pt-16"
+					className="pt-16 flex justify-center items-center"
 				>
-					<Scroll />
+					<Link href="/#projects">
+						<Scroll />
+					</Link>
 				</MotionDiv>
 			</div>
 		</div>
