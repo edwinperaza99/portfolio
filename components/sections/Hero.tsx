@@ -23,7 +23,7 @@ export default function Hero() {
 						initial="hidden"
 						whileInView="visible"
 						viewport={{ once: false, amount: 0.5 }}
-						transition={{ duration: 0.8 }}
+						transition={{ duration: 0.8, delay: 0.2 }}
 						className="text-6xl sm:text-6xl md:text-7xl font-bold text-center bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-transparent tracking-tight"
 					>
 						Hey!{" "}
@@ -88,7 +88,7 @@ export default function Hero() {
 					whileInView="visible"
 					viewport={{ once: true, amount: 0.5 }}
 					transition={{ duration: 0.8, delay: 0.8 }}
-					className="pt-16 flex justify-center items-center"
+					className="pt-24 flex justify-center items-center"
 				>
 					<Link href="/#projects">
 						<Scroll />

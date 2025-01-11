@@ -69,13 +69,13 @@ const MainNavBar = () => {
 					href="/landing"
 					className="group text-lg md:text-xl font-bold flex items-center transition-colors"
 				>
-					<span className="text-blue-400 group-hover:text-blue-300 transition-colors">
+					<span className="text-blue-400 group-hover:text-green-300 transition-colors">
 						{`<`}
 					</span>
 					<span className="text-white group-hover:text-blue-300 transition-colors">
 						EdwinPeraza
 					</span>
-					<span className="text-blue-400 group-hover:text-blue-300 transition-colors">
+					<span className="text-blue-400 group-hover:text-green-300 transition-colors">
 						{` />`}
 					</span>
 				</Link>
