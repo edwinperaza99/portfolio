@@ -23,6 +23,11 @@ import CaC_6 from "@/public/CodeAgainstCancer/6.png";
 import CaC_7 from "@/public/CodeAgainstCancer/7.png";
 // imports for Hikken
 import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
+import Hikken_1 from "@/public/Hikken/1.png";
+import Hikken_2 from "@/public/Hikken/2.png";
+import Hikken_3 from "@/public/Hikken/3.png";
+import Hikken_4 from "@/public/Hikken/4.png";
+import Hikken_5 from "@/public/Hikken/5.png";
 // imports for iExpense
 import iExpense_1 from "@/public/iExpense/1.png";
 import iExpense_2 from "@/public/iExpense/2.png";
@@ -359,7 +364,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["html", "css", "javascript"],
 		thumbnail: Hikken_Thumbnail,
-		images: [],
+		images: [Hikken_1, Hikken_2, Hikken_3, Hikken_4, Hikken_5],
 		githubUrl: "https://github.com/edwinperaza99/Hikken",
 		deployUrl: "https://edwinperaza99.github.io/Hikken/",
 	},
@@ -391,7 +396,7 @@ export const projects: Project[] = [
 		),
 		technologies: ["python", "tkinter", "regex"],
 		thumbnail: Chatbot_Thumbnail,
-		images: [],
+		images: [Chatbot_Thumbnail],
 		githubUrl: "https://github.com/edwinperaza99/CSUF-Chatbot",
 	},
 
