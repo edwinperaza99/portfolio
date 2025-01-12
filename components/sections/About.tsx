@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function About() {
 	return (
-		<section className="container px-4 py-6">
+		<section className="container px-4 py-6 overflow-hidden">
 			<MotionH2
 				variants={slideInFromBottom}
 				initial="hidden"
@@ -28,14 +28,14 @@ export default function About() {
 					whileInView="visible"
 					viewport={{ once: false, amount: 0.5 }}
 					transition={{ duration: 0.8, ease: "easeOut" }}
-					className="relative w-64 h-64 overflow-hidden rounded-full border-2 border-blue-300"
+					className="relative w-52 md:w-64 aspect-square overflow-hidden rounded-full border-2 border-blue-300"
 				>
 					<Image
 						src="/headshot.jpg"
 						alt="Head shot"
 						loading="lazy"
 						fill
-						className="object-cover w-full h-full scale-110 "
+						className="object-cover w-full scale-110 "
 					/>
 				</MotionDiv>
 				<MotionDiv
