@@ -27,7 +27,7 @@ export default function FeaturedProjects() {
 		// },
 		{
 			href: "/projects/1",
-			imgSrc: "/Weatheria/Weatheria_thumbnail.png",
+			imgSrc: "/Weatheria/Weatheria_Thumbnail.png",
 			imgAlt: "Weatheria thumbnail",
 			title: "Weatheria",
 			description: "Nuxt.js | Tailwind CSS | FastAPI | Scikit-learn | GCP",
