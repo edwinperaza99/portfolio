@@ -12,8 +12,6 @@ import Calculator_3 from "@/public/Calculator/3.png";
 import Calculator_Thumbnail from "@/public/Calculator/calculator_thumbnail.png";
 // imports for Chatbot
 import Chatbot_Thumbnail from "@/public/Chatbot/Chatbot_thumbnail.png";
-// imports for Code Against Cancer
-import CaC_Thumbnail from "@/public/CodeAgainstCancer/CaC_thumbnail.png";
 import CaC_1 from "@/public/CodeAgainstCancer/1.png";
 import CaC_2 from "@/public/CodeAgainstCancer/2.png";
 import CaC_3 from "@/public/CodeAgainstCancer/3.png";
@@ -21,13 +19,15 @@ import CaC_4 from "@/public/CodeAgainstCancer/4.png";
 import CaC_5 from "@/public/CodeAgainstCancer/5.png";
 import CaC_6 from "@/public/CodeAgainstCancer/6.png";
 import CaC_7 from "@/public/CodeAgainstCancer/7.png";
-// imports for Hikken
-import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
+// imports for Code Against Cancer
+import CaC_Thumbnail from "@/public/CodeAgainstCancer/CaC_thumbnail.png";
 import Hikken_1 from "@/public/Hikken/1.png";
 import Hikken_2 from "@/public/Hikken/2.png";
 import Hikken_3 from "@/public/Hikken/3.png";
 import Hikken_4 from "@/public/Hikken/4.png";
 import Hikken_5 from "@/public/Hikken/5.png";
+// imports for Hikken
+import Hikken_Thumbnail from "@/public/Hikken/Hikken_thumbnail.png";
 // imports for iExpense
 import iExpense_1 from "@/public/iExpense/1.png";
 import iExpense_2 from "@/public/iExpense/2.png";
@@ -73,10 +73,10 @@ import PhotoGallery_3 from "@/public/PhotoGallery/3.png";
 import PhotoGallery_4 from "@/public/PhotoGallery/4.png";
 import PhotoGallery_5 from "@/public/PhotoGallery/5.png";
 import PhotoGallery_Thumbnail from "@/public/PhotoGallery/PhotoGallery_thumbnail.png";
-// imports for RBR
-import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
 import RBR_1 from "@/public/RBR/1.png";
 import RBR_2 from "@/public/RBR/2.png";
+// imports for RBR
+import RBR_Thumbnail from "@/public/RBR/RBR_thumbnail.png";
 // imports for RPS
 import RPS_1 from "@/public/RPS/1.png";
 import RPS_2 from "@/public/RPS/2.png";
@@ -106,6 +106,11 @@ import SoloLevel_Thumbnail from "@/public/SoloLevel/SoloLevel_thumbnail.png";
 import SpaceInvaders_1 from "@/public/SpaceInvaders/1.png";
 import SpaceInvaders_2 from "@/public/SpaceInvaders/2.png";
 import SpaceInvaders_Thumbnail from "@/public/SpaceInvaders/SpaceInvaders_thumbnail.png";
+// imports for Weatheria
+import Weatheria_1 from "@/public/Weatheria/1.png";
+import Weatheria_2 from "@/public/Weatheria/2.png";
+import Weatheria_3 from "@/public/Weatheria/3.png";
+import Weatheria_Thumbnail from "@/public/Weatheria/Weatheria_Thumbnail.png";
 // imports for WordScramble
 import WordScramble_1 from "@/public/WordScramble/1.png";
 import WordScramble_2 from "@/public/WordScramble/2.png";
@@ -132,6 +137,312 @@ export type Project = {
 export const projects: Project[] = [
 	{
 		id: "1",
+		name: "Weatheria",
+		category: "AI & ML",
+		description: (
+			<>
+				<div className="space-y-4">
+					<p>
+						Weatheria is a machine learning-powered weather prediction platform
+						that leverages advanced algorithms to analyze historical climate
+						data. It predicts Earth surface temperatures based on spatial
+						(latitude, longitude) and temporal (year, month) features, providing
+						insights into climate trends and the impact of global warming.
+					</p>
+					<p>
+						The project incorporates a highly modular and scalable architecture:
+					</p>
+					<div className="pl-6">
+						<ul className="list-disc space-y-2">
+							<li>
+								<strong>Frontend:</strong> Built with{" "}
+								<span className="text-blue-300">Nuxt.js</span> and styled using{" "}
+								<span className="text-blue-300">TailwindCSS</span> for a modern,
+								responsive, and user-friendly design. Deployed seamlessly on{" "}
+								<span className="text-blue-300">Vercel</span>.
+							</li>
+							<li>
+								<strong>Backend:</strong> Developed using{" "}
+								<span className="text-blue-300">FastAPI</span>, containerized
+								with <span className="text-blue-300">Docker</span>, and hosted
+								on <span className="text-blue-300">Google Cloud</span> VM
+								instances. This ensures robust, scalable, and efficient API
+								endpoints for serving predictions.
+							</li>
+							<li>
+								<strong>Machine Learning:</strong> The models were developed
+								using <span className="text-blue-300">Scikit-learn</span>,
+								employing four algorithms:
+								<ul className="list-disc list-inside pl-4">
+									<li>
+										<strong>Random Forest:</strong> Achieved the highest
+										accuracy with an R² score of{" "}
+										<span className="text-blue-300">0.9857</span>.
+									</li>
+									<li>
+										<strong>K-Nearest Neighbors (KNN):</strong> Provided
+										reliable predictions, balancing simplicity with
+										effectiveness.
+									</li>
+									<li>
+										<strong>Support Vector Regression (SVR):</strong>{" "}
+										Implemented with various kernels to model non-linear
+										relationships.
+									</li>
+									<li>
+										<strong>Linear Regression:</strong> Used as a baseline to
+										compare performance against more advanced algorithms.
+									</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Data Handling:</strong> The dataset was sourced from the{" "}
+								<a
+									href="https://berkeleyearth.org/data/"
+									className="text-blue-300 hover:underline"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Berkeley Earth Surface Temperature
+								</a>{" "}
+								repository. Rigorous preprocessing steps were applied:
+								<ul className="list-disc list-inside pl-4">
+									<li>Removed incomplete records prior to 1870.</li>
+									<li>
+										Excluded missing temperature values for data integrity.
+									</li>
+									<li>
+										Extracted and scaled features (year, month, latitude,
+										longitude) for optimal model training.
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<p>
+						The integration of these technologies and methodologies allowed
+						Weatheria to deliver highly accurate predictions and valuable
+						insights, making it a meaningful contribution to understanding
+						climate change.
+					</p>
+				</div>
+			</>
+		),
+		technologies: [
+			"nuxtjs",
+			"tailwindcss",
+			"fastapi",
+			"docker",
+			"scikit-learn",
+		],
+		thumbnail: Weatheria_Thumbnail,
+		images: [Weatheria_1, Weatheria_2, Weatheria_3],
+		githubUrl: "https://github.com/edwinperaza99/weather-prediction-model",
+		deployUrl: "https://www.weatheria.edwinperaza.com/",
+	},
+	{
+		id: "2",
+		name: "SoloLevel",
+		category: "Mobile Development",
+		description: (
+			<>
+				<div className="space-y-4">
+					<p>
+						SoloLevel is a self-improvement application inspired by the themes
+						of progression and personal growth depicted in the popular manhwa
+						and anime series <em>Solo Leveling</em>. Just as Sung Jinwoo rises
+						through challenges to achieve new heights, this app empowers users
+						to set daily goals, complete challenges, and track their progress to
+						foster discipline and consistency in achieving personal milestones.
+					</p>
+					<p>
+						Built using <span className="text-blue-300">SwiftUI</span>, the app
+						features a sleek and intuitive interface that prioritizes user
+						experience. Tasks are easy to manage, track, and update, ensuring
+						users stay focused on their self-improvement journey. The real-time
+						storage and synchronization of user data are handled by{" "}
+						<span className="text-blue-300">Firebase</span>, providing seamless
+						authentication and cross-device accessibility.
+					</p>
+					<p>
+						SoloLevel incorporates a gamified approach to self-improvement by
+						rewarding users with visualized milestones and motivational feedback
+						as they complete their goals. This progression system mirrors the
+						app&apos;s core inspiration, encouraging users to adopt a
+						growth-oriented mindset.
+					</p>
+					<p>
+						Developing SoloLevel provided invaluable experience in mobile
+						application development, combining{" "}
+						<span className="text-blue-300">SwiftUI</span> for front-end design
+						and <span className="text-blue-300">Firebase</span> for back-end
+						integration. The project underscores the importance of creating
+						engaging, user-centric applications that leverage modern
+						technologies to make personal growth accessible and enjoyable.
+					</p>
+				</div>
+			</>
+		),
+		technologies: ["swift", "swiftui", "firebase"],
+		thumbnail: SoloLevel_Thumbnail,
+		images: [
+			SoloLevel_Thumbnail_2,
+			SoloLevel_1,
+			SoloLevel_2,
+			SoloLevel_3,
+			SoloLevel_4,
+			SoloLevel_5,
+			SoloLevel_6,
+			SoloLevel_7,
+			SoloLevel_8,
+		],
+		githubUrl: "https://github.com/edwinperaza99/SoloLevel",
+	},
+	{
+		id: "3",
+		name: "Mio's Portfolio",
+		category: "Web Development",
+		description: (
+			<>
+				<div className="space-y-4">
+					<p>
+						Mio&apos;s Portfolio is a dynamic and visually engaging personal
+						website crafted to highlight Mio&apos;s artistic journey as a scenic
+						designer and artist. Designed to leave a lasting impression, the
+						site emphasizes clean aesthetics, intuitive navigation, and a strong
+						focus on visual storytelling.
+					</p>
+					<p>
+						Built with <span className="text-blue-300">Next.js</span> and styled
+						using <span className="text-blue-300">TailwindCSS</span>, the
+						project showcases a seamless blend of modern web technologies and
+						performance optimization. Leveraging{" "}
+						<span className="text-blue-300">TypeScript</span>, the codebase
+						ensures robustness and maintainability while catering to scalability
+						and future enhancements.
+					</p>
+					<p>
+						The portfolio serves as a comprehensive platform for presenting
+						Mio&apos;s projects, professional experience, and creative
+						accomplishments. Features include:
+					</p>
+					<ul className="list-disc list-inside pl-4 space-y-2">
+						<li>
+							<strong>Responsive Design:</strong> Ensures a consistent
+							experience across devices, from desktops to mobile screens.
+						</li>
+						<li>
+							<strong>Optimized Performance:</strong> With server-side rendering
+							(SSR) and static generation, the site achieves lightning-fast load
+							times and superior SEO.
+						</li>
+					</ul>
+					<p>
+						Mio&apos;s Portfolio exemplifies the potential of modern frontend
+						technologies to create an impactful and professional digital
+						presence for artists and designers.
+					</p>
+				</div>
+			</>
+		),
+		technologies: ["nextjs", "typescript", "tailwindcss"],
+		thumbnail: MioPortfolio_Thumbnail,
+		images: [MioPortfolio_1, MioPortfolio_2, MioPortfolio_3, MioPortfolio_4],
+		githubUrl: "https://github.com/edwinperaza99/portfolio-mio",
+		deployUrl: "https://www.okadamio.com/",
+	},
+	{
+		id: "4",
+		name: "Code Against Cancer",
+		category: "Web Development",
+		description: (
+			<>
+				<div className="space-y-6">
+					<p className="leading-relaxed">
+						<strong>Code Against Cancer</strong> is a comprehensive web
+						application designed to support cancer patients with accessible
+						nutritional guidance and emotional resources. The platform bridges
+						the critical gap between diagnosis and access to professional
+						dietary consultations, empowering patients with the tools and
+						information they need to make informed dietary choices.
+					</p>
+
+					<p className="leading-relaxed">
+						By leveraging advanced technologies and API integrations, Code
+						Against Cancer tailors personalized nutritional recommendations for
+						patients based on their specific needs, such as cancer type, stage,
+						and dietary restrictions. The platform also incorporates
+						community-focused features to foster connection and provide
+						emotional support.
+					</p>
+
+					<div className="space-y-4">
+						<h3 className="text-xl font-semibold text-blue-300">
+							Key Features
+						</h3>
+						<ul className="list-disc list-inside space-y-2">
+							<li>
+								<strong>Personalized Nutrition Guidance:</strong> Dynamically
+								tailored recipes and dietary advice using patient inputs,
+								filtered through
+								<span className="text-blue-300"> Edamam</span> and
+								<span className="text-blue-300"> USDA APIs</span>.
+							</li>
+							<li>
+								<strong>Calorie Tracking:</strong> Built-in tracker to monitor
+								daily food intake, helping patients maintain nutritional goals
+								during treatment.
+							</li>
+							<li>
+								<strong>Resources and Support:</strong> Access curated articles,
+								educational videos via{" "}
+								<span className="text-blue-300">YouTube API</span>, research
+								articles via <span className="text-blue-300">PubMed API</span>,
+								and a forum for community engagement.
+							</li>
+						</ul>
+					</div>
+
+					<div className="space-y-4">
+						<h3 className="text-xl font-semibold text-blue-300">
+							Technical Overview
+						</h3>
+						<ul className="list-disc list-inside space-y-2">
+							<li>
+								<strong>Frontend:</strong> Developed with HTML, CSS, and
+								Bootstrap for a responsive and accessible interface.
+							</li>
+							<li>
+								<strong>Backend:</strong> Powered by{" "}
+								<span className="text-blue-300">Django</span>, with{" "}
+								<span className="text-blue-300">SQLite</span> as the database
+								during development.
+							</li>
+							<li>
+								<strong>Deployment:</strong> Hosted on{" "}
+								<span className="text-blue-300">AWS</span>, utilizing Docker for
+								scalability and reliable backup systems for disaster recovery.
+							</li>
+						</ul>
+					</div>
+
+					<p className="leading-relaxed">
+						Code Against Cancer showcases the transformative potential of
+						technology in healthcare by offering patients not just information,
+						but an empowering, holistic platform to navigate the challenges of
+						treatment with confidence.
+					</p>
+				</div>
+			</>
+		),
+		technologies: ["python", "django", "bootstrap", "jquery", "aws", "docker"],
+		thumbnail: CaC_Thumbnail,
+		images: [CaC_1, CaC_2, CaC_3, CaC_4, CaC_5, CaC_6, CaC_7],
+		githubUrl: "https://github.com/edwinperaza99/Code-Against-Cancer",
+		deployUrl: "https://codeagainstcancer.edwinperaza.com/",
+	},
+	{
+		id: "5",
 		name: "Natalia's Website",
 		category: "Web Development",
 		description: (
@@ -162,97 +473,7 @@ export const projects: Project[] = [
 		deployUrl: "https://be-beauty.edwinperaza.com/",
 	},
 	{
-		id: "2",
-		name: "SoloLevel",
-		category: "Mobile Development",
-		description: (
-			<>
-				<p>
-					Solo Level is a self-improvement app inspired by the themes of
-					progression and personal growth, akin to the journey of Sung Jinwoo in
-					popular manwha and anime series &quot;Solo Leveling&quot;. The app
-					integrates a gamified level system where users can set daily
-					challenges and earn experience points upon completion, with a focus on
-					fostering consistency and discipline in personal goals.
-				</p>
-				<p>
-					The app is built using SwiftUI and Firebase, combining a sleek and
-					intuitive user interface with real-time data storage and
-					authentication. Users can create accounts, set daily tasks, and track
-					their progress over time, with the app providing motivational messages
-					and rewards for achieving milestones. This project was a valuable
-					learning experience in mobile development, UI/UX design, and
-					integrating cloud services for data management.
-				</p>
-			</>
-		),
-		technologies: ["swift", "swiftui", "firebase"],
-		thumbnail: SoloLevel_Thumbnail,
-		images: [
-			SoloLevel_Thumbnail_2,
-			SoloLevel_1,
-			SoloLevel_2,
-			SoloLevel_3,
-			SoloLevel_4,
-			SoloLevel_5,
-			SoloLevel_6,
-			SoloLevel_7,
-			SoloLevel_8,
-		],
-		githubUrl: "https://github.com/edwinperaza99/SoloLevel",
-	},
-	{
-		id: "3",
-		name: "Mio's Portfolio",
-		category: "Web Development",
-		description: (
-			<>
-				<p>
-					Mio&apos;s Portfolio is a personal portfolio website built using
-					NextJS and Tailwind CSS. The website showcases the projects, skills,
-					and experience of Mio, a scenic designer and artist. The site features
-					a modern design with a focus on visual elements and user experience,
-				</p>
-			</>
-		),
-		technologies: ["nextjs", "typescript", "tailwindcss"],
-		thumbnail: MioPortfolio_Thumbnail,
-		images: [MioPortfolio_1, MioPortfolio_2, MioPortfolio_3, MioPortfolio_4],
-		githubUrl: "https://github.com/edwinperaza99/portfolio-mio",
-		deployUrl: "https://www.okadamio.com/",
-	},
-	{
-		id: "4",
-		name: "Code Against Cancer",
-		category: "Web Development",
-		description: (
-			<>
-				<p>
-					Code Against Cancer is an app designed to support cancer patients with
-					accessible information and resources focused on nutrition. The app
-					offers a recipe section that excludes ingredients potentially harmful
-					to cancer patients and provides resources tailored to specific cancer
-					types, making dietary planning easier and safer.
-				</p>
-				<p>
-					This was my first project working with Django, where I focused on
-					using its features to build a structured and maintainable application.
-					I also integrated external APIs, such as the YouTube API for relevant
-					video content and the PubMed API for accessing research articles, to
-					provide users with reliable, up-to-date information. Combined with
-					Bootstrap and jQuery, these integrations helped create a smooth,
-					user-friendly experience.
-				</p>
-			</>
-		),
-		technologies: ["python", "django", "bootstrap", "jquery"],
-		thumbnail: CaC_Thumbnail,
-		images: [CaC_1, CaC_2, CaC_3, CaC_4, CaC_5, CaC_6, CaC_7],
-		githubUrl: "https://github.com/edwinperaza99/Code-Against-Cancer",
-		deployUrl: "https://codeagainstcancer.edwinperaza.com/",
-	},
-	{
-		id: "5",
+		id: "6",
 		name: "RBR Inventory Formatter",
 		category: "Web Development",
 		description: (
@@ -285,27 +506,74 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/RBR-Inventory-Formatter",
 	},
 	{
-		id: "6",
+		id: "7",
 		name: "PAC-MAN",
 		category: "Game Development",
 		description: (
 			<>
-				<p>
-					Classic PAC-MAN game built with pygame. This project is a recreation
-					of the iconic arcade game, featuring the original gameplay mechanics
-					and design. Players can navigate the maze, collect pellets, and avoid
-					ghosts to achieve the highest score. The game includes multiple
-					levels, power-ups, and challenging AI to provide an engaging and
-					nostalgic experience.
-				</p>
-				<p>
-					Working with pygame allowed me to explore game development concepts,
-					such as collision detection, game loops, and sprite animations. I
-					focused on optimizing game performance, implementing player controls,
-					and designing interactive game elements to capture the essence of the
-					original PAC-MAN game. This project was a fun and educational journey
-					in game development and Python programming.
-				</p>
+				<div className="space-y-4">
+					<p>
+						This project is a recreation of the classic{" "}
+						<span className="text-yellow-400 font-bold">PAC-MAN</span> arcade
+						game, developed using <span className="text-blue-300">Python</span>{" "}
+						and <span className="text-blue-300">Pygame</span>. It captures the
+						essence of the original gameplay, featuring the iconic maze,
+						pellets, power-ups, and ghost challenges. Players navigate through
+						levels, collecting points and avoiding ghosts to achieve high
+						scores.
+					</p>
+					<p>
+						The game adheres to the original{" "}
+						<span className="text-yellow-400 font-bold">PAC-MAN</span> rules,
+						incorporating features like:
+					</p>
+					<div className="pl-6">
+						<ul className="list-disc space-y-2">
+							<li>
+								Classic scoring system:{" "}
+								<span className="text-blue-300">10 points</span> for pellets,{" "}
+								<span className="text-blue-300">50 points</span> for power
+								pellets, and <span className="text-blue-300">200 points</span>{" "}
+								for each ghost eaten.
+							</li>
+							<li>Levels that advance as all pellets are collected.</li>
+							<li>
+								Ghosts that turn vulnerable upon consuming power pellets,
+								allowing players to eat them for extra points.
+							</li>
+							<li>
+								Game over condition when all lives are lost, with the highest
+								score saved.
+							</li>
+						</ul>
+					</div>
+					<p>
+						Developing this game provided an in-depth exploration of game
+						development concepts such as:
+					</p>
+					<div className="pl-6">
+						<ul className="list-disc space-y-2">
+							<li>Collision detection for game interactions.</li>
+							<li>
+								Sprite animations to replicate{" "}
+								<span className="text-yellow-400 font-bold">PAC-MAN</span>’s
+								movement and ghost behaviors.
+							</li>
+							<li>Game loops for handling continuous gameplay mechanics.</li>
+							<li>
+								Optimized player controls to enhance the gaming experience.
+							</li>
+						</ul>
+					</div>
+					<p>
+						The project includes detailed instructions for setup and execution.
+						A virtual environment setup script is provided, making it easy to
+						install dependencies and run the game using:
+					</p>
+					<code className="bg-gray-900 text-green-400 px-2 py-1 rounded inline-block">
+						python3 game.py
+					</code>
+				</div>
 			</>
 		),
 		technologies: ["python", "pygame"],
@@ -314,52 +582,64 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/PAC-MAN",
 	},
 	{
-		id: "7",
-		name: "Spotify Clone",
-		category: "Web Development",
-		description: (
-			<>
-				<p>
-					This project is a Spotify clone built using the Astro framework,
-					designed to replicate the user interface of Spotify. As my first
-					project with Astro, this endeavor serves as a hands-on exploration of
-					the framework, showcasing its capabilities and my learning journey.
-					The design stays true to the original Spotify interface, aiming to
-					provide a familiar user experience.
-				</p>
-				<p>
-					This project is currently in development. The current version focuses
-					on replicating the Spotify user interface. More features and
-					functionalities are planned and will be added progressively.
-				</p>
-			</>
-		),
-		technologies: ["astro", "tailwindcss"],
-		thumbnail: RBR_Thumbnail,
-		images: [],
-		deployUrl: "https://spotify-clone-mocha-kappa.vercel.app/",
-		githubUrl: "https://github.com/edwinperaza99/spotify-clone",
-	},
-	{
 		id: "8",
 		name: "Hikken",
 		category: "Web Development",
 		description: (
 			<>
-				<p>
-					Hikken is a browser-based 2D fighting game where players can engage in
-					thrilling battles using various characters and abilities. This game
-					offers both single-player and multiplayer modes with unique attacks
-					and special abilities for each character.
-				</p>
-				<p>
-					This project was a collaborative effort with a team of developers,
-					marking our first experience with web development. We worked closely
-					to design game mechanics, implement character abilities, and optimize
-					real-time interactions for a seamless user experience. This project
-					taught me valuable skills in teamwork and problem-solving within a
-					development environment.
-				</p>
+				<div className="space-y-4">
+					<p>
+						This browser-based 2D fighting game offers players the chance to
+						battle in single-player mode against a simple AI or in two-player
+						mode on the same keyboard.{" "}
+						<span className="text-red-500 font-bold">Hikken</span> features
+						diverse characters with unique abilities, including melee attacks,
+						special moves, and healing, delivering engaging and dynamic
+						gameplay. Customizable settings, such as character and background
+						selection, further enhance the player experience.
+					</p>
+					<p>
+						Built using the HTML{" "}
+						<code className="bg-gray-900 text-green-300 px-2 py-1 rounded">
+							canvas
+						</code>{" "}
+						element, the game employs a robust game loop to handle animations,
+						physics, and interactions in real-time. Key functionalities include:
+					</p>
+					<div className="pl-6">
+						<ul className="list-disc space-y-2">
+							<li>
+								<span className="text-blue-300">Single-Player Mode:</span> Play
+								against a simple AI with randomized attack patterns for a
+								challenging experience.
+							</li>
+							<li>
+								<span className="text-blue-300">Two-Player Mode:</span> Compete
+								head-to-head with a friend using shared keyboard controls.
+							</li>
+							<li>
+								<span className="text-blue-300">
+									Dynamic Sprite Animations:
+								</span>{" "}
+								Character actions and movements are brought to life with
+								carefully designed sprite animations.
+							</li>
+							<li>
+								<span className="text-blue-300">Customizable Battles:</span>{" "}
+								Choose different characters and backgrounds to tailor your
+								gameplay experience.
+							</li>
+						</ul>
+					</div>
+					<p>
+						This game was developed as part of my Software Engineering class
+						with a team of five developers. We followed agile methodologies,
+						including iterative cycles of prototyping, testing, and refining
+						game mechanics. As my first frontend project, it was a valuable
+						learning experience in implementing sprite animations, managing game
+						loops, and handling user input in a browser environment.
+					</p>
+				</div>
 			</>
 		),
 		technologies: ["html", "css", "javascript"],
@@ -371,7 +651,7 @@ export const projects: Project[] = [
 	{
 		id: "9",
 		name: "CSUF Chatbot",
-		category: "AI",
+		category: "AI & ML",
 		description: (
 			<>
 				<p>
@@ -681,5 +961,32 @@ export const projects: Project[] = [
 		],
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project1",
 		deployUrl: "https://edwinperaza99.github.io/cpsc349-project1/",
+	},
+	{
+		id: "20",
+		name: "Spotify Clone",
+		category: "Web Development",
+		description: (
+			<>
+				<p>
+					This project is a Spotify clone built using the Astro framework,
+					designed to replicate the user interface of Spotify. As my first
+					project with Astro, this endeavor serves as a hands-on exploration of
+					the framework, showcasing its capabilities and my learning journey.
+					The design stays true to the original Spotify interface, aiming to
+					provide a familiar user experience.
+				</p>
+				<p>
+					This project is currently in development. The current version focuses
+					on replicating the Spotify user interface. More features and
+					functionalities are planned and will be added progressively.
+				</p>
+			</>
+		),
+		technologies: ["astro", "tailwindcss"],
+		thumbnail: RBR_Thumbnail,
+		images: [],
+		deployUrl: "https://spotify-clone-mocha-kappa.vercel.app/",
+		githubUrl: "https://github.com/edwinperaza99/spotify-clone",
 	},
 ];

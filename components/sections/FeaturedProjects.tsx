@@ -1,11 +1,11 @@
-import Link from "next/link";
-import ProjectCard from "@/components/ProjectCard";
 import {
+	fadeInOut,
 	MotionDiv,
 	MotionH2,
-	fadeInOut,
 	slideInFromLeft,
 } from "@/components/motionUtils";
+import ProjectCard from "@/components/ProjectCard";
+import Link from "next/link";
 
 interface Project {
 	href: string;
@@ -18,17 +18,24 @@ interface Project {
 
 export default function FeaturedProjects() {
 	const projects: Project[] = [
+		// {
+		// 	href: "/projects/1",
+		// 	imgSrc: "/NataliaSalon/NataliaSalon_thumbnail.png",
+		// 	imgAlt: "NataliaSalon project",
+		// 	title: "BeBeauty",
+		// 	description: "Next.js | Tailwind | MongoDB",
+		// },
 		{
 			href: "/projects/1",
-			imgSrc: "/NataliaSalon/NataliaSalon_thumbnail.png",
-			imgAlt: "NataliaSalon project",
-			title: "BeBeauty",
-			description: "Next.js | Tailwind | MongoDB",
+			imgSrc: "/Weatheria/Weatheria_thumbnail.png",
+			imgAlt: "Weatheria thumbnail",
+			title: "Weatheria",
+			description: "Nuxt.js | Tailwind CSS | FastAPI | Scikit-learn | GCP",
 		},
 		{
 			href: "/projects/2",
 			imgSrc: "/SoloLevel/SoloLevel_thumbnail_2.png",
-			imgAlt: "SoloLevel",
+			imgAlt: "SoloLevel thumbnail",
 			title: "SoloLevel",
 			description: "Swift | Swift UI | Firebase",
 			classes: "md:col-span-2 md:row-span-2",
@@ -36,14 +43,14 @@ export default function FeaturedProjects() {
 		{
 			href: "/projects/3",
 			imgSrc: "/MioPortfolio/MioPortfolio_thumbnail.png",
-			imgAlt: "Portfolio Mio",
+			imgAlt: "Portfolio Mio thumbnail",
 			title: "Portfolio Mio",
 			description: "Next.js | Tailwind CSS",
 		},
 		{
 			href: "/projects/4",
 			imgSrc: "/CodeAgainstCancer/CaC_thumbnail.png",
-			imgAlt: "Code Against Cancer",
+			imgAlt: "Code Against Cancer thumbnail",
 			title: "Code Against Cancer",
 			description: "Django | Bootstrap | AWS | Docker",
 			classes: "md:col-span-2 md:row-span-2",
@@ -51,7 +58,7 @@ export default function FeaturedProjects() {
 		{
 			href: "/projects/8",
 			imgSrc: "/Hikken/Hikken_thumbnail.png",
-			imgAlt: "Hikken",
+			imgAlt: "Hikken thumbnail",
 			title: "Hikken",
 			description: "HTML | CSS | JavaScript",
 		},

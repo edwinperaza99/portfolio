@@ -1,9 +1,5 @@
-import { projects } from "@/data/projects";
-import { notFound } from "next/navigation";
-import { resolveSkills } from "@/data/skills";
-import Image from "next/image";
-import { IoRocketOutline, IoLogoGithub } from "react-icons/io5";
-
+import { fadeInOut, MotionDiv } from "@/components/motionUtils";
+import MainNavBar from "@/components/navigation/MainNavBar";
 import {
 	Breadcrumb,
 	BreadcrumbItem,
@@ -12,17 +8,18 @@ import {
 	BreadcrumbPage,
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-
 import { Button } from "@/components/ui/button";
-
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { MotionDiv, fadeInOut } from "@/components/motionUtils";
-import MainNavBar from "@/components/navigation/MainNavBar";
+import { projects } from "@/data/projects";
+import { resolveSkills } from "@/data/skills";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import { IoLogoGithub, IoRocketOutline } from "react-icons/io5";
 
 export async function generateStaticParams() {
 	return projects.map((project) => ({
@@ -161,8 +158,8 @@ export default async function Project({
 						variants={fadeInOut}
 						initial="hidden"
 						whileInView="visible"
-						viewport={{ once: false, amount: 0.1 }}
-						transition={{ duration: 0.8, ease: "easeOut" }}
+						viewport={{ once: false, amount: 0 }}
+						transition={{ duration: 2, ease: "easeOut" }}
 						className="flex flex-row justify-center items-center"
 					>
 						<Image

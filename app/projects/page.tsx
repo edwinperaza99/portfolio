@@ -48,7 +48,7 @@ export default function Projects() {
 						>
 							<Smartphone className="h-5 w-5" />
 						</ToggleGroupItem>
-						<ToggleGroupItem value="AI" aria-label="Show AI projects">
+						<ToggleGroupItem value="AI & ML" aria-label="Show AI & ML projects">
 							<Brain className="h-5 w-5" />
 						</ToggleGroupItem>
 						<ToggleGroupItem
