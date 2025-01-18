@@ -26,7 +26,14 @@ import SwiftIcon from "@/public/icons/Swift.svg";
 import SwiftUIIcon from "@/public/icons/SwiftUI.svg";
 import TailwindCSSIcon from "@/public/icons/TailwindCSS.svg";
 import TypeScript from "@/public/icons/TypeScript.svg";
+import VueIcon from "@/public/icons/Vue.svg";
 import XCodeIcon from "@/public/icons/Xcode.svg";
+import NuxtIcon from "@/public/icons/Nuxt.svg";
+import AWSIcon from "@/public/icons/AWS.svg";
+import DockerIcon from "@/public/icons/Docker.svg";
+import GCPIcon from "@/public/icons/GCP.svg";
+import FlaskIcon from "@/public/icons/Flask.svg";
+
 import { StaticImageData } from "next/image";
 
 export function resolveSkills(skillIds: string[]) {
@@ -106,6 +113,17 @@ export const skillRegistry: Skill[] = [
 	{ id: "swiftui", name: "SwiftUI", icon: SwiftUIIcon, color: "0, 113, 230" },
 	{ id: "mysql", name: "MySQL", icon: MySQLIcon, color: "68, 121, 161" },
 	{ id: "sqlite3", name: "SQLite3", icon: SQLite3Icon, color: "0, 59, 87" },
+	{ id: "vue", name: "Vue", icon: VueIcon, color: "42, 130, 228" },
+	{ id: "nuxt", name: "Nuxt.js", icon: NuxtIcon, color: "00, 00, 00" },
+	{ id: "aws", name: "AWS", icon: AWSIcon, color: "232, 120, 0" },
+	{ id: "docker", name: "Docker", icon: DockerIcon, color: "13, 183, 237" },
+	{
+		id: "gcp",
+		name: "Google Cloud Platform",
+		icon: GCPIcon,
+		color: "66, 133, 244",
+	},
+	{ id: "flask", name: "Flask", icon: FlaskIcon, color: "00, 00, 00" },
 ];
 
 interface SkillCategory {
@@ -128,7 +146,7 @@ export const skillCategories: SkillCategory[] = [
 	{
 		id: "backend",
 		name: "Back-End Skills",
-		skills: ["nodejs", "express", "python", "django", "fastapi"],
+		skills: ["nodejs", "express", "python", "django", "fastapi", "flask"],
 	},
 	{
 		id: "frontend",
@@ -143,6 +161,8 @@ export const skillCategories: SkillCategory[] = [
 			"nextjs",
 			"tailwindcss",
 			"astro",
+			"vue",
+			"nuxt",
 		],
 	},
 	{
@@ -153,6 +173,6 @@ export const skillCategories: SkillCategory[] = [
 	{
 		id: "tools",
 		name: "Tools",
-		skills: ["git", "github", "figma", "postman"],
+		skills: ["git", "github", "docker", "figma", "postman", "aws", "gcp"],
 	},
 ];

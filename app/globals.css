@@ -485,3 +485,15 @@ body {
 	inherits: true;
 	initial-value: 0turn;
 }
+
+@layer utilities {
+	.min-h-viewport {
+		min-height: 100vh; /* Fallback for browsers that don't support dvh */
+	}
+
+	@supports (height: 100dvh) {
+		.min-h-viewport {
+			min-height: 100dvh; /* Uses dvh if supported */
+		}
+	}
+}
