@@ -8,8 +8,6 @@ import { IoIosMail } from "react-icons/io";
 import { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import { MotionSection, fadeInOut } from "@/components/motionUtils";
-import Link from "next/link";
-import Image from "next/image";
 
 export default function Contact() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
