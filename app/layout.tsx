@@ -103,11 +103,25 @@ export const metadata: Metadata = {
 		type: "website",
 		locale: "en_US",
 		siteName: "Edwin Peraza Portfolio",
+		images: [
+			{
+				url: "https://edwinperaza.com/images/og.png",
+				width: 1200,
+				height: 630,
+				alt: "Edwin Peraza | Portfolio",
+			},
+		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Edwin Peraza | Portfolio",
 		description: "Personal portfolio of Edwin Peraza",
+		images: [
+			{
+				url: "https://edwinperaza.com/images/og.png",
+				alt: "Edwin Peraza | Portfolio",
+			},
+		],
 	},
 };
 

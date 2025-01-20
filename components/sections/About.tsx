@@ -5,7 +5,6 @@ import {
 	slideInFromLeft,
 	slideInFromRight,
 } from "@/components/motionUtils";
-
 import Image from "next/image";
 
 export default function About() {
@@ -31,7 +30,7 @@ export default function About() {
 					className="relative w-52 md:w-64 aspect-square overflow-hidden rounded-full border-2 border-blue-300"
 				>
 					<Image
-						src="/headshot.jpg"
+						src="/images/headshot.jpg"
 						alt="Head shot"
 						loading="lazy"
 						fill
