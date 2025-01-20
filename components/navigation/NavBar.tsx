@@ -53,7 +53,7 @@ const NavBar = () => {
 						exit="closed"
 						variants={overlayVariants}
 					>
-						<motion.ul className="grid grid-cols-5 grid-rows-5 uppercase w-screen min-h-viewport cursor-pointer text-4xl">
+						<motion.ul className="grid grid-cols-5 grid-rows-5 uppercase w-screen h-screen cursor-pointer text-4xl">
 							<motion.li
 								variants={itemVariants}
 								className="col-span-3 row-span-2"

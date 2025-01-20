@@ -129,13 +129,13 @@ const MainNavBar = () => {
 				<AnimatePresence>
 					{isOpen && (
 						<motion.div
-							className="w-screen min-h-viewport fixed inset-0 z-[1000] bg-black bg-opacity-90 text-white flex items-center justify-center"
+							className="w-screen h-screen fixed inset-0 z-[1000] bg-black bg-opacity-90 text-white flex items-center justify-center"
 							initial="closed"
 							animate="open"
 							exit="closed"
 							variants={overlayVariants}
 						>
-							<motion.ul className="grid grid-cols-5 grid-rows-5 uppercase w-screen min-h-viewport cursor-pointer text-4xl">
+							<motion.ul className="grid grid-cols-5 grid-rows-5 uppercase w-screen h-screen cursor-pointer text-4xl">
 								<motion.li
 									variants={itemVariants}
 									className="col-span-3 row-span-2"
