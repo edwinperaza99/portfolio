@@ -124,36 +124,6 @@ export default function Contact() {
 					</Button>
 				</div>
 			</form>
-			<div className="flex justify-center gap-6 mt-6">
-				<Link
-					className="row-span-2 place-items-center"
-					href="https://github.com/edwinperaza99"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Image
-						src="/icons/GitHub.svg"
-						alt="GitHub link"
-						width={80}
-						height={80}
-						className="skill drop-shadow-3xl rounded-full p-4"
-					/>
-				</Link>
-				<Link
-					className="row-span-2"
-					href="https://www.linkedin.com/in/edwin-peraza/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Image
-						src="/icons/LinkedIn.svg"
-						alt="LinkedIn link"
-						width={80}
-						height={80}
-						className="skill drop-shadow-3xl rounded-full p-4"
-					/>
-				</Link>
-			</div>
 		</MotionSection>
 	);
 }

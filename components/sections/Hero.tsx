@@ -14,7 +14,7 @@ import {
 
 export default function Hero() {
 	return (
-		<div className="bg-[image:radial-gradient(80%_50%_at_50%_-20%,hsl(206,81.9%,65.3%,0.5),rgba(255,255,255,0))] min-h-screen flex justify-center items-center flex-col">
+		<div className="bg-[image:radial-gradient(80%_50%_at_50%_-20%,hsl(206,81.9%,65.3%,0.5),rgba(255,255,255,0))] min-h-viewport flex justify-center items-center flex-col">
 			<div className="container px-4 pt-32">
 				<div className="flex flex-col justify-center items-center space-y-0 text-gray-200 px-2 md:px-8 ">
 					<GalaxyBackground direction="bottom-to-top" />

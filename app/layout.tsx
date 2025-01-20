@@ -4,6 +4,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -136,6 +137,7 @@ export default function RootLayout({
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				{children}
+				<Footer />
 				<Analytics />
 				<SpeedInsights />
 			</body>

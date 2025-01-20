@@ -962,31 +962,31 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project1",
 		deployUrl: "https://edwinperaza99.github.io/cpsc349-project1/",
 	},
-	{
-		id: "20",
-		name: "Spotify Clone",
-		category: "Web Development",
-		description: (
-			<>
-				<p>
-					This project is a Spotify clone built using the Astro framework,
-					designed to replicate the user interface of Spotify. As my first
-					project with Astro, this endeavor serves as a hands-on exploration of
-					the framework, showcasing its capabilities and my learning journey.
-					The design stays true to the original Spotify interface, aiming to
-					provide a familiar user experience.
-				</p>
-				<p>
-					This project is currently in development. The current version focuses
-					on replicating the Spotify user interface. More features and
-					functionalities are planned and will be added progressively.
-				</p>
-			</>
-		),
-		technologies: ["astro", "tailwindcss"],
-		thumbnail: RBR_Thumbnail,
-		images: [],
-		deployUrl: "https://spotify-clone-mocha-kappa.vercel.app/",
-		githubUrl: "https://github.com/edwinperaza99/spotify-clone",
-	},
+	// {
+	// 	id: "20",
+	// 	name: "Spotify Clone",
+	// 	category: "Web Development",
+	// 	description: (
+	// 		<>
+	// 			<p>
+	// 				This project is a Spotify clone built using the Astro framework,
+	// 				designed to replicate the user interface of Spotify. As my first
+	// 				project with Astro, this endeavor serves as a hands-on exploration of
+	// 				the framework, showcasing its capabilities and my learning journey.
+	// 				The design stays true to the original Spotify interface, aiming to
+	// 				provide a familiar user experience.
+	// 			</p>
+	// 			<p>
+	// 				This project is currently in development. The current version focuses
+	// 				on replicating the Spotify user interface. More features and
+	// 				functionalities are planned and will be added progressively.
+	// 			</p>
+	// 		</>
+	// 	),
+	// 	technologies: ["astro", "tailwindcss"],
+	// 	thumbnail: RBR_Thumbnail,
+	// 	images: [],
+	// 	deployUrl: "https://spotify-clone-mocha-kappa.vercel.app/",
+	// 	githubUrl: "https://github.com/edwinperaza99/spotify-clone",
+	// },
 ];

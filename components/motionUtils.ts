@@ -14,6 +14,7 @@ export const MotionP = motion.p;
 export const MotionSpan = motion.span;
 export const MotionMain = motion.main;
 export const MotionNav = motion.nav;
+export const MotionFooter = motion.footer;
 
 export const fadeInOut: Variants = {
 	hidden: { opacity: 0 },
