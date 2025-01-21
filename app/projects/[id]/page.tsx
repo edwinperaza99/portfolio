@@ -111,7 +111,7 @@ export default async function Project({
 													/>
 												</div>
 											</TooltipTrigger>
-											<TooltipContent>
+											<TooltipContent className="border border-white bg-black">
 												<p>{skill.name}</p>
 											</TooltipContent>
 										</Tooltip>

@@ -141,91 +141,85 @@ export const projects: Project[] = [
 		category: "AI & ML",
 		description: (
 			<>
-				<div className="space-y-4">
-					<p>
-						Weatheria is a machine learning-powered weather prediction platform
-						that leverages advanced algorithms to analyze historical climate
-						data. It predicts Earth surface temperatures based on spatial
-						(latitude, longitude) and temporal (year, month) features, providing
-						insights into climate trends and the impact of global warming.
-					</p>
-					<p>
-						The project incorporates a highly modular and scalable architecture:
-					</p>
-					<div className="pl-6">
-						<ul className="list-disc space-y-2">
-							<li>
-								<strong>Frontend:</strong> Built with{" "}
-								<span className="text-blue-300">Nuxt.js</span> and styled using{" "}
-								<span className="text-blue-300">TailwindCSS</span> for a modern,
-								responsive, and user-friendly design. Deployed seamlessly on{" "}
-								<span className="text-blue-300">Vercel</span>.
-							</li>
-							<li>
-								<strong>Backend:</strong> Developed using{" "}
-								<span className="text-blue-300">FastAPI</span>, containerized
-								with <span className="text-blue-300">Docker</span>, and hosted
-								on <span className="text-blue-300">Google Cloud</span> VM
-								instances. This ensures robust, scalable, and efficient API
-								endpoints for serving predictions.
-							</li>
-							<li>
-								<strong>Machine Learning:</strong> The models were developed
-								using <span className="text-blue-300">Scikit-learn</span>,
-								employing four algorithms:
-								<ul className="list-disc list-inside pl-4">
-									<li>
-										<strong>Random Forest:</strong> Achieved the highest
-										accuracy with an R² score of{" "}
-										<span className="text-blue-300">0.9857</span>.
-									</li>
-									<li>
-										<strong>K-Nearest Neighbors (KNN):</strong> Provided
-										reliable predictions, balancing simplicity with
-										effectiveness.
-									</li>
-									<li>
-										<strong>Support Vector Regression (SVR):</strong>{" "}
-										Implemented with various kernels to model non-linear
-										relationships.
-									</li>
-									<li>
-										<strong>Linear Regression:</strong> Used as a baseline to
-										compare performance against more advanced algorithms.
-									</li>
-								</ul>
-							</li>
-							<li>
-								<strong>Data Handling:</strong> The dataset was sourced from the{" "}
-								<a
-									href="https://berkeleyearth.org/data/"
-									className="text-blue-300 hover:underline"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Berkeley Earth Surface Temperature
-								</a>{" "}
-								repository. Rigorous preprocessing steps were applied:
-								<ul className="list-disc list-inside pl-4">
-									<li>Removed incomplete records prior to 1870.</li>
-									<li>
-										Excluded missing temperature values for data integrity.
-									</li>
-									<li>
-										Extracted and scaled features (year, month, latitude,
-										longitude) for optimal model training.
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<p>
-						The integration of these technologies and methodologies allowed
-						Weatheria to deliver highly accurate predictions and valuable
-						insights, making it a meaningful contribution to understanding
-						climate change.
-					</p>
+				<p>
+					Weatheria is a machine learning-powered weather prediction platform
+					that leverages advanced algorithms to analyze historical climate data.
+					It predicts Earth surface temperatures based on spatial (latitude,
+					longitude) and temporal (year, month) features, providing insights
+					into climate trends and the impact of global warming.
+				</p>
+				<p>
+					The project incorporates a highly modular and scalable architecture:
+				</p>
+				<div className="pl-6">
+					<ul className="list-disc space-y-2">
+						<li>
+							<strong>Frontend:</strong> Built with{" "}
+							<span className="text-blue-300">Nuxt.js</span> and styled using{" "}
+							<span className="text-blue-300">TailwindCSS</span> for a modern,
+							responsive, and user-friendly design. Deployed seamlessly on{" "}
+							<span className="text-blue-300">Vercel</span>.
+						</li>
+						<li>
+							<strong>Backend:</strong> Developed using{" "}
+							<span className="text-blue-300">FastAPI</span>, containerized with{" "}
+							<span className="text-blue-300">Docker</span>, and hosted on{" "}
+							<span className="text-blue-300">Google Cloud</span> VM instances.
+							This ensures robust, scalable, and efficient API endpoints for
+							serving predictions.
+						</li>
+						<li>
+							<strong>Machine Learning:</strong> The models were developed using{" "}
+							<span className="text-blue-300">Scikit-learn</span>, employing
+							four algorithms:
+							<ul className="list-disc list-inside pl-4">
+								<li>
+									<strong>Random Forest:</strong> Achieved the highest accuracy
+									with an R² score of{" "}
+									<span className="text-blue-300">0.9857</span>.
+								</li>
+								<li>
+									<strong>K-Nearest Neighbors (KNN):</strong> Provided reliable
+									predictions, balancing simplicity with effectiveness.
+								</li>
+								<li>
+									<strong>Support Vector Regression (SVR):</strong> Implemented
+									with various kernels to model non-linear relationships.
+								</li>
+								<li>
+									<strong>Linear Regression:</strong> Used as a baseline to
+									compare performance against more advanced algorithms.
+								</li>
+							</ul>
+						</li>
+						<li>
+							<strong>Data Handling:</strong> The dataset was sourced from the{" "}
+							<a
+								href="https://berkeleyearth.org/data/"
+								className="text-blue-300 hover:underline"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Berkeley Earth Surface Temperature
+							</a>{" "}
+							repository. Rigorous preprocessing steps were applied:
+							<ul className="list-disc list-inside pl-4">
+								<li>Removed incomplete records prior to 1870.</li>
+								<li>Excluded missing temperature values for data integrity.</li>
+								<li>
+									Extracted and scaled features (year, month, latitude,
+									longitude) for optimal model training.
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
+				<p>
+					The integration of these technologies and methodologies allowed
+					Weatheria to deliver highly accurate predictions and valuable
+					insights, making it a meaningful contribution to understanding climate
+					change.
+				</p>
 			</>
 		),
 		technologies: [
@@ -1066,11 +1060,11 @@ export const projects: Project[] = [
 					<span className="text-blue-300">HTML</span> and{" "}
 					<span className="text-blue-300">CSS</span>. The app allows users to
 					track their favorite movies by creating personalized lists, marking
-					them as "watched," and organizing collections with inline editing
-					capabilities.
+					them as &quot;watched,&quot; and organizing collections with inline
+					editing capabilities.
 				</p>
 				<p>
-					The project leverages <strong>Remake</strong>'s built-in user
+					The project leverages <strong>Remake</strong>&apos;s built-in user
 					accounts, database integration, and real-time editing features to
 					simplify development without requiring backend coding. Tailwind CSS
 					was utilized to create a responsive and visually cohesive interface,

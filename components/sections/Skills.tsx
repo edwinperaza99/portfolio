@@ -121,7 +121,7 @@ export default function Skills() {
 															/>
 														</div>
 													</TooltipTrigger>
-													<TooltipContent>
+													<TooltipContent className="border border-white bg-black">
 														<p>{skill.name}</p>
 													</TooltipContent>
 												</Tooltip>

@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Edwin Peraza - Personal Portfolio
 
-## Getting Started
+Welcome to my personal portfolio! This project showcases my skills, projects, and experience as a developer.
 
-First, run the development server:
+## 🔧 Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Frontend:** [Next.js](https://nextjs.org), [TypeScript](https://www.typescriptlang.org), [Tailwind CSS](https://tailwindcss.com), [Framer Motion](https://www.framer.com/motion/), [Three.js](https://threejs.org)
+- **UI Enhancements:** Lottie animations, Radix UI, React Icons
+- **Deployment:** [Vercel](https://vercel.com)
+- **Backend Integrations:** Web3Forms for contact form submissions
+
+## 📂 Project Structure
+
+```plaintext
+portfolio/
+├── README.md                // Description of the project
+├── components.json          // Configuration for reusable UI components
+├── next.config.mjs          // Next.js configuration file
+├── package.json             // Project dependencies and scripts
+├── postcss.config.mjs       // PostCSS configuration for processing styles
+├── tailwind.config.ts       // TailwindCSS configuration with custom theme and extensions
+├── tsconfig.json            // TypeScript configuration
+├── .eslintrc.json           // ESLint configuration for code linting
+├── app/                     // Next.js `app` directory structure for routing and layouts
+│   ├── globals.css          // Global CSS styles for the entire app
+│   ├── layout.tsx           // Root layout with meta tags and global structure
+│   ├── page.tsx             // Default landing page of the portfolio
+│   ├── template.tsx         // Template wrapper for shared animations/styles
+│   ├── fonts/               // Custom font files used in the project
+│   ├── landing/             // Landing page route
+│   │   └── page.tsx         // Landing page content
+│   └── projects/            // Projects-related pages
+│       ├── layout.tsx       // Shared layout for all project pages
+│       ├── page.tsx         // All projects page with filtering capabilities
+│       └── [id]/            // Dynamic routing for individual project pages
+│           └── page.tsx     // Details of a specific project
+├── components/              // Reusable UI components
+│   ├── Footer.tsx           // Footer component for consistent UI
+│   ├── Galaxy.tsx           // Three.js component for interactive galaxy visuals
+│   ├── GalaxyBG.tsx         // Animated background using Three.js
+│   ├── ProjectCard.tsx      // Component for displaying project summaries
+│   ├── TypingEffect.tsx     // Typing animation component for text
+│   ├── motionUtils.ts       // Motion animations with Framer Motion
+│   ├── lottie/              // Lottie animations for specific visuals
+│   ├── navigation/          // Components for navigation elements
+│   ├── projects/            // Components specific to project displays
+│   ├── sections/            // Components representing key page sections (Hero, About, Skills, etc.)
+│   └── ui/                  // shadcn/ui elements
+├── data/                    // Static data for projects and skills
+│   ├── projects.tsx         // Details of projects showcased in the portfolio
+│   └── skills.ts            // Skill categories and related metadata
+├── lib/                     // Utility functions and helpers
+│   └── utils.ts             // Common utility functions used across the project
+└── public/                  // Public assets like images and resume
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Dynamic project filtering and showcasing
+- Interactive animations using Three.js and Framer Motion
+- Responsive design optimized for all devices
+- Web3Forms integration for seamless contact submissions
+- Optimized for fast performance with Vercel deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Live Demo
 
-## Learn More
+Experience my portfolio live: [edwinperaza.com](https://www.edwinperaza.com)
 
-To learn more about Next.js, take a look at the following resources:
+## 📬 Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Feel free to connect with me for collaborations, questions, or networking opportunities:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Email:** [edwin.peraza111@gmail.com](mailto:edwin.peraza111@gmail.com)
+- **LinkedIn:** [Edwin Peraza](https://www.linkedin.com/in/edwin-peraza/)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I look forward to hearing from you!
