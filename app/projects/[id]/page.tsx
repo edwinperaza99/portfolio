@@ -47,7 +47,7 @@ export default async function Project({
 			variants={fadeInOut}
 			initial="hidden"
 			animate="visible"
-			transition={{ duration: 0.8, ease: "easeOut" }}
+			transition={{ duration: 1.5, ease: "easeInOut" }}
 			className="min-h-screen flex flex-col text-white"
 		>
 			<section className="container px-2 pt-14 md:pt-20">
@@ -94,7 +94,6 @@ export default async function Project({
 										<Tooltip>
 											<TooltipTrigger>
 												<div
-													key={skill.id}
 													className="skill p-4 rounded-full glass"
 													// style={{ backgroundColor: skill.color }}
 													style={
@@ -106,7 +105,6 @@ export default async function Project({
 													<Image
 														src={skill.icon.src}
 														alt={`${skill.name} icon`}
-														loading="lazy"
 														width={30}
 														height={30}
 														className="drop-shadow-3xl"
