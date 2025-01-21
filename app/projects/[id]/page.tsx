@@ -1,5 +1,5 @@
 import { fadeInOut, MotionDiv } from "@/components/motionUtils";
-import MainNavBar from "@/components/navigation/MainNavBar";
+import ProjectNavigation from "@/components/navigation/ProjectNavigation";
 import {
 	Breadcrumb,
 	BreadcrumbItem,
@@ -33,6 +33,7 @@ export default async function Project({
 	params: Promise<{ id: string }>;
 }) {
 	const { id } = await params;
+	const projectId = parseInt(id, 10);
 	const project = projects.find((project) => project.id === id);
 
 	if (!project) {
@@ -49,7 +50,6 @@ export default async function Project({
 			transition={{ duration: 0.8, ease: "easeOut" }}
 			className="min-h-screen flex flex-col text-white"
 		>
-			<MainNavBar />
 			<section className="container px-2 pt-14 md:pt-20">
 				<header className="my-4">
 					<Breadcrumb className="dark">
@@ -95,7 +95,7 @@ export default async function Project({
 											<TooltipTrigger>
 												<div
 													key={skill.id}
-													className="skill p-4 rounded-full"
+													className="skill p-4 rounded-full glass"
 													// style={{ backgroundColor: skill.color }}
 													style={
 														{
@@ -174,6 +174,7 @@ export default async function Project({
 					</MotionDiv>
 				))}
 			</section>
+			<ProjectNavigation currentProject={projectId} />
 		</MotionDiv>
 	);
 }

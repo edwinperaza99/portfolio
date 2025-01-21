@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Laptop, Smartphone, Globe, Brain, Gamepad2 } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
-import MainNavBar from "@/components/navigation/MainNavBar";
 
 export default function Projects() {
 	const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -17,7 +16,6 @@ export default function Projects() {
 
 	return (
 		<div className="min-h-screen flex flex-col text-white">
-			<MainNavBar />
 			<section className="container px-1 pt-14 md:pt-20">
 				<header className="text-center my-4">
 					<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase mb-2 font-bold bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-transparent tracking-tight">
