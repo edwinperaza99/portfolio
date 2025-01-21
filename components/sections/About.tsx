@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function About() {
 	return (
-		<section className="container px-4 py-6 overflow-hidden">
+		<section className="container px-4 pb-6 pt-16 overflow-hidden">
 			<MotionH2
 				variants={slideInFromBottom}
 				initial="hidden"

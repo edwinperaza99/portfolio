@@ -65,7 +65,7 @@ export default function FeaturedProjects() {
 	];
 
 	return (
-		<div className="flex flex-col text-white container px-4 my-8">
+		<div className="flex flex-col text-white container px-4 pt-16">
 			<MotionH2
 				variants={slideInFromLeft}
 				initial="hidden"
@@ -87,7 +87,7 @@ export default function FeaturedProjects() {
 						whileInView="visible"
 						viewport={{ once: false, amount: 0 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}
-						className="flex justify-center mt-5 sm:mt-0"
+						className="flex justify-center mt-5"
 					>
 						<Link
 							href="/projects"
