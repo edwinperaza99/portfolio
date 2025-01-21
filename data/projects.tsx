@@ -487,7 +487,7 @@ export const projects: Project[] = [
 					unnecessary columns, adding custom ones (e.g., user initials,
 					processing date), and formatting the data to be print-ready.
 				</p>
-				<p className="text-gray-200 leading-relaxed">
+				<p className="text-gray-200 leading-relaxed mb-4">
 					The app increased inventory processing speed by{" "}
 					<strong className="text-green-400">200%</strong>, enabling staff to
 					process six reading lists per hour instead of two. Built with modern
@@ -496,6 +496,46 @@ export const projects: Project[] = [
 					<span className="text-blue-300">TailwindCSS</span>, the project
 					showcases my ability to develop scalable, maintainable, and impactful
 					tools for real-world use.
+				</p>
+				<div className="mb-6">
+					<h3 className="text-lg font-semibold text-blue-300 ">Features</h3>
+					<ul className="list-disc list-inside text-gray-200 leading-relaxed">
+						<li>
+							Automates{" "}
+							<code className="bg-gray-800 text-yellow-400 px-1 rounded">
+								.xls
+							</code>{" "}
+							file processing by removing unnecessary columns.
+						</li>
+						<li>
+							Adds custom fields such as inventory dates and user initials.
+						</li>
+						<li>
+							Outputs fully formatted{" "}
+							<code className="bg-gray-800 text-yellow-400 px-1 rounded">
+								.xlsx
+							</code>{" "}
+							files ready for printing.
+						</li>
+						<li>Customizable preferences saved locally for convenience.</li>
+						<li>Supports light and dark themes for accessibility.</li>
+					</ul>
+				</div>
+
+				<p className="text-gray-200 leading-relaxed">
+					This application leverages{" "}
+					<span className="text-blue-300">ExcelJS</span> to handle file
+					processing, enabling seamless manipulation of{" "}
+					<code className="bg-gray-800 text-yellow-400 px-1 rounded">.xls</code>{" "}
+					files and generation of clean, formatted{" "}
+					<code className="bg-gray-800 text-yellow-400 px-1 rounded">
+						.xlsx
+					</code>{" "}
+					outputs. By utilizing <span className="text-blue-300">Date-fns</span>,
+					the app efficiently manages and formats inventory timestamps.
+					Additionally, <span className="text-blue-300">FileSaver.js</span>{" "}
+					facilitates hassle-free downloads, ensuring that users can quickly
+					obtain processed files ready for printing.
 				</p>
 			</>
 		),
@@ -851,12 +891,72 @@ export const projects: Project[] = [
 		category: "Game Development",
 		description: (
 			<>
-				<p>
-					Dive into the nostalgic realm of arcade games with this Python-based
-					Space Invaders clone. Utilizing the Pygame library, this project is a
-					tribute to the classic Space Invaders arcade game, offering a blend of
-					retro gaming with modern programming.
-				</p>
+				<div className="space-y-4">
+					<p>
+						This project is a recreation of the classic{" "}
+						<span className="text-green-400 font-bold">Space Invaders</span>{" "}
+						arcade game, developed using{" "}
+						<span className="text-blue-300">Python</span> and{" "}
+						<span className="text-blue-300">Pygame</span>. It captures the
+						essence of the original gameplay, featuring waves of alien ships,
+						lasers, and a dynamic scoring system. Players navigate a spaceship,
+						defend against an alien invasion, and aim to achieve the highest
+						score.
+					</p>
+					<p>
+						The game adheres to the original{" "}
+						<span className="text-green-400 font-bold">Space Invaders</span>{" "}
+						rules, incorporating features like:
+					</p>
+					<div className="pl-6">
+						<ul className="list-disc space-y-2">
+							<li>
+								A dynamic scoring system, rewarding players for destroying alien
+								ships and hitting UFOs for bonus points.
+							</li>
+							<li>
+								Progressive difficulty: Aliens increase in speed as levels
+								advance, adding to the challenge.
+							</li>
+							<li>
+								Interactive barriers that degrade as they absorb laser hits,
+								providing temporary protection.
+							</li>
+							<li>
+								A game over condition when all lives are lost, with the highest
+								score saved.
+							</li>
+						</ul>
+					</div>
+					<p>
+						Developing this game provided an in-depth exploration of game
+						development concepts such as:
+					</p>
+					<div className="pl-6">
+						<ul className="list-disc space-y-2">
+							<li>Collision detection for lasers, ships, and barriers.</li>
+							<li>
+								Timed sprite animations to replicate alien and ship movements.
+							</li>
+							<li>
+								Game loops to manage real-time updates, including player input
+								and alien behavior.
+							</li>
+							<li>
+								Optimized controls for a smooth and engaging gameplay
+								experience.
+							</li>
+						</ul>
+					</div>
+					<p>
+						The project includes detailed instructions for setup and execution.
+						A requirements file is provided, making it easy to install
+						dependencies and run the game using:
+					</p>
+					<code className="bg-gray-900 text-green-400 px-2 py-1 rounded inline-block">
+						python3 game.py
+					</code>
+				</div>
 			</>
 		),
 		technologies: ["python", "Pygame"],
@@ -870,11 +970,32 @@ export const projects: Project[] = [
 		category: "Web Development",
 		description: (
 			<>
-				<p>
-					Santa, Please! Allows you to create wishlists with your favorite
-					products. You can submit your wishlist to your loved ones (in the
-					hopes to receive a present)
-				</p>
+				<div className="space-y-4">
+					<p>
+						<strong>Santa, Please!</strong> is a wishlist creation platform
+						where users can add their favorite products and share their lists
+						with loved ones, making it easier to get the perfect gift during the
+						holiday season.
+					</p>
+					<p>
+						Built using <span className="text-blue-300">React</span>,{" "}
+						<span className="text-blue-300">TailwindCSS</span>, and{" "}
+						<span className="text-blue-300">PocketBase</span>, the app offers an
+						intuitive and visually appealing interface for creating and managing
+						wishlists.
+					</p>
+					<p>
+						Developing <strong>Santa, Please!</strong> marked my first dive into{" "}
+						<span className="text-blue-300">React</span>, providing a hands-on
+						introduction to modern frontend development and component-based
+						architecture. This project also introduced me to tools like{" "}
+						<span className="text-blue-300">PocketBase</span>, a no-code backend
+						solution, which allowed me to efficiently handle data storage and
+						authentication without writing extensive backend code. It was a
+						valuable learning experience in building dynamic user interfaces and
+						leveraging no-code tools to streamline development.
+					</p>
+				</div>
 			</>
 		),
 		technologies: ["react", "tailwindcss", "pocketbase"],
@@ -895,10 +1016,27 @@ export const projects: Project[] = [
 		description: (
 			<>
 				<p>
-					Rock, Paper, Scissors is a classic game built using HTML, Tailwind
-					CSS, and JavaScript. This project is a fun and interactive
-					implementation of the popular game, allowing users to play against the
-					computer and test their luck and strategy.
+					<strong>Rock, Paper, Scissors</strong> is a browser-based
+					implementation of the classic game, built using{" "}
+					<span className="text-blue-300">HTML</span>,{" "}
+					<span className="text-blue-300">Tailwind CSS</span>, and{" "}
+					<span className="text-blue-300">JavaScript</span>. Players can compete
+					against a randomized AI, testing their strategy and luck in a
+					best-of-three match.
+				</p>
+				<p>
+					The game features dynamic UI updates, real-time score tracking, and{" "}
+					<span className="text-blue-300">local storage</span> integration to
+					save progress between sessions. This project demonstrates core web
+					development skills, including DOM manipulation, event handling, and
+					responsive design.
+				</p>
+				<p>
+					Additionally, this was my first dive into{" "}
+					<span className="text-blue-300">JavaScript</span>, my introduction to{" "}
+					<span className="text-blue-300">Figma</span> for UI prototyping, and
+					one of my earliest experiences with{" "}
+					<span className="text-blue-300">Tailwind CSS</span>.
 				</p>
 			</>
 		),
@@ -915,10 +1053,34 @@ export const projects: Project[] = [
 		description: (
 			<>
 				<p>
-					The Movie Tracker App is a web application built with Remake that
-					allows users to keep track of movies they want to watch or have
-					already seen. Users can add movies to their personal list, mark them
-					as watched, and organize their collection based on preferences.
+					<strong>FavFlicks</strong> is a web application built using{" "}
+					<a
+						href="https://remaketheweb.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-blue-300 hover:underline"
+					>
+						Remake
+					</a>
+					, an open-source framework for creating no-code platforms with just{" "}
+					<span className="text-blue-300">HTML</span> and{" "}
+					<span className="text-blue-300">CSS</span>. The app allows users to
+					track their favorite movies by creating personalized lists, marking
+					them as "watched," and organizing collections with inline editing
+					capabilities.
+				</p>
+				<p>
+					The project leverages <strong>Remake</strong>'s built-in user
+					accounts, database integration, and real-time editing features to
+					simplify development without requiring backend coding. Tailwind CSS
+					was utilized to create a responsive and visually cohesive interface,
+					making the app both functional and user-friendly.
+				</p>
+				<p>
+					As part of my journey into frontend development, this project offered
+					valuable experience in using a no-code framework to build dynamic,
+					database-backed platforms while focusing on accessibility and design
+					consistency.
 				</p>
 			</>
 		),
@@ -941,16 +1103,34 @@ export const projects: Project[] = [
 		name: "Photo Gallery Collection",
 		category: "Web Development",
 		description: (
-			<>
+			<div className="space-y-4">
 				<p>
-					Photo gallery collection using Eleventy as a static site generator.
-					This project is a simple photo gallery collection that showcases a
-					variety of images. Users can view the images, navigate through the
-					gallery, and enjoy a visual experience.
+					<strong>Photo Gallery</strong> is a simple static website showcasing a
+					collection of stock photos sourced from{" "}
+					<a
+						href="https://www.pexels.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-blue-300 hover:underline"
+					>
+						Pexels
+					</a>
+					. Built using <span className="text-blue-300">Eleventy</span>, a
+					static site generator, this project enabled users to view and navigate
+					through individual photo pages with a minimalist design powered by{" "}
+					<span className="text-blue-300">MVP.css</span>.
 				</p>
-			</>
+				<p>
+					As my first-ever frontend project, it marked an introduction to key
+					technologies like{" "}
+					<span className="text-blue-300 font-semibold">HTML</span> and{" "}
+					<span className="text-blue-300 font-semibold">CSS</span>. This
+					experience laid a strong foundation in building accessible,
+					lightweight, and modular static websites.
+				</p>
+			</div>
 		),
-		technologies: ["html", "tailwindcss", "Eleventy"],
+		technologies: ["html", "css", "Eleventy"],
 		thumbnail: PhotoGallery_Thumbnail,
 		images: [
 			PhotoGallery_1,
