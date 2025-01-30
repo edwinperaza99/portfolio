@@ -96,14 +96,14 @@ export default function ProjectNavigation({
 			</div>
 
 			{/* Desktop navigation */}
-			<div className="hidden md:flex flex-col justify-end items-center absolute right-2 lg:right-8 bottom-0 w-48 z-50">
+			<div className="hidden md:flex flex-col justify-end items-center absolute right-2 lg:right-8 bottom-0 w-60 z-50">
 				{/* Thumbnail preview */}
 				<AnimatePresence>
 					{hoveredProject && (
 						<MotionDiv
-							initial={{ y: 210 }}
+							initial={{ y: 250 }}
 							animate={{ y: 0 }}
-							exit={{ y: 210 }}
+							exit={{ y: 250 }}
 							transition={{ duration: 0.5, ease: "easeOut" }}
 							className=" w-full text-white flex flex-col"
 						>
@@ -142,7 +142,7 @@ export default function ProjectNavigation({
 						</MotionDiv>
 					)}
 				</AnimatePresence>
-				<div className="relative z-10 bg-gray-900 text-white p-4 rounded-lg shadow-lg flex items-center gap-4 w-48">
+				<div className="relative z-10 bg-gray-900 text-white p-4 rounded-lg shadow-lg flex items-center justify-around gap-4 w-60">
 					<button
 						title="Previous Project"
 						className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition"
@@ -153,7 +153,7 @@ export default function ProjectNavigation({
 						<IoArrowBack size={24} />
 					</button>
 					<div className="flex flex-col text-center">
-						<span className="text-sm">Project</span>
+						<span className="text-base">Project</span>
 						<span className="font-bold">
 							{currentProject} / {totalProjects}
 						</span>
