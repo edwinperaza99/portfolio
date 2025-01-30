@@ -7,7 +7,7 @@ import Skills from "@/components/sections/Skills";
 
 export default function Home() {
 	return (
-		<>
+		<div className="overflow-x-hidden">
 			<MainNavBar />
 			<section>
 				<Hero />
@@ -24,6 +24,6 @@ export default function Home() {
 			<section id="contact">
 				<Contact />
 			</section>
-		</>
+		</div>
 	);
 }

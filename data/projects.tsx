@@ -57,9 +57,12 @@ import MovieTracker_8 from "@/public/MovieTracker/8.png";
 import MovieTracker_Thumbnail from "@/public/MovieTracker/MovieTracker_thumbnail.png";
 // imports for Natalia
 import Natalia_1 from "@/public/NataliaSalon/1.png";
+import Natalia_2 from "@/public/NataliaSalon/2.png";
+import Natalia_3 from "@/public/NataliaSalon/3.png";
 import Natalia_4 from "@/public/NataliaSalon/4.png";
 import Natalia_5 from "@/public/NataliaSalon/5.png";
 import Natalia_6 from "@/public/NataliaSalon/6.png";
+import Natalia_7 from "@/public/NataliaSalon/7.png";
 import NataliaSalon_Thumbnail from "@/public/NataliaSalon/NataliaSalon_thumbnail.png";
 // imports for PACMAN
 import PACMAN_1 from "@/public/PAC-MAN/1.png";
@@ -437,33 +440,75 @@ export const projects: Project[] = [
 	},
 	{
 		id: "5",
-		name: "Natalia's Website",
+		name: "Natalia Salon Platform",
 		category: "Web Development",
 		description: (
 			<>
-				<p>
-					Natalia Salon and Beauty Supply is the official website for a beauty
-					salon and supply store, designed to provide clients with a seamless
-					online experience. Built with Next.js and styled with Tailwind CSS,
-					the site offers detailed information on the salon&apos;s services,
-					team members, and contact details, along with a straightforward
-					booking system for clients to schedule appointments.
-				</p>
-				<p>
-					The website includes a dedicated admin dashboard for updating product
-					inventory, allowing staff to manage the beauty supply offerings
-					displayed on the site. This dashboard, built using Next.js API routes,
-					enables easy product updates directly through the site without needing
-					external tools. By combining a dynamic frontend with efficient backend
-					routes, the platform offers a practical and maintainable solution
-					tailored to the salon&apos;s needs.
-				</p>
+				<div className="space-y-4">
+					<p>
+						Natalia Salon Platform is a modern web application designed to
+						provide a seamless online experience for exploring salon products
+						and services. It features an intuitive user interface for visitors
+						to browse a curated selection of beauty products while offering an
+						admin dashboard for efficient product management.
+					</p>
+					<p>
+						Built with <span className="text-blue-400 font-bold">Next.js</span>{" "}
+						and leveraging the{" "}
+						<span className="text-blue-400 font-bold">shadcn/ui</span> component
+						library, the platform ensures a sleek and responsive user
+						experience. Its backend is powered by{" "}
+						<span className="text-blue-400 font-bold">Prisma</span> and{" "}
+						<span className="text-blue-400 font-bold">MongoDB</span>, providing
+						a scalable and efficient database structure. Key features include:
+					</p>
+					<div className="pl-6">
+						<ul className="list-disc space-y-2">
+							<li>
+								<span className="text-blue-300">Product Exploration:</span>{" "}
+								Visitors can browse through a selection of salon products,
+								complete with images, descriptions, and pricing information.
+							</li>
+							<li>
+								<span className="text-blue-300">Service Showcase:</span>{" "}
+								Highlighting available salon services, promotions, and special
+								offers.
+							</li>
+							<li>
+								<span className="text-blue-300">Admin Dashboard:</span> A
+								role-based management system that allows salon staff to add,
+								edit, activate/deactivate, and organize products effortlessly.
+							</li>
+							<li>
+								<span className="text-blue-300">Secure Authentication:</span>{" "}
+								Powered by{" "}
+								<span className="text-blue-400 font-bold">NextAuth</span>,
+								ensuring secure access for administrators.
+							</li>
+							<li>
+								<span className="text-blue-300">Dynamic UI:</span> Built using{" "}
+								<span className="text-blue-400 font-bold">shadcn/ui</span>{" "}
+								components and{" "}
+								<span className="text-blue-400 font-bold">TailwindCSS</span>,
+								ensuring a responsive and visually appealing interface.
+							</li>
+						</ul>
+					</div>
+				</div>
 			</>
 		),
 		technologies: ["nextjs", "typescript", "tailwindcss", "mongodb", "prisma"],
 		thumbnail: NataliaSalon_Thumbnail,
-		images: [Natalia_1, Natalia_4, Natalia_5, Natalia_6],
-		// githubUrl: "https://github.com/edwinperaza99/be-beauty",
+		images: [
+			Natalia_1,
+			Natalia_2,
+			Natalia_3,
+			Natalia_4,
+			Natalia_5,
+			Natalia_6,
+			Natalia_7,
+		],
+		githubUrl: "https://github.com/edwinperaza99/be-beauty",
 		deployUrl: "https://be-beauty.edwinperaza.com/",
 	},
 	{

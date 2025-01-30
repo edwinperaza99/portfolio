@@ -18,13 +18,6 @@ interface Project {
 
 export default function FeaturedProjects() {
 	const projects: Project[] = [
-		// {
-		// 	href: "/projects/1",
-		// 	imgSrc: "/NataliaSalon/NataliaSalon_thumbnail.png",
-		// 	imgAlt: "NataliaSalon project",
-		// 	title: "BeBeauty",
-		// 	description: "Next.js | Tailwind | MongoDB",
-		// },
 		{
 			href: "/projects/1",
 			imgSrc: "/Weatheria/Weatheria_Thumbnail.png",
@@ -56,12 +49,19 @@ export default function FeaturedProjects() {
 			classes: "md:col-span-2 md:row-span-2",
 		},
 		{
-			href: "/projects/8",
-			imgSrc: "/Hikken/Hikken_thumbnail.png",
-			imgAlt: "Hikken thumbnail",
-			title: "Hikken",
-			description: "HTML | CSS | JavaScript",
+			href: "/projects/5",
+			imgSrc: "/NataliaSalon/NataliaSalon_thumbnail.png",
+			imgAlt: "Natalia Salon project",
+			title: "Natalia Salon Platform",
+			description: "Next.js | Tailwind | MongoDB",
 		},
+		// {
+		// 	href: "/projects/8",
+		// 	imgSrc: "/Hikken/Hikken_thumbnail.png",
+		// 	imgAlt: "Hikken thumbnail",
+		// 	title: "Hikken",
+		// 	description: "HTML | CSS | JavaScript",
+		// },
 	];
 
 	return (
