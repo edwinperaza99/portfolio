@@ -55,7 +55,7 @@ export default function Skills() {
 												<Tooltip>
 													<TooltipTrigger>
 														<div
-															className=" p-4 flex gap-3 glass rounded-full"
+															className=" p-4 flex gap-3 rounded-full bg-white/20 backdrop-filter"
 															style={
 																{
 																	"--skill-color": skill.color,
@@ -105,7 +105,7 @@ export default function Skills() {
 												<Tooltip>
 													<TooltipTrigger>
 														<div
-															className="p-4 flex gap-3 glass rounded-full"
+															className="p-4 flex gap-3 rounded-full bg-white/20 backdrop-filter"
 															style={
 																{
 																	"--skill-color": skill.color,
