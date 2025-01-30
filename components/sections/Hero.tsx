@@ -1,5 +1,7 @@
 import TypingEffect from "@/components/TypingEffect";
 import { Button } from "@/components/ui/button";
+import { PiReadCvLogoThin } from "react-icons/pi";
+import { MdOutlineEmail } from "react-icons/md";
 import Link from "next/link";
 import Scroll from "@/components/lottie/Scroll";
 import GalaxyBackground from "@/components/GalaxyBG";
@@ -58,13 +60,14 @@ export default function Hero() {
 							viewport={{ once: false, amount: 0.5 }}
 							transition={{ duration: 0.8, delay: 0.6 }}
 						>
-							<Button asChild>
+							<Button variant="gradient" asChild>
 								<Link
 									href="/Resume_Edwin_Peraza.pdf"
 									target="_blank"
 									rel="noopener noreferrer"
 									prefetch={false}
 								>
+									<PiReadCvLogoThin />
 									View Resume
 								</Link>
 							</Button>
@@ -76,8 +79,11 @@ export default function Hero() {
 							viewport={{ once: false, amount: 0.5 }}
 							transition={{ duration: 0.8, delay: 0.6 }}
 						>
-							<Button asChild>
-								<Link href="/#contact">Contact Me</Link>
+							<Button variant="secondaryGradient" asChild>
+								<Link href="/#contact">
+									<MdOutlineEmail />
+									Contact Me
+								</Link>
 							</Button>
 						</MotionDiv>
 					</div>
