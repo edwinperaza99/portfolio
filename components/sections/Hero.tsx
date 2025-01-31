@@ -60,7 +60,7 @@ export default function Hero() {
 							viewport={{ once: false, amount: 0.5 }}
 							transition={{ duration: 0.8, delay: 0.6 }}
 						>
-							<Button variant="gradient" asChild>
+							<Button variant="gradient" className="min-w-36" asChild>
 								<Link
 									href="/Resume_Edwin_Peraza.pdf"
 									target="_blank"
@@ -79,7 +79,7 @@ export default function Hero() {
 							viewport={{ once: false, amount: 0.5 }}
 							transition={{ duration: 0.8, delay: 0.6 }}
 						>
-							<Button variant="secondaryGradient" asChild>
+							<Button variant="secondaryGradient" className="min-w-36" asChild>
 								<Link href="/#contact">
 									<MdOutlineEmail />
 									Contact Me
