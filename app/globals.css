@@ -23,19 +23,20 @@ html {
 }
 
 body {
-	/* background-color: var(--background-base); */
 	background-color: #0a0a0a;
-	/* color: var(--foreground-base); */
+	/* background-color: #121212; */
 	color: #ededed;
-	/* font-family: Arial, Helvetica, sans-serif; */
-	/* background-image: url("/textures/8k_stars_milky_way.webp"); */
-	/* background-repeat: no-repeat; */
-	/* background-size: cover; */
-	/* background-position: center; */
-	/* NOTE: great solution for fixing repeating backgrounds when the size is inconsistent */
-	/* background-attachment: fixed; */
-	/* animation: zoom-bg 40s ease-in-out infinite; */
 }
+
+/* body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: black;
+	filter: url("/textures/noise.svg#noiseFilter") contrast(200%);
+	opacity: 0.1;
+	pointer-events: none;
+} */
 
 @keyframes zoom-bg {
 	0% {
@@ -174,81 +175,6 @@ body {
 	}
 }
 
-/* Glitch Text */
-.glitch {
-	position: relative;
-	color: #fff;
-	overflow: hidden;
-}
-
-.glitch::before,
-.glitch::after {
-	content: attr(data-text);
-	position: absolute;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transition: none;
-}
-
-.glitch:hover::before,
-.glitch:focus::before {
-	animation: glitchTop 2s linear infinite;
-}
-
-.glitch:hover::after,
-.glitch:focus::after {
-	animation: glitchBottom 1.5s linear infinite;
-}
-
-.glitch:hover,
-.glitch:focus {
-	animation: glitch 2s linear infinite;
-}
-
-/* Keyframes for glitch effect */
-@keyframes glitch {
-	2%,
-	64% {
-		transform: translate(2px, 0) skew(0deg);
-	}
-	4%,
-	60% {
-		transform: translate(-2px, 0) skew(0deg);
-	}
-	62% {
-		transform: translate(0, 0) skew(5deg);
-	}
-}
-
-@keyframes glitchTop {
-	2%,
-	64% {
-		transform: translate(2px, -2px);
-	}
-	4%,
-	60% {
-		transform: translate(-2px, 2px);
-	}
-	62% {
-		transform: translate(13px, -1px) skew(-13deg);
-	}
-}
-
-@keyframes glitchBottom {
-	2%,
-	64% {
-		transform: translate(-2px, 0);
-	}
-	4%,
-	60% {
-		transform: translate(-2px, 0);
-	}
-	62% {
-		transform: translate(-22px, 5px) skew(21deg);
-	}
-}
-
 /* styles for stack icons */
 .skill {
 	--skill-color: 255, 255, 255; /* Set this dynamically */
@@ -339,31 +265,6 @@ body {
 	}
 }
 
-.animate-wave {
-	display: inline-block;
-	animation: wave 2s infinite;
-	transform-origin: 70% 70%;
-}
-
-@keyframes wave {
-	0%,
-	100% {
-		transform: rotate(0deg);
-	}
-	20% {
-		transform: rotate(14deg);
-	}
-	40% {
-		transform: rotate(-8deg);
-	}
-	60% {
-		transform: rotate(14deg);
-	}
-	80% {
-		transform: rotate(-4deg);
-	}
-}
-
 .glass-window {
 	background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
 	-webkit-backdrop-filter: blur(10px); /* Safari */
@@ -428,14 +329,6 @@ body {
 	}
 }
 
-@layer base {
-	* {
-		@apply border-border;
-	}
-	body {
-		@apply bg-background text-foreground;
-	}
-}
 .border-animation {
 	--border-angle: 0turn; /* For animation */
 	--main-bg: conic-gradient(
