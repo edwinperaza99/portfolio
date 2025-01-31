@@ -45,3 +45,8 @@ export const scaleUp: Variants = {
 	hidden: { opacity: 0, scale: 0.8 },
 	visible: { opacity: 1, scale: 1 },
 };
+
+export const blurFadeInOut: Variants = {
+	hidden: { opacity: 0, filter: "blur(5px)" },
+	visible: { opacity: 1, filter: "blur(0px)" },
+};

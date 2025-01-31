@@ -1,4 +1,4 @@
-import { fadeInOut, MotionDiv } from "@/components/motionUtils";
+import { blurFadeInOut, fadeInOut, MotionDiv } from "@/components/motionUtils";
 import ProjectNavigation from "@/components/navigation/ProjectNavigation";
 import {
 	Breadcrumb,
@@ -43,111 +43,115 @@ export default async function Project({
 	const resolvedTechnologies = resolveSkills(project.technologies);
 
 	return (
-		<MotionDiv
-			variants={fadeInOut}
-			initial="hidden"
-			animate="visible"
-			transition={{ duration: 1.5, ease: "easeInOut" }}
-			className="min-h-screen flex flex-col text-white"
-		>
-			<section className="container px-2 pt-14 md:pt-20">
-				<header className="my-4">
-					<Breadcrumb className="dark">
-						<BreadcrumbList>
-							<BreadcrumbItem>
-								<BreadcrumbLink href="/landing">Landing</BreadcrumbLink>
-							</BreadcrumbItem>
-							<BreadcrumbSeparator />
-							<BreadcrumbItem>
-								<BreadcrumbLink href="/">Home</BreadcrumbLink>
-							</BreadcrumbItem>
-							<BreadcrumbSeparator />
-							<BreadcrumbItem>
-								<BreadcrumbLink href="/projects">Projects</BreadcrumbLink>
-							</BreadcrumbItem>
-							<BreadcrumbSeparator />
-							<BreadcrumbItem>
-								<BreadcrumbPage>Project #{project.id}</BreadcrumbPage>
-							</BreadcrumbItem>
-						</BreadcrumbList>
-					</Breadcrumb>
-					<div className="mt-4 max-w-full md:max-w-[50%]">
-						<h1 className="text-3xl md:text-5xl uppercase font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight ">
-							{project.name}
-						</h1>
-						<h2 className="text-secondary-light font-extralight">
-							{project.category}
-						</h2>
-					</div>
-				</header>
-			</section>
-			{/* information section */}
-			<section className="container px-2 grid grid-cols-1 md:grid-cols-2 py-4 gap-6 md:gap-16">
-				<article className="space-y-2">{project.description}</article>
-				<article className="flex flex-col gap-4">
-					<h3 className="text-2xl">Development Stack</h3>
-					<div className="flex flex-wrap gap-2">
-						{resolvedTechnologies.map(
-							(skill) =>
-								skill && (
-									<TooltipProvider key={skill.id}>
-										<Tooltip>
-											<TooltipTrigger>
-												<div
-													className="skill p-4 rounded-full glass"
-													// style={{ backgroundColor: skill.color }}
-													style={
-														{
-															"--skill-color": skill.color,
-														} as React.CSSProperties
-													}
-												>
-													<Image
-														src={skill.icon.src}
-														alt={`${skill.name} icon`}
-														width={30}
-														height={30}
-														className="drop-shadow-3xl"
-													/>
-												</div>
-											</TooltipTrigger>
-											<TooltipContent className="border border-white bg-black">
-												<p>{skill.name}</p>
-											</TooltipContent>
-										</Tooltip>
-									</TooltipProvider>
-								)
-						)}
-					</div>
-					{/* buttons section */}
-					<div className="w-full flex space-between gap-2">
-						{project.deployUrl && (
-							<Button asChild size="lg" variant="secondary">
-								<a
-									href={project.deployUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<IoRocketOutline />
-									Live Demo
-								</a>
-							</Button>
-						)}
-						{project.githubUrl && (
-							<Button asChild size="lg" variant="secondary">
-								<a
-									href={project.githubUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<IoLogoGithub />
-									GitHub Repository
-								</a>
-							</Button>
-						)}
-					</div>
-				</article>
-			</section>
+		<>
+			<MotionDiv
+				variants={blurFadeInOut}
+				initial="hidden"
+				animate="visible"
+				transition={{ duration: 1, ease: "easeInOut" }}
+				className="flex flex-col text-white"
+			>
+				<section className="container px-2 pt-14 md:pt-20">
+					<header className="my-4">
+						<Breadcrumb className="dark">
+							<BreadcrumbList>
+								<BreadcrumbItem>
+									<BreadcrumbLink href="/landing">Landing</BreadcrumbLink>
+								</BreadcrumbItem>
+								<BreadcrumbSeparator />
+								<BreadcrumbItem>
+									<BreadcrumbLink href="/">Home</BreadcrumbLink>
+								</BreadcrumbItem>
+								<BreadcrumbSeparator />
+								<BreadcrumbItem>
+									<BreadcrumbLink href="/projects">Projects</BreadcrumbLink>
+								</BreadcrumbItem>
+								<BreadcrumbSeparator />
+								<BreadcrumbItem>
+									<BreadcrumbPage>Project #{project.id}</BreadcrumbPage>
+								</BreadcrumbItem>
+							</BreadcrumbList>
+						</Breadcrumb>
+						<div className="mt-4 max-w-full md:max-w-[50%]">
+							<h1 className="text-3xl md:text-5xl uppercase font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight">
+								{project.name}
+							</h1>
+							<h2 className="text-secondary-light font-extralight">
+								{project.category}
+							</h2>
+						</div>
+					</header>
+				</section>
+				{/* information section */}
+				<section className="container px-2 grid grid-cols-1 md:grid-cols-2 py-4 gap-6 md:gap-16">
+					<article className="space-y-2">{project.description}</article>
+					<article className="flex flex-col gap-4">
+						<h3 className="text-2xl font-semibold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight">
+							Development Stack
+						</h3>
+						<div className="flex flex-wrap gap-2">
+							{resolvedTechnologies.map(
+								(skill) =>
+									skill && (
+										<TooltipProvider key={skill.id}>
+											<Tooltip>
+												<TooltipTrigger>
+													<div
+														className="skill p-4 rounded-full glass"
+														// style={{ backgroundColor: skill.color }}
+														style={
+															{
+																"--skill-color": skill.color,
+															} as React.CSSProperties
+														}
+													>
+														<Image
+															src={skill.icon.src}
+															alt={`${skill.name} icon`}
+															width={30}
+															height={30}
+															className="drop-shadow-3xl"
+														/>
+													</div>
+												</TooltipTrigger>
+												<TooltipContent className="border border-white bg-black">
+													<p>{skill.name}</p>
+												</TooltipContent>
+											</Tooltip>
+										</TooltipProvider>
+									)
+							)}
+						</div>
+						{/* buttons section */}
+						<div className="w-full flex space-between gap-2">
+							{project.deployUrl && (
+								<Button asChild size="lg" variant="secondary">
+									<a
+										href={project.deployUrl}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<IoRocketOutline />
+										Live Demo
+									</a>
+								</Button>
+							)}
+							{project.githubUrl && (
+								<Button asChild size="lg" variant="secondary">
+									<a
+										href={project.githubUrl}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<IoLogoGithub />
+										GitHub Repository
+									</a>
+								</Button>
+							)}
+						</div>
+					</article>
+				</section>
+			</MotionDiv>
 			{/* gallery section */}
 			<section className="container px-2 space-y-2 md:space-y-4 py-6">
 				{project.images.map((image, index) => (
@@ -157,7 +161,7 @@ export default async function Project({
 						initial="hidden"
 						whileInView="visible"
 						viewport={{ once: false, amount: 0 }}
-						transition={{ duration: 2, ease: "easeOut" }}
+						transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
 						className="flex flex-row justify-center items-center"
 					>
 						<Image
@@ -173,6 +177,6 @@ export default async function Project({
 				))}
 			</section>
 			<ProjectNavigation currentProject={projectId} />
-		</MotionDiv>
+		</>
 	);
 }
