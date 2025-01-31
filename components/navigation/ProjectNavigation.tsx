@@ -76,7 +76,7 @@ export default function ProjectNavigation({
 	const clearHover = () => setHoveredProject(null);
 
 	return (
-		<div className="px-4 md:px-0 fixed bottom-2 mx-auto w-full max-w-screen-2xl">
+		<div className="fixed bottom-2 left-1/2 transform -translate-x-1/2 w-full max-w-[1900px] flex justify-center items-center">
 			{/* Mobile navigation */}
 			<div className="flex justify-between items-center md:hidden fixed bottom-4 left-0 right-0 px-2">
 				<button
@@ -96,7 +96,7 @@ export default function ProjectNavigation({
 			</div>
 
 			{/* Desktop navigation */}
-			<div className="hidden md:flex flex-col justify-end items-center absolute right-2 lg:right-8 bottom-0 w-60 z-50">
+			<div className="hidden md:flex flex-col justify-end items-center absolute right-2 bottom-0 w-60 z-50">
 				{/* Thumbnail preview */}
 				<AnimatePresence>
 					{hoveredProject && (

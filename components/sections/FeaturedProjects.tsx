@@ -37,7 +37,7 @@ export default function FeaturedProjects() {
 			href: "/projects/3",
 			imgSrc: "/MioPortfolio/MioPortfolio_thumbnail.png",
 			imgAlt: "Portfolio Mio thumbnail",
-			title: "Portfolio Mio",
+			title: "Mio's Portfolio",
 			description: "Next.js | Tailwind CSS",
 		},
 		{

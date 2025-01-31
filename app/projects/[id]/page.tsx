@@ -72,7 +72,7 @@ export default async function Project({
 						</BreadcrumbList>
 					</Breadcrumb>
 					<div className="mt-4 max-w-full md:max-w-[50%]">
-						<h1 className="text-3xl md:text-5xl uppercase font-bold">
+						<h1 className="text-3xl md:text-5xl uppercase font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight ">
 							{project.name}
 						</h1>
 						<h2 className="text-secondary-light font-extralight">
