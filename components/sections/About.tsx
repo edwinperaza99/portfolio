@@ -63,12 +63,13 @@ export default function About() {
 						</p>
 						<p>
 							I enjoy working across the stack, thinking through architecture,
-							and building products that are both efficient and easy to use. I'm
-							driven by a constant desire to improve.
+							and building products that are both efficient and easy to use.
+							I&apos;m driven by a constant desire to improve.
 						</p>
 						<p>
-							When I’m not coding, you’ll find me enjoying a video game,
-							watching a good TV show, or hopefully getting some fresh air.
+							When I&apos;m not coding, you&apos;ll find me enjoying a video
+							game, watching a good TV show, or hopefully getting some fresh
+							air.
 						</p>
 					</div>
 				</MotionDiv>
