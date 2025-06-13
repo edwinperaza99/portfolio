@@ -19,6 +19,10 @@ import CaC_4 from "@/public/CodeAgainstCancer/4.png";
 import CaC_5 from "@/public/CodeAgainstCancer/5.png";
 import CaC_6 from "@/public/CodeAgainstCancer/6.png";
 import CaC_7 from "@/public/CodeAgainstCancer/7.png";
+// imports for Cindy's Portfolio
+import CindysPortfolio_Thumbnail from "@/public/CindysPortfolio/thumbnail.png";
+import CindysPortfolio_1 from "@/public/CindysPortfolio/1.png";
+import CindysPortfolio_2 from "@/public/CindysPortfolio/2.png";
 // imports for Code Against Cancer
 import CaC_Thumbnail from "@/public/CodeAgainstCancer/CaC_thumbnail.png";
 import Hikken_1 from "@/public/Hikken/1.png";
@@ -297,47 +301,51 @@ export const projects: Project[] = [
 	},
 	{
 		id: "3",
-		name: "Mio's Portfolio",
+		name: "Designer Portfolio Template",
 		category: "Web Development",
 		description: (
 			<>
 				<div className="space-y-4">
 					<p>
-						Mio&apos;s Portfolio is a dynamic and visually engaging personal
-						website crafted to highlight Mio&apos;s artistic journey as a scenic
-						designer and artist. Designed to leave a lasting impression, the
-						site emphasizes clean aesthetics, intuitive navigation, and a strong
-						focus on visual storytelling.
+						This project began as a custom personal website for Mio, a scenic
+						designer and artist, crafted to showcase her creative journey with
+						clean aesthetics and intuitive navigation.
 					</p>
 					<p>
-						Built with <span className="text-blue-300">Next.js</span> and styled
-						using <span className="text-blue-300">TailwindCSS</span>, the
-						project showcases a seamless blend of modern web technologies and
-						performance optimization. Leveraging{" "}
-						<span className="text-blue-300">TypeScript</span>, the codebase
-						ensures robustness and maintainability while catering to scalability
-						and future enhancements.
+						It has since evolved into a flexible{" "}
+						<strong>Designer Portfolio Template</strong> powered by{" "}
+						<span className="text-blue-300">Next.js</span>, styled with{" "}
+						<span className="text-blue-300">TailwindCSS</span>, and integrated
+						with <span className="text-blue-300">Sanity CMS</span> for easy
+						content management and scalability.
 					</p>
 					<p>
-						The portfolio serves as a comprehensive platform for presenting
-						Mio&apos;s projects, professional experience, and creative
-						accomplishments. Features include:
+						The template is designed to help artists and designers build
+						professional, visually engaging portfolios with minimal setup. Mio’s
+						portfolio serves as the live example of this template in action.
 					</p>
 					<ul className="list-disc list-inside pl-4 space-y-2">
 						<li>
-							<strong>Responsive Design:</strong> Ensures a consistent
-							experience across devices, from desktops to mobile screens.
+							<strong>Content Management:</strong> Sanity CMS enables dynamic
+							updates and customization without changing the codebase.
 						</li>
 						<li>
-							<strong>Optimized Performance:</strong> With server-side rendering
-							(SSR) and static generation, the site achieves lightning-fast load
-							times and superior SEO.
+							<strong>Responsive Design:</strong> Ensures a consistent, polished
+							experience on all devices.
+						</li>
+						<li>
+							<strong>Optimized Performance:</strong> Uses server-side rendering
+							(SSR) and static generation for fast load times and SEO benefits.
+						</li>
+						<li>
+							<strong>TypeScript Powered:</strong> Ensures a robust,
+							maintainable codebase ready for future enhancements.
 						</li>
 					</ul>
 					<p>
-						Mio&apos;s Portfolio exemplifies the potential of modern frontend
-						technologies to create an impactful and professional digital
-						presence for artists and designers.
+						This Designer Portfolio Template demonstrates how modern web
+						technologies can empower creatives to build their digital presence
+						with ease and style.
 					</p>
 				</div>
 			</>
@@ -345,7 +353,7 @@ export const projects: Project[] = [
 		technologies: ["nextjs", "typescript", "tailwindcss"],
 		thumbnail: MioPortfolio_Thumbnail,
 		images: [MioPortfolio_1, MioPortfolio_2, MioPortfolio_3, MioPortfolio_4],
-		githubUrl: "https://github.com/edwinperaza99/portfolio-mio",
+		githubUrl: "https://github.com/edwinperaza99/designer-portfolio-template",
 		deployUrl: "https://www.okadamio.com/",
 	},
 	{
@@ -576,6 +584,21 @@ export const projects: Project[] = [
 					facilitates hassle-free downloads, ensuring that users can quickly
 					obtain processed files ready for printing.
 				</p>
+				<p className="text-gray-200 leading-relaxed mt-4">
+					A desktop native version has also been built using{" "}
+					<span className="text-blue-300">Electron-Vite</span>, providing
+					offline capabilities and native desktop performance.
+				</p>
+				<p className="mt-4">
+					<a
+						href="https://github.com/edwinperaza99/RBR-Inventory-Formatter-Desktop"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-blue-300 hover:text-blue-400 underline"
+					>
+						See the GitHub repository here.
+					</a>
+				</p>
 			</>
 		),
 		technologies: ["nextjs", "typescript", "tailwindcss"],
@@ -586,6 +609,91 @@ export const projects: Project[] = [
 	},
 	{
 		id: "7",
+		name: "Dual Persona Portfolio",
+		category: "Web Development",
+		description: (
+			<>
+				<div className="space-y-4">
+					<p>
+						The <strong>Dual Persona Portfolio</strong> is a modern and
+						interactive personal website template built to support two distinct
+						user identities—one professional and one creative. Originally
+						designed as a general-purpose portfolio, it evolved into a dynamic
+						tool for individuals who want to showcase both technical and
+						content-creator personas in a single experience.
+					</p>
+					<p>
+						Powered by{" "}
+						<span className="text-blue-300">Next.js (App Router)</span>, styled
+						with <span className="text-blue-300">TailwindCSS</span>, and backed
+						by <span className="text-blue-300">Sanity CMS</span>, the template
+						provides flexibility and scalability for dynamic content updates. It
+						uses <span className="text-blue-300">TypeScript</span> for code
+						robustness, <span className="text-blue-300">Framer Motion</span> for
+						smooth animations, and{" "}
+						<span className="text-blue-300">shadcn/ui</span> for accessible UI
+						components.
+					</p>
+					<p>
+						A key feature of the template is its persona toggle: it cleanly
+						separates sections like Resume, Experience, and Skills from
+						streaming-specific features like live Twitch integration, VODs, and
+						Clips—making it perfect for professionals who also build audiences
+						online.
+					</p>
+					<ul className="list-disc list-inside pl-4 space-y-2">
+						<li>
+							<strong>Dual Personas:</strong> Seamlessly switch between a
+							professional portfolio and a streamer/content creator profile.
+						</li>
+						<li>
+							<strong>Twitch Integration:</strong> Pulls in live streams, recent
+							VODs, and Clips via the Twitch API.
+						</li>
+						<li>
+							<strong>Content Management:</strong> Sanity CMS powers all dynamic
+							content, from bios to events and media.
+						</li>
+						<li>
+							<strong>Modern Stack:</strong> Built with the latest Next.js App
+							Router, using SSR and static generation for performance.
+						</li>
+						<li>
+							<strong>UI & Animation:</strong> Built with Framer Motion and
+							shadcn/ui for a polished, accessible, and animated user
+							experience.
+						</li>
+					</ul>
+					<p>
+						This template is currently live at{" "}
+						<a
+							href="https://www.cindynphan.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-blue-300 hover:text-blue-400"
+						>
+							cindynphan.com
+						</a>
+					</p>
+				</div>
+			</>
+		),
+		technologies: [
+			"nextjs",
+			"typescript",
+			"tailwindcss",
+			"sanity",
+			"framer-motion",
+			"shadcn-ui",
+			"twitch-api",
+		],
+		thumbnail: CindysPortfolio_Thumbnail,
+		images: [CindysPortfolio_1, CindysPortfolio_2],
+		githubUrl: "https://github.com/edwinperaza99/dual-portfolio",
+		deployUrl: "https://www.cindynphan.com/",
+	},
+	{
+		id: "8",
 		name: "PAC-MAN",
 		category: "Game Development",
 		description: (
@@ -661,7 +769,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/PAC-MAN",
 	},
 	{
-		id: "8",
+		id: "9",
 		name: "Hikken",
 		category: "Web Development",
 		description: (
@@ -728,7 +836,7 @@ export const projects: Project[] = [
 		deployUrl: "https://edwinperaza99.github.io/Hikken/",
 	},
 	{
-		id: "9",
+		id: "10",
 		name: "CSUF Chatbot",
 		category: "AI & ML",
 		description: (
@@ -791,7 +899,7 @@ export const projects: Project[] = [
 	// 	githubUrl: "https://github.com/edwinperaza99/HotProspects",
 	// },
 	{
-		id: "10",
+		id: "11",
 		name: "BucketList",
 		category: "Mobile Development",
 		description: (
@@ -825,7 +933,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/BucketList",
 	},
 	{
-		id: "11",
+		id: "12",
 		name: "InstaFilter",
 		category: "Mobile Development",
 		description: (
@@ -853,7 +961,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/Instafilter",
 	},
 	{
-		id: "12",
+		id: "13",
 		name: "iExpense",
 		category: "Mobile Development",
 		description: (
@@ -873,7 +981,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/iExpense",
 	},
 	{
-		id: "13",
+		id: "14",
 		name: "WordScramble",
 		category: "Mobile Development",
 		description: (
@@ -906,7 +1014,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/WordScramble",
 	},
 	{
-		id: "14",
+		id: "15",
 		name: "iPhone Calculator",
 		category: "Mobile Development",
 		description: (
@@ -925,7 +1033,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/iPhone-calculator",
 	},
 	{
-		id: "15",
+		id: "16",
 		name: "Space Invaders",
 		category: "Game Development",
 		description: (
@@ -1004,7 +1112,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/space-invaders",
 	},
 	{
-		id: "16",
+		id: "17",
 		name: "Santa, Please!",
 		category: "Web Development",
 		description: (
@@ -1049,7 +1157,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project4",
 	},
 	{
-		id: "17",
+		id: "18",
 		name: "Rock, Paper, Scissors",
 		category: "Web Development",
 		description: (
@@ -1086,7 +1194,7 @@ export const projects: Project[] = [
 		deployUrl: "https://edwinperaza99.github.io/cpsc349-project3/",
 	},
 	{
-		id: "18",
+		id: "19",
 		name: "Movie Tracker App",
 		category: "Web Development",
 		description: (
@@ -1138,7 +1246,7 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/edwinperaza99/cpsc349-project2",
 	},
 	{
-		id: "19",
+		id: "20",
 		name: "Photo Gallery Collection",
 		category: "Web Development",
 		description: (

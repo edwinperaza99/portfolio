@@ -55,15 +55,20 @@ export default function About() {
 								className="text-blue-300 hover:text-blue-400"
 							>
 								CSUF
-							</a>
-							. With a strong focus on front-end development, I specialize in
-							creating engaging user experiences using React, Next.js,
-							TypeScript, and Tailwind CSS.
+							</a>{" "}
+							with experience developing full-stack web applications. I approach
+							software engineering with a strong sense of ownership, from
+							designing solutions to writing clean, scalable code built for the
+							long term.
 						</p>
 						<p>
-							I&apos;m actively seeking opportunities in software engineering to
-							contribute to innovative, user-focused solutions. Check out my
-							portfolio to explore some of the projects I&apos;ve built.
+							I enjoy working across the stack, thinking through architecture,
+							and building products that are both efficient and easy to use. I'm
+							driven by a constant desire to improve.
+						</p>
+						<p>
+							When I’m not coding, you’ll find me enjoying a video game,
+							watching a good TV show, or hopefully getting some fresh air.
 						</p>
 					</div>
 				</MotionDiv>
