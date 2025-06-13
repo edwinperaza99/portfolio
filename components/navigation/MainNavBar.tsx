@@ -85,7 +85,7 @@ const MainNavBar = () => {
 					<li>
 						<Link
 							href="/#hero"
-							className="p-2 md:p-4 text-white hover:text-blue-300 transition-colors"
+							className="relative p-2 md:p-4 text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
 						>
 							Home
 						</Link>
@@ -93,7 +93,7 @@ const MainNavBar = () => {
 					<li>
 						<Link
 							href="/#projects"
-							className="p-2 md:p-4 text-white hover:text-blue-300 transition-colors"
+							className="relative p-2 md:p-4 text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
 						>
 							Projects
 						</Link>
@@ -101,7 +101,7 @@ const MainNavBar = () => {
 					<li>
 						<Link
 							href="/#about"
-							className="p-2 md:p-4 text-white hover:text-blue-300 transition-colors"
+							className="relative p-2 md:p-4 text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
 						>
 							About
 						</Link>
@@ -109,7 +109,7 @@ const MainNavBar = () => {
 					<li>
 						<Link
 							href="/#contact"
-							className="p-2 md:p-4 text-white hover:text-blue-300 transition-colors"
+							className="relative p-2 md:p-4 text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
 						>
 							Contact
 						</Link>

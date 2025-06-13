@@ -222,10 +222,9 @@ export const projects: Project[] = [
 					</ul>
 				</div>
 				<p>
-					The integration of these technologies and methodologies allowed
-					Weatheria to deliver highly accurate predictions and valuable
-					insights, making it a meaningful contribution to understanding climate
-					change.
+					A research paper based on this project has been accepted for
+					presentation at the IEEE AMLDS 2025 conference. More information
+					coming after July 2025.
 				</p>
 			</>
 		),
