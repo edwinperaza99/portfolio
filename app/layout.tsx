@@ -4,7 +4,6 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import Footer from "@/components/Footer";
 
 const geistSans = localFont({
@@ -141,7 +140,6 @@ export default function RootLayout({
 				<Footer />
 				<Analytics />
 				<SpeedInsights />
-				<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
 			</body>
 		</html>
 	);
