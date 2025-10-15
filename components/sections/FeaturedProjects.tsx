@@ -2,7 +2,7 @@ import {
 	fadeInOut,
 	MotionDiv,
 	MotionH2,
-	slideInFromLeft,
+	slideInFromRight,
 } from "@/components/motionUtils";
 import ProjectCard from "@/components/ProjectCard";
 import Link from "next/link";
@@ -65,39 +65,45 @@ export default function FeaturedProjects() {
 	];
 
 	return (
-		<div className="flex flex-col text-white container px-4 pt-16">
-			<MotionH2
-				variants={slideInFromLeft}
-				initial="hidden"
-				whileInView="visible"
-				viewport={{ once: false, amount: 0.5 }}
-				transition={{ duration: 0.8, delay: 0.2 }}
-				className="text-5xl uppercase mb-2 font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight"
-			>
-				Projects
-			</MotionH2>
-			<section className="w-full grid gap-4 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-3">
-				{projects.map((project, index) => (
-					<ProjectCard key={index} {...project} />
-				))}
-				<div className="aspect-none md:aspect-[4/3] flex justify-center items-center">
-					<MotionDiv
-						variants={fadeInOut}
+		<>
+			<div className="border-b border-white/20">
+				<div className="container border-x border-white/20">
+					<MotionH2
+						variants={slideInFromRight}
 						initial="hidden"
 						whileInView="visible"
-						viewport={{ once: false, amount: 0 }}
-						transition={{ duration: 0.8, ease: "easeOut" }}
-						className="flex justify-center mt-5"
+						viewport={{ once: true, amount: 0.5 }}
+						transition={{ duration: 0.8, delay: 0.2 }}
+						className="px-4 py-4 text-5xl uppercase font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight"
 					>
-						<Link
-							href="/projects"
-							className="relative inline-block px-6 py-3 text-lg font-bold text-white rounded-lg border-animation"
-						>
-							View All Projects
-						</Link>
-					</MotionDiv>
+						Projects
+					</MotionH2>
 				</div>
-			</section>
-		</div>
+			</div>
+			<div className="flex flex-col text-white container border-x border-white/20">
+				<section className="px-4 py-4 w-full grid gap-4 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:grid-cols-3 bg-white/5">
+					{projects.map((project, index) => (
+						<ProjectCard key={index} {...project} />
+					))}
+					<div className="aspect-none md:aspect-[4/3] flex justify-center items-center">
+						<MotionDiv
+							variants={fadeInOut}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true, amount: 0 }}
+							transition={{ duration: 0.8, ease: "easeOut" }}
+							className="flex justify-center mt-5"
+						>
+							<Link
+								href="/projects"
+								className="relative inline-block px-6 py-3 text-lg font-bold text-white rounded-lg border-animation"
+							>
+								View All Projects
+							</Link>
+						</MotionDiv>
+					</div>
+				</section>
+			</div>
+		</>
 	);
 }

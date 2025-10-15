@@ -1,6 +1,6 @@
-import Link from "next/link";
+import { fadeInOut, MotionArticle } from "@/components/motionUtils";
 import Image from "next/image";
-import { MotionArticle, fadeInOut } from "@/components/motionUtils";
+import Link from "next/link";
 
 interface ProjectCardProps {
 	href: string;
@@ -26,7 +26,7 @@ export default function ProjectCard({
 			whileInView="visible"
 			viewport={{ once: false, amount: 0.2 }}
 			transition={{ duration: 0.8, ease: "easeOut" }}
-			className={`rounded-2xl glass overflow-hidden group ${classes}`}
+			className={`rounded-2xl  border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 overflow-hidden group ${classes}`}
 		>
 			<Link href={href} className="flex flex-col h-full">
 				<div className="glass-grid-bg relative aspect-[4/3] md:aspect-none md:flex-grow overflow-hidden">
