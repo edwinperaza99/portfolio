@@ -380,6 +380,48 @@ body {
 }
 
 @layer utilities {
+	.three-d-marquee-grid {
+		transform: translate3d(-50%, -50%, 0) rotateX(55deg) rotateY(0deg)
+			rotateZ(-45deg) scale3d(1.9, 1.9, 1);
+		transform-style: preserve-3d;
+	}
+
+	.grid-line-horizontal {
+		--background: #ffffff;
+		--color: rgba(0, 0, 0, 0.2);
+		--height: 1px;
+		--width: 5px;
+		--fade-stop: 90%;
+		--offset: 200px;
+		--color-dark: rgba(255, 255, 255, 0.2);
+	}
+
+	.grid-line-horizontal--offset-20 {
+		--offset: 20px;
+	}
+
+	.grid-line-horizontal--offset-16 {
+		--offset: 16px;
+	}
+
+	.grid-line-vertical {
+		--background: #ffffff;
+		--color: rgba(0, 0, 0, 0.2);
+		--height: 5px;
+		--width: 1px;
+		--fade-stop: 90%;
+		--offset: 150px;
+		--color-dark: rgba(255, 255, 255, 0.2);
+	}
+
+	.grid-line-vertical--offset-80 {
+		--offset: 80px;
+	}
+
+	.grid-line-vertical--offset-60 {
+		--offset: 60px;
+	}
+
 	.min-h-viewport {
 		min-height: 100vh; /* Fallback for browsers that don't support dvh */
 	}

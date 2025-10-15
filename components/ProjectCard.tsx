@@ -26,10 +26,10 @@ export default function ProjectCard({
 			whileInView="visible"
 			viewport={{ once: false, amount: 0.2 }}
 			transition={{ duration: 0.8, ease: "easeOut" }}
-			className={`rounded-2xl  border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 overflow-hidden group ${classes}`}
+			className={`group relative aspect-square overflow-hidden rounded-2xl border border-white/20 bg-white/5 transition-all duration-300 hover:bg-white/10 ${classes}`}
 		>
-			<Link href={href} className="flex flex-col h-full">
-				<div className="glass-grid-bg relative aspect-[4/3] md:aspect-none md:flex-grow overflow-hidden">
+			<Link href={href} className="flex size-full flex-col">
+				<div className="glass-grid-bg relative flex-1 overflow-hidden">
 					<Image
 						src={imgSrc}
 						alt={imgAlt}
@@ -37,9 +37,16 @@ export default function ProjectCard({
 						className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-75"
 					/>
 				</div>
-				<div className="p-4">
-					<h3 className="text-xl md:text-base lg:text-xl font-bold">{title}</h3>
-					<p className="text-sm md:text-xs lg:text-sm">{description}</p>
+				<div className="flex-shrink-0 p-4">
+					<h3 className="text-lg font-bold truncate" title={title}>
+						{title}
+					</h3>
+					<p
+						className="mt-1 text-sm text-white/80 truncate"
+						title={description}
+					>
+						{description}
+					</p>
 				</div>
 			</Link>
 		</MotionArticle>
