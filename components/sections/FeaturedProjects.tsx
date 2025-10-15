@@ -1,7 +1,9 @@
 "use client";
+import Link from "next/link";
 import { MotionH2, slideInFromRight } from "@/components/motionUtils";
 import ProjectCard from "@/components/ProjectCard";
 import { ThreeDMarquee } from "@/components/ui/3d-marquee";
+import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 
 interface Project {
 	href: string;
@@ -94,6 +96,19 @@ export default function FeaturedProjects() {
 					))}
 					<div className="order-6 group relative aspect-square overflow-hidden rounded-2xl border border-white/20 bg-white/10">
 						<ThreeDMarquee images={marqueeImages} className="h-full w-full" />
+						<div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+						<div className="absolute inset-0 z-10 flex items-center justify-center p-6">
+							<MovingBorderButton
+								as={Link}
+								href="/projects"
+								duration={3200}
+								hoverDuration={1200}
+								containerClassName="h-16 w-full max-w-xs"
+								className="border border-white/20 bg-black/60 text-base font-semibold uppercase tracking-wide"
+							>
+								View All Projects
+							</MovingBorderButton>
+						</div>
 					</div>
 				</section>
 			</div>
