@@ -26,7 +26,7 @@ export default function ProjectCard({
 			whileInView="visible"
 			viewport={{ once: false, amount: 0.2 }}
 			transition={{ duration: 0.8, ease: "easeOut" }}
-			className={`group relative aspect-square overflow-hidden rounded-2xl border border-white/20 bg-white/5 transition-all duration-300 hover:bg-white/10 ${classes}`}
+			className={`group relative aspect-square overflow-hidden rounded-2xl border border-white/20 bg-white/5 transition-colors duration-300 hover:bg-white/10 ${classes}`}
 		>
 			<Link href={href} className="flex size-full flex-col">
 				<div className="glass-grid-bg relative flex-1 overflow-hidden">
