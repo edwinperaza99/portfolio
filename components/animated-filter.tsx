@@ -17,12 +17,12 @@ const FILTER_OPTIONS = [
 
 const FRAME_OPTIONS = [
 	"top-[6%] left-[8%] w-[72%] h-[36%]",
-	"top-[44%] left-[12%] w-[58%] h-[46%]",
+	"top-[48%] left-[5%] w-[58%] h-[46%]",
 	"top-[18%] left-[56%] w-[32%] h-[64%]",
 	"top-[4%] left-[38%] w-[52%] h-[32%]",
 	"top-[28%] left-[6%] w-[44%] h-[56%]",
-	"top-[58%] left-[48%] w-[36%] h-[30%]",
-	"top-[14%] left-[22%] w-[60%] h-[54%]",
+	"top-[58%] left-[48%] w-[46%] h-[30%]",
+	"top-[12%] left-[32%] w-[40%] h-[76%]",
 ];
 
 const randomIndex = (length: number, exclude?: number) => {
