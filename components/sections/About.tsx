@@ -1,3 +1,4 @@
+import AnimatedFilter from "@/components/animated-filter";
 import {
 	fadeInOut,
 	MotionDiv,
@@ -6,7 +7,7 @@ import {
 } from "@/components/motionUtils";
 import { Cover } from "@/components/ui/cover";
 import { LinkPreview } from "@/components/ui/link-preview";
-import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
+// import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
 import { LuBook, LuFilm, LuGamepad } from "react-icons/lu";
 
 // Image intentionally not used in this layout (PixelatedCanvas used instead)
@@ -63,7 +64,7 @@ export default function About() {
 						transition={{ duration: 0.8, ease: "easeOut" }}
 						className="relative aspect-square lg:aspect-[3/4] overflow-hidden rounded-lg border border-white/20 bg-white/5"
 					>
-						<PixelatedCanvas
+						{/* <PixelatedCanvas
 							src="/images/headshot.jpg"
 							responsive
 							cellSize={3}
@@ -75,7 +76,8 @@ export default function About() {
 							sampleAverage
 							followSpeed={0.2}
 							className="w-full h-full object-cover"
-						/>
+						/> */}
+						<AnimatedFilter />
 					</MotionDiv>
 
 					{/* Bio Text - Takes 2 columns on desktop, full width on tablet */}
