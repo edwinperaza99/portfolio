@@ -1,5 +1,6 @@
 import {
 	fadeInOut,
+	MotionDiv,
 	MotionH2,
 	MotionSection,
 	slideInFromLeft,
@@ -55,7 +56,7 @@ export default function Skills() {
 			: `rgba(255,255,255,${alpha})`;
 	return (
 		<>
-			<div className="border-x border-b border-white/20">
+			<div className="border-b border-white/20">
 				<div className="container border-x border-white/20">
 					<MotionH2
 						variants={slideInFromLeft}
@@ -76,18 +77,23 @@ export default function Skills() {
 				whileInView="visible"
 				viewport={{ once: false, amount: 0.5 }}
 				transition={{ duration: 0.8, ease: "easeOut" }}
-				className="py-6 px-4 container text-primary-light border-x border-white/20 p-4 shadow-md"
+				className="py-4 px-4 container text-primary-light border-x border-white/20 p-4 shadow-md"
 			>
 				<article className="flex flex-wrap gap-3 justify-center">
 					{skillRegistry.map((skill) => {
 						const rgb = parseColor(skill.color);
+						const baseShadow = `0 3px 12px ${rgba(rgb, 0.08)}`;
+						const hoverShadow = `0 8px 22px ${rgba(rgb, 0.16)}, 0 0 32px ${rgba(
+							rgb,
+							0.22
+						)}`;
 						const bubbleStyle: React.CSSProperties = {
 							background: `linear-gradient(135deg, ${rgba(rgb, 0.12)}, ${rgba(
 								rgb,
 								0.06
 							)})`,
 							border: `1px solid ${rgba(rgb, 0.16)}`,
-							boxShadow: `0 8px 24px ${rgba(rgb, 0.08)}`,
+							boxShadow: baseShadow,
 						};
 
 						const solidColor = rgb
@@ -95,7 +101,7 @@ export default function Skills() {
 							: "rgb(255,255,255)";
 
 						const tooltipStyle: React.CSSProperties = {
-							background: "rgba(0,0,0,0.6)", // dark glass for contrast
+							background: "rgba(0,0,0,0.7)", // dark glass for contrast
 							color: solidColor,
 							border: `1px solid ${solidColor}`,
 							backdropFilter: "blur(6px)",
@@ -104,10 +110,16 @@ export default function Skills() {
 						return (
 							<TooltipProvider key={skill.id}>
 								<Tooltip>
-									<TooltipTrigger>
-										<div
-											className="p-2 md:p-3 flex items-center justify-center gap-3 rounded-2xl transition-colors"
+									<TooltipTrigger asChild>
+										<MotionDiv
+											className="p-2 md:p-3 flex items-center justify-center gap-3 rounded-2xl cursor-pointer"
 											style={bubbleStyle}
+											whileHover={{
+												scale: 1.02,
+												boxShadow: hoverShadow,
+											}}
+											whileTap={{ scale: 0.97 }}
+											transition={{ duration: 0.2, ease: "easeOut" }}
 										>
 											<Image
 												src={skill.icon}
@@ -116,7 +128,7 @@ export default function Skills() {
 												height={44}
 												className="drop-shadow-3xl"
 											/>
-										</div>
+										</MotionDiv>
 									</TooltipTrigger>
 									<TooltipContent style={tooltipStyle} className="mb-2">
 										<p className="font-medium text-lg">{skill.name}</p>
