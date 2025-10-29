@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+	color-scheme: dark;
+	forced-color-adjust: none;
 	--background-base: #ffffff;
 	--foreground-base: #171717;
 	--primary-light: #ffffff;
