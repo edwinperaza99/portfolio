@@ -1,10 +1,6 @@
-import {
-	fadeInOut,
-	MotionDiv,
-	MotionH2,
-	MotionSection,
-	slideInFromLeft,
-} from "@/components/motionUtils";
+"use client";
+
+import { MotionDiv, MotionH2, slideInFromLeft } from "@/components/motionUtils";
 import {
 	Tooltip,
 	TooltipContent,
@@ -13,6 +9,7 @@ import {
 } from "@/components/ui/tooltip";
 import { skillRegistry } from "@/data/skills";
 import Image from "next/image";
+import type { Variants } from "framer-motion";
 
 export default function Skills() {
 	// Helpers to normalize colors from the skill registry.
@@ -54,6 +51,20 @@ export default function Skills() {
 		rgb
 			? `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`
 			: `rgba(255,255,255,${alpha})`;
+
+	// Domino-style entry animation for skill bubbles.
+	const bubbleVariants: Variants = {
+		hidden: { opacity: 0, y: 20 },
+		visible: (index: number) => ({
+			opacity: 1,
+			y: 0,
+			transition: {
+				delay: index * 0.05,
+				duration: 0.5,
+				ease: [0.22, 1, 0.36, 1],
+			},
+		}),
+	};
 	return (
 		<>
 			<div className="border-b border-white/20">
@@ -71,16 +82,9 @@ export default function Skills() {
 				</div>
 			</div>
 
-			<MotionSection
-				variants={fadeInOut}
-				initial="hidden"
-				whileInView="visible"
-				viewport={{ once: false, amount: 0.5 }}
-				transition={{ duration: 0.8, ease: "easeOut" }}
-				className="py-4 px-4 container text-primary-light border-x border-white/20 p-4 shadow-md"
-			>
+			<section className="py-4 px-4 container text-primary-light border-x border-white/20 p-4 shadow-md">
 				<article className="flex flex-wrap gap-3 justify-center">
-					{skillRegistry.map((skill) => {
+					{skillRegistry.map((skill, index) => {
 						const rgb = parseColor(skill.color);
 						const baseShadow = `0 3px 12px ${rgba(rgb, 0.08)}`;
 						const hoverShadow = `0 8px 22px ${rgba(rgb, 0.16)}, 0 0 32px ${rgba(
@@ -112,6 +116,11 @@ export default function Skills() {
 								<Tooltip>
 									<TooltipTrigger asChild>
 										<MotionDiv
+											variants={bubbleVariants}
+											initial="hidden"
+											whileInView="visible"
+											viewport={{ once: true, amount: 0.3 }}
+											custom={index}
 											className="p-2 md:p-3 flex items-center justify-center gap-3 rounded-2xl cursor-pointer"
 											style={bubbleStyle}
 											whileHover={{
@@ -138,7 +147,7 @@ export default function Skills() {
 						);
 					})}
 				</article>
-			</MotionSection>
+			</section>
 		</>
 	);
 }
