@@ -76,7 +76,7 @@ export default function Contact() {
 							whileInView="visible"
 							viewport={{ once: true, amount: 0.2 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
-							className="group relative overflow-hidden rounded-3xl border border-white/20 bg-white/5 transition-colors duration-300 hover:bg-white/10 md:col-span-6 lg:col-span-6"
+							className="group relative overflow-hidden rounded-2xl border border-white/20 bg-white/5 transition-colors duration-300 hover:bg-white/10 md:col-span-6 lg:col-span-6"
 						>
 							<div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/0 via-white/5 to-white/10 opacity-0 transition group-hover:opacity-100" />
 							<div className="flex h-full flex-col md:flex-row">
@@ -114,7 +114,7 @@ export default function Contact() {
 							whileInView="visible"
 							viewport={{ once: true, amount: 0.2 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
-							className="group relative overflow-hidden rounded-3xl border border-white/20 bg-white/5 transition-colors duration-300 hover:bg-white/10 md:col-span-6 lg:col-span-6"
+							className="group relative overflow-hidden rounded-2xl border border-white/20 bg-white/5 transition-colors duration-300 hover:bg-white/10 md:col-span-6 lg:col-span-6"
 						>
 							<div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/0 via-white/5 to-white/10 opacity-0 transition group-hover:opacity-100" />
 							<div className="flex h-full flex-col md:flex-row">
@@ -152,7 +152,7 @@ export default function Contact() {
 							whileInView="visible"
 							viewport={{ once: true, amount: 0.2 }}
 							transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-							className="group relative overflow-hidden rounded-3xl border border-white/20 bg-white/5 transition-colors duration-300 hover:bg-white/10 md:col-span-3 lg:col-span-2"
+							className="group relative overflow-hidden rounded-2xl border border-white/20 bg-white/5 transition-colors duration-300 hover:bg-white/10 md:col-span-3 lg:col-span-2"
 						>
 							<div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/0 via-white/5 to-white/10 opacity-0 transition group-hover:opacity-100" />
 							<div className="flex h-full flex-col md:flex-row">
@@ -191,7 +191,7 @@ export default function Contact() {
 							whileInView="visible"
 							viewport={{ once: true, amount: 0.2 }}
 							transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
-							className="md:col-span-9 lg:col-span-10 rounded-3xl border border-white/20 bg-white/5 p-6 transition-colors duration-300 focus-within:border-white/40 focus-within:bg-white/10 backdrop-blur-sm md:p-8"
+							className="md:col-span-9 lg:col-span-10 rounded-2xl border border-white/20 bg-white/5 p-6 transition-colors duration-300 focus-within:border-white/40 focus-within:bg-white/10 backdrop-blur-sm md:p-8"
 						>
 							<form onSubmit={handleSubmit} className="space-y-5">
 								<input

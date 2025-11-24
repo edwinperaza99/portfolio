@@ -7,7 +7,7 @@ import {
 } from "@/components/motionUtils";
 import { Cover } from "@/components/ui/cover";
 import { LinkPreview } from "@/components/ui/link-preview";
-// import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
+// import { LuBook, LuFilm, LuGamepad } from "@/components/ui/pixelated-canvas";
 import { LuBook, LuFilm, LuGamepad } from "react-icons/lu";
 
 // Image intentionally not used in this layout (PixelatedCanvas used instead)
@@ -36,7 +36,6 @@ const recommendations = [
 export default function About() {
 	return (
 		<div>
-			{/* Header */}
 			<div className="border-b border-white/20">
 				<div className="container border-x border-white/20 px-4 py-4">
 					<MotionH2
@@ -62,7 +61,7 @@ export default function About() {
 						whileInView="visible"
 						viewport={{ once: true, amount: 0.3 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}
-						className="relative aspect-square lg:aspect-[3/4] overflow-hidden rounded-lg border border-white/20 bg-white/5"
+						className="relative aspect-square lg:aspect-[3/4] overflow-hidden rounded-2xl border border-white/20 bg-white/5"
 					>
 						{/* <PixelatedCanvas
 							src="/images/headshot.jpg"
@@ -80,14 +79,13 @@ export default function About() {
 						<AnimatedFilter />
 					</MotionDiv>
 
-					{/* Bio Text - Takes 2 columns on desktop, full width on tablet */}
 					<MotionDiv
 						variants={slideInFromBottom}
 						initial="hidden"
 						whileInView="visible"
 						viewport={{ once: true, amount: 0.3 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
-						className="lg:col-span-2 flex flex-col justify-center space-y-4 p-6 rounded-lg border border-white/20 bg-transparent"
+						className="lg:col-span-2 flex flex-col justify-center space-y-4 p-6 rounded-2xl border border-white/20 bg-transparent"
 					>
 						<div>
 							<h3 className="text-3xl md:text-4xl font-bold mb-2 text-white">
@@ -125,22 +123,20 @@ export default function About() {
 						</div>
 					</MotionDiv>
 
-					{/* Spotify-like embeds - right column under bio (spans 2 cols) */}
+					{/* Spotify-like embeds  */}
 					<MotionDiv
 						variants={fadeInOut}
 						initial="hidden"
 						whileInView="visible"
 						viewport={{ once: true, amount: 0.2 }}
 						transition={{ duration: 0.8, delay: 0.3 }}
-						className="lg:col-span-2 p-6 rounded-lg border border-white/20 bg-white/5"
+						className="lg:col-span-2 p-6 rounded-2xl border border-white/20 bg-white/5"
 					>
 						<h3 className="text-2xl font-bold mb-4 text-white">
 							Now Playing on Spotify
 						</h3>
-						{/* Use the elongated/compact player variant and stack them vertically like recommendations */}
 						<div className="flex flex-col gap-3">
-							{/* Only use the elongated-style iframe (the last variant previously) and show as a vertical list */}
-							<div className="overflow-hidden rounded-lg border border-white/10">
+							<div className="overflow-hidden rounded-2xl border border-white/10">
 								<iframe
 									data-testid="embed-iframe"
 									title="Now Playing 1"
@@ -153,7 +149,7 @@ export default function About() {
 								></iframe>
 							</div>
 
-							<div className="overflow-hidden rounded-lg border border-white/10">
+							<div className="overflow-hidden rounded-2xl border border-white/10">
 								<iframe
 									data-testid="embed-iframe"
 									title="Now Playing 2"
@@ -166,7 +162,7 @@ export default function About() {
 								></iframe>
 							</div>
 
-							<div className="overflow-hidden rounded-lg border border-white/10">
+							<div className="overflow-hidden rounded-2xl border border-white/10">
 								<iframe
 									data-testid="embed-iframe"
 									title="Now Playing 3"
@@ -180,7 +176,6 @@ export default function About() {
 							</div>
 						</div>
 					</MotionDiv>
-					{/* Recommendations - left column under profile */}
 					<MotionDiv
 						variants={slideInFromBottom}
 						initial="hidden"
@@ -197,10 +192,10 @@ export default function About() {
 							return (
 								<div
 									key={index}
-									className="p-4 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 group"
+									className="p-4 rounded-2xl border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 group"
 								>
 									<div className="flex items-start gap-3">
-										<div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 border border-white/20">
+										<div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 border border-white/20">
 											<Icon className="w-6 h-6 text-white" />
 										</div>
 										<div className="flex-1 min-w-0">

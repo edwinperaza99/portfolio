@@ -59,7 +59,7 @@ export default function Skills() {
 			opacity: 1,
 			y: 0,
 			transition: {
-				delay: index * 0.05,
+				delay: index * 0.03,
 				duration: 0.5,
 				ease: [0.22, 1, 0.36, 1],
 			},
@@ -82,8 +82,8 @@ export default function Skills() {
 				</div>
 			</div>
 
-			<section className="py-4 px-4 container text-primary-light border-x border-white/20 p-4 shadow-md">
-				<article className="flex flex-wrap gap-3 justify-center">
+			<section className="py-4 px-4 container text-primary-light border-x border-white/20 shadow-md">
+				<article className="flex flex-wrap gap-3 justify-evenly">
 					{skillRegistry.map((skill, index) => {
 						const rgb = parseColor(skill.color);
 						const baseShadow = `0 3px 12px ${rgba(rgb, 0.08)}`;
@@ -119,7 +119,7 @@ export default function Skills() {
 											variants={bubbleVariants}
 											initial="hidden"
 											whileInView="visible"
-											viewport={{ once: true, amount: 0.3 }}
+											viewport={{ once: true, amount: 0.7 }}
 											custom={index}
 											className="p-2 md:p-3 flex items-center justify-center gap-3 rounded-2xl cursor-pointer"
 											style={bubbleStyle}
