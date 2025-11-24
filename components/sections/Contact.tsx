@@ -10,10 +10,10 @@ import { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import {
 	MotionDiv,
-	MotionH2,
 	slideInFromLeft,
 	slideInFromRight,
 } from "@/components/motionUtils";
+import SectionHeader from "@/components/ui/SectionHeader";
 import Link from "next/link";
 
 export default function Contact() {
@@ -52,17 +52,8 @@ export default function Contact() {
 	return (
 		<>
 			<div className="border-b border-white/20">
-				<div className="container border-x border-white/20 px-4 py-4">
-					<MotionH2
-						variants={slideInFromLeft}
-						initial="hidden"
-						whileInView="visible"
-						viewport={{ once: true, amount: 0.4 }}
-						transition={{ duration: 0.8, ease: "easeOut" }}
-						className="text-4xl md:text-5xl uppercase font-bold text-white tracking-tight"
-					>
-						Contact
-					</MotionH2>
+				<div className="container border-x border-white/20">
+					<SectionHeader text="Get In Touch" />
 				</div>
 			</div>
 

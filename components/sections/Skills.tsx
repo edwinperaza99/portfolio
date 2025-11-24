@@ -1,6 +1,7 @@
 "use client";
 
-import { MotionDiv, MotionH2, slideInFromLeft } from "@/components/motionUtils";
+import { MotionDiv } from "@/components/motionUtils";
+import SectionHeader from "@/components/ui/SectionHeader";
 import {
 	Tooltip,
 	TooltipContent,
@@ -69,16 +70,10 @@ export default function Skills() {
 		<>
 			<div className="border-b border-white/20">
 				<div className="container border-x border-white/20">
-					<MotionH2
-						variants={slideInFromLeft}
-						initial="hidden"
-						whileInView="visible"
-						viewport={{ once: true, amount: 0.5 }}
-						transition={{ duration: 0.8, ease: "easeOut" }}
+					<SectionHeader
+						text={"Skills, tools & technologies"}
 						className="px-4 py-4 text-5xl capitalize font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight"
-					>
-						Skills, tools & technologies
-					</MotionH2>
+					/>
 				</div>
 			</div>
 

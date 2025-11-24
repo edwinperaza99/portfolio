@@ -24,7 +24,7 @@ export default function ProjectCard({
 			variants={fadeInOut}
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ once: false, amount: 0.2 }}
+			viewport={{ once: true, amount: 0.2 }}
 			transition={{ duration: 0.8, ease: "easeOut" }}
 			className={`group relative aspect-square overflow-hidden rounded-2xl border border-white/20 bg-white/5 transition-colors duration-300 hover:bg-white/10 ${classes}`}
 		>

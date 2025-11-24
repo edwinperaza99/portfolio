@@ -2,10 +2,10 @@ import AnimatedFilter from "@/components/animated-filter";
 import {
 	fadeInOut,
 	MotionDiv,
-	MotionH2,
 	slideInFromBottom,
 } from "@/components/motionUtils";
 import { Cover } from "@/components/ui/cover";
+import SectionHeader from "@/components/ui/SectionHeader";
 import { LinkPreview } from "@/components/ui/link-preview";
 // import { LuBook, LuFilm, LuGamepad } from "@/components/ui/pixelated-canvas";
 import { LuBook, LuFilm, LuGamepad } from "react-icons/lu";
@@ -37,17 +37,8 @@ export default function About() {
 	return (
 		<div>
 			<div className="border-b border-white/20">
-				<div className="container border-x border-white/20 px-4 py-4">
-					<MotionH2
-						variants={slideInFromBottom}
-						initial="hidden"
-						whileInView="visible"
-						viewport={{ once: true, amount: 0.3 }}
-						transition={{ duration: 0.8, ease: "easeOut" }}
-						className="text-4xl md:text-5xl uppercase font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight"
-					>
-						About Me
-					</MotionH2>
+				<div className="container border-x border-white/20">
+					<SectionHeader text="Behind The Code" />
 				</div>
 			</div>
 

@@ -1,11 +1,7 @@
 "use client";
 import Link from "next/link";
-import {
-	MotionH2,
-	MotionArticle,
-	fadeInOut,
-	slideInFromRight,
-} from "@/components/motionUtils";
+import { MotionArticle, fadeInOut } from "@/components/motionUtils";
+import SectionHeader from "@/components/ui/SectionHeader";
 import ProjectCard from "@/components/ProjectCard";
 import { ThreeDMarquee } from "@/components/ui/3d-marquee";
 import { Button as MovingBorderButton } from "@/components/ui/moving-border";
@@ -82,16 +78,7 @@ export default function FeaturedProjects() {
 		<>
 			<div className="border-b border-white/20">
 				<div className="container border-x border-white/20">
-					<MotionH2
-						variants={slideInFromRight}
-						initial="hidden"
-						whileInView="visible"
-						viewport={{ once: true, amount: 0.5 }}
-						transition={{ duration: 0.8, delay: 0.2 }}
-						className="px-4 py-4 text-5xl uppercase font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent tracking-tight"
-					>
-						Projects
-					</MotionH2>
+					<SectionHeader text="What I've Built" />
 				</div>
 			</div>
 			<div className="flex flex-col text-white container border-x border-white/20">
@@ -103,7 +90,7 @@ export default function FeaturedProjects() {
 						variants={fadeInOut}
 						initial="hidden"
 						whileInView="visible"
-						viewport={{ once: false, amount: 0.2 }}
+						viewport={{ once: true, amount: 0.2 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}
 						className={`order-6 group relative aspect-square overflow-hidden rounded-2xl border border-white/20 bg-white/5 transition-colors duration-300 hover:bg-white/10`}
 					>
