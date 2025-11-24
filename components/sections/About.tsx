@@ -1,9 +1,5 @@
 import AnimatedFilter from "@/components/animated-filter";
-import {
-	fadeInOut,
-	MotionDiv,
-	slideInFromBottom,
-} from "@/components/motionUtils";
+import { fadeInOut, MotionDiv } from "@/components/motionUtils";
 import { Cover } from "@/components/ui/cover";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { LinkPreview } from "@/components/ui/link-preview";
@@ -71,11 +67,11 @@ export default function About() {
 					</MotionDiv>
 
 					<MotionDiv
-						variants={slideInFromBottom}
+						variants={fadeInOut}
 						initial="hidden"
 						whileInView="visible"
 						viewport={{ once: true, amount: 0.3 }}
-						transition={{ duration: 0.8, delay: 0.2 }}
+						transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
 						className="lg:col-span-2 flex flex-col justify-center space-y-4 p-6 rounded-2xl border border-white/20 bg-transparent"
 					>
 						<div>
@@ -124,9 +120,9 @@ export default function About() {
 						className="lg:col-span-2 p-6 rounded-2xl border border-white/20 bg-white/5"
 					>
 						<h3 className="text-2xl font-bold mb-4 text-white">
-							Now Playing on Spotify
+							My Current Vibe
 						</h3>
-						<div className="flex flex-col gap-3">
+						<div className="flex flex-col gap-2">
 							<div className="overflow-hidden rounded-2xl border border-white/10">
 								<iframe
 									data-testid="embed-iframe"
@@ -152,60 +148,49 @@ export default function About() {
 									loading="lazy"
 								></iframe>
 							</div>
-
-							<div className="overflow-hidden rounded-2xl border border-white/10">
-								<iframe
-									data-testid="embed-iframe"
-									title="Now Playing 3"
-									className="w-full h-[152px]"
-									src="https://open.spotify.com/embed/track/4gM814NneKElxn37F5Ht7G?utm_source=generator&theme=0"
-									frameBorder="0"
-									allowFullScreen
-									allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-									loading="lazy"
-								></iframe>
-							</div>
 						</div>
 					</MotionDiv>
 					<MotionDiv
-						variants={slideInFromBottom}
+						variants={fadeInOut}
 						initial="hidden"
 						whileInView="visible"
 						viewport={{ once: true, amount: 0.2 }}
-						transition={{ duration: 0.8, delay: 0.4 }}
-						className="flex flex-col gap-4"
+						transition={{ duration: 0.7, delay: 0.3 }}
+						className="flex flex-col gap-4 lg:col-span-1 p-4 rounded-2xl border border-white/20 bg-white/5"
 					>
 						<h3 className="text-2xl font-bold text-white">Recommendations</h3>
-						{recommendations.map((item, index) => {
-							const Icon = item.icon as React.ComponentType<
-								React.SVGProps<SVGSVGElement>
-							>;
-							return (
-								<div
-									key={index}
-									className="p-4 rounded-2xl border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 group"
-								>
-									<div className="flex items-start gap-3">
-										<div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 border border-white/20">
-											<Icon className="w-6 h-6 text-white" />
-										</div>
-										<div className="flex-1 min-w-0">
-											<div className="flex items-center gap-2 mb-1">
-												<span className="text-xs font-bold text-zinc-500 uppercase">
-													{item.type}
-												</span>
+						<div className="flex flex-col gap-2">
+							{recommendations.map((item, index) => {
+								const Icon = item.icon as React.ComponentType<
+									React.SVGProps<SVGSVGElement>
+								>;
+								return (
+									<div
+										key={index}
+										className="p-3 rounded-2xl border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 group"
+									>
+										<div className="flex items-start gap-3">
+											<div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 border border-white/20">
+												<Icon className="w-6 h-6 text-white" />
 											</div>
-											<h4 className="font-bold text-sm mb-1 text-white">
-												{item.title}
-											</h4>
-											<p className="text-xs text-zinc-400 leading-relaxed">
-												{item.description}
-											</p>
+											<div className="flex-1 min-w-0">
+												<div className="flex items-center gap-2 mb-1">
+													<span className="text-xs font-bold text-zinc-500 uppercase">
+														{item.type}
+													</span>
+												</div>
+												<h4 className="font-bold text-sm mb-1 text-white">
+													{item.title}
+												</h4>
+												<p className="text-xs text-zinc-400 leading-relaxed">
+													{item.description}
+												</p>
+											</div>
 										</div>
 									</div>
-								</div>
-							);
-						})}
+								);
+							})}
+						</div>
 					</MotionDiv>
 				</section>
 			</div>
