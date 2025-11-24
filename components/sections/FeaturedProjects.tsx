@@ -1,6 +1,11 @@
 "use client";
 import Link from "next/link";
-import { MotionH2, slideInFromRight } from "@/components/motionUtils";
+import {
+	MotionH2,
+	MotionArticle,
+	fadeInOut,
+	slideInFromRight,
+} from "@/components/motionUtils";
 import ProjectCard from "@/components/ProjectCard";
 import { ThreeDMarquee } from "@/components/ui/3d-marquee";
 import { Button as MovingBorderButton } from "@/components/ui/moving-border";
@@ -94,8 +99,18 @@ export default function FeaturedProjects() {
 					{projects.map((project) => (
 						<ProjectCard key={project.href} {...project} />
 					))}
-					<div className="order-6 group relative aspect-square overflow-hidden rounded-2xl border border-white/20 bg-white/10">
-						<ThreeDMarquee images={marqueeImages} className="h-full w-full" />
+					<MotionArticle
+						variants={fadeInOut}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: false, amount: 0.2 }}
+						transition={{ duration: 0.8, ease: "easeOut" }}
+						className={`order-6 group relative aspect-square overflow-hidden rounded-2xl border border-white/20 bg-white/5 transition-colors duration-300 hover:bg-white/10`}
+					>
+						<ThreeDMarquee
+							images={marqueeImages}
+							className="h-full w-full transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-75"
+						/>
 						<div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 						<div className="absolute inset-0 z-10 flex items-center justify-center p-6">
 							<MovingBorderButton
@@ -109,7 +124,7 @@ export default function FeaturedProjects() {
 								View All Projects
 							</MovingBorderButton>
 						</div>
-					</div>
+					</MotionArticle>
 				</section>
 			</div>
 		</>

@@ -82,7 +82,7 @@ export default function Skills() {
 				</div>
 			</div>
 
-			<section className="py-4 px-4 container text-primary-light border-x border-white/20 shadow-md">
+			<section className="py-4 px-4 container text-primary-light border-x border-white/20 shadow-md bg-white/5">
 				<article className="flex flex-wrap gap-3 justify-evenly">
 					{skillRegistry.map((skill, index) => {
 						const rgb = parseColor(skill.color);
