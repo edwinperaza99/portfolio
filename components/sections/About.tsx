@@ -72,7 +72,7 @@ export default function About() {
 						whileInView="visible"
 						viewport={{ once: true, amount: 0.3 }}
 						transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-						className="lg:col-span-2 flex flex-col justify-center space-y-4 p-6 rounded-2xl border border-white/20 bg-transparent"
+						className="lg:col-span-2 flex flex-col justify-center space-y-4 p-6 rounded-2xl border border-white/20 bg-white/5"
 					>
 						<div>
 							<h3 className="text-3xl md:text-4xl font-bold mb-2 text-white">
