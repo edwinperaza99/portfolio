@@ -3,6 +3,14 @@ import { projects } from "@/data/projects";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import dynamic from "next/dynamic";
+const EncryptedText = dynamic(
+	() =>
+		import("@/components/ui/encrypted-text").then((mod) => ({
+			default: mod.EncryptedText,
+		})),
+	{ ssr: false }
+);
 import { Laptop, Smartphone, Globe, Brain, Gamepad2 } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
 
@@ -18,8 +26,12 @@ export default function Projects() {
 		<div className="min-h-screen flex flex-col text-white">
 			<section className="container px-1 pt-14 md:pt-20">
 				<header className="text-center my-4">
-					<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase mb-2 font-bold bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-transparent tracking-tight">
-						{selectedCategory} Projects
+					<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase mb-2 font-bold text-white tracking-tight">
+						<EncryptedText
+							key={selectedCategory}
+							text={`${selectedCategory} Projects`}
+							className="inline-block whitespace-pre"
+						/>
 					</h1>
 				</header>
 				{/* Category Filter ToggleGroup */}

@@ -1,6 +1,13 @@
 "use client";
 import React from "react";
-import { EncryptedText } from "@/components/ui/encrypted-text";
+import dynamic from "next/dynamic";
+const EncryptedText = dynamic(
+	() =>
+		import("@/components/ui/encrypted-text").then((mod) => ({
+			default: mod.EncryptedText,
+		})),
+	{ ssr: false }
+);
 import { cn } from "@/lib/utils";
 
 type SectionHeaderProps = React.HTMLAttributes<HTMLHeadingElement> & {
