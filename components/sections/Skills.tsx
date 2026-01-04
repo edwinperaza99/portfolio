@@ -78,7 +78,7 @@ export default function Skills() {
 			</div>
 
 			<section className="py-4 px-4 container text-primary-light border-x border-white/20 shadow-md bg-white/5">
-				<article className="flex flex-wrap gap-3 justify-evenly">
+				<article className="flex flex-wrap gap-2 justify-evenly">
 					{skillRegistry.map((skill, index) => {
 						const rgb = parseColor(skill.color);
 						const baseShadow = `0 3px 12px ${rgba(rgb, 0.08)}`;
@@ -116,7 +116,7 @@ export default function Skills() {
 											whileInView="visible"
 											viewport={{ once: true, amount: 0.7 }}
 											custom={index}
-											className="p-2 md:p-3 flex items-center justify-center gap-3 rounded-2xl cursor-pointer"
+											className="p-2 md:p-3 flex items-center justify-center rounded-2xl cursor-pointer"
 											style={bubbleStyle}
 											whileHover={{
 												scale: 1.02,
@@ -128,9 +128,10 @@ export default function Skills() {
 											<Image
 												src={skill.icon}
 												alt={`${skill.name} icon`}
-												width={44}
-												height={44}
-												className="drop-shadow-3xl"
+												width={56}
+												height={56}
+												sizes="(max-width: 1024px) 44px, 56px"
+												className="w-11 h-11 sm:w-12 sm:h-12 lg:w-16 lg:h-16 xl:h-22 xl:w-22 drop-shadow-3xl"
 											/>
 										</MotionDiv>
 									</TooltipTrigger>
