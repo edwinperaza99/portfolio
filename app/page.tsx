@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import MainNavBar from "@/components/navigation/MainNavBar";
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
@@ -24,6 +25,7 @@ export default function Home() {
 			<section id="contact" className="border-t border-t-white/20">
 				<Contact />
 			</section>
+			<Footer />
 		</div>
 	);
 }
