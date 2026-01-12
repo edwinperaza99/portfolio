@@ -1,12 +1,18 @@
 import GalaxyBackground from "@/components/GalaxyBG";
-import { MotionDiv, MotionH1, MotionP, MotionSpan, scaleUp } from "@/components/motionUtils";
+import {
+	MotionDiv,
+	MotionH1,
+	MotionP,
+	MotionSpan,
+	scaleUp,
+} from "@/components/motionUtils";
 import TypingEffect from "@/components/TypingEffect";
 import { Button } from "@/components/ui/button";
+import { TypewriterQuote } from "@/components/ui/typewriter-quote";
 import Link from "next/link";
 
 import type { Variants } from "framer-motion";
 import { FiGithub, FiLinkedin, FiDownload } from "react-icons/fi";
-import { FaQuoteLeft } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 
 const heroContainer: Variants = {
@@ -235,35 +241,13 @@ export default function Hero() {
 				</MotionDiv>
 			</section>
 			<section className="container px-4 pb-8">
-				<MotionDiv
-					variants={scaleUp}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true, amount: 0.4 }}
-					transition={{ duration: 0.8, ease: "easeOut" }}
-					className="w-full flex justify-center"
-				>
-					<div className="mx-auto max-w-4xl w-full px-6">
-						<div className="py-16 text-center space-y-8">
-							<div className="flex items-center justify-center gap-3 text-[0.65rem] uppercase tracking-[0.45em] text-white/40">
-								<span className="hidden sm:block h-px w-16 bg-white/20" />
-								<span className="inline-flex items-center gap-2">
-									<FaQuoteLeft aria-hidden="true" className="text-base" />
-									Words to live by
-								</span>
-								<span className="hidden sm:block h-px w-16 bg-white/20" />
-							</div>
-							<p className="text-xl sm:text-2xl text-white/90 italic font-light leading-relaxed max-w-3xl mx-auto">
-								<span className="text-teal-200">“</span>A lesson without pain is
-								meaningless. That&apos;s because no one can gain without
-								sacrificing something.<span className="text-teal-200">”</span>
-							</p>
-							<div className=" text-xs uppercase tracking-[0.5em] text-white/60">
-								— Edward Elric
-							</div>
-						</div>
-					</div>
-				</MotionDiv>
+				<div className="mx-auto max-w-4xl w-full px-6">
+					<TypewriterQuote
+						quote="A lesson without pain is meaningless. That's because no one can gain without sacrificing something."
+						author="Edward Elric"
+						typingSpeed={35}
+					/>
+				</div>
 				{/*
 				<MotionDiv
 					variants={scaleUp}
