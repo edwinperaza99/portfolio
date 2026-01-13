@@ -1,33 +1,34 @@
 import AnimatedFilter from "@/components/animated-filter";
 import { fadeInOut, MotionDiv } from "@/components/motionUtils";
 import { Cover } from "@/components/ui/cover";
-import SectionHeader from "@/components/ui/SectionHeader";
 import { LinkPreview } from "@/components/ui/link-preview";
+import SectionHeader from "@/components/ui/SectionHeader";
+
 // import { LuBook, LuFilm, LuGamepad } from "@/components/ui/pixelated-canvas";
-import { LuBook, LuFilm, LuGamepad } from "react-icons/lu";
+// import { LuBook, LuFilm, LuGamepad } from "react-icons/lu";
 
 // Image intentionally not used in this layout (PixelatedCanvas used instead)
 
-const recommendations = [
-	{
-		icon: LuFilm,
-		type: "Movie",
-		title: "Arrival",
-		description: "A thought-provoking sci-fi film about communication.",
-	},
-	{
-		icon: LuGamepad,
-		type: "Video Game",
-		title: "Elden Ring",
-		description: "Rewarding gameplay with a vast open world.",
-	},
-	{
-		icon: LuBook,
-		type: "Manga",
-		title: "One Piece",
-		description: "Long I know, but the journey is worth it.",
-	},
-];
+// const recommendations = [
+// 	{
+// 		icon: LuFilm,
+// 		type: "Movie",
+// 		title: "Arrival",
+// 		description: "A thought-provoking sci-fi film about communication.",
+// 	},
+// 	{
+// 		icon: LuGamepad,
+// 		type: "Video Game",
+// 		title: "Elden Ring",
+// 		description: "Rewarding gameplay with a vast open world.",
+// 	},
+// 	{
+// 		icon: LuBook,
+// 		type: "Manga",
+// 		title: "One Piece",
+// 		description: "Long I know, but the journey is worth it.",
+// 	},
+// ];
 
 export default function About() {
 	return (
@@ -111,7 +112,7 @@ export default function About() {
 					</MotionDiv>
 
 					{/* Spotify-like embeds  */}
-					<MotionDiv
+					{/* <MotionDiv
 						variants={fadeInOut}
 						initial="hidden"
 						whileInView="visible"
@@ -191,7 +192,7 @@ export default function About() {
 								);
 							})}
 						</div>
-					</MotionDiv>
+					</MotionDiv> */}
 				</section>
 			</div>
 		</div>
