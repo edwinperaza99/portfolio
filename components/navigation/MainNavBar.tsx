@@ -62,7 +62,7 @@ const MainNavBar = () => {
 				animate="visible"
 				viewport={{ once: true }}
 				transition={{ duration: 0.8 }}
-				className="container flex items-center justify-between px-4 py-3 md:px-6 md:py-5"
+				className="flex items-center justify-between px-4 py-3 md:px-6 md:py-3.5 max-w-[1960px] mx-auto"
 			>
 				{/* Left Side: Name as a Link */}
 				<Link
@@ -72,8 +72,8 @@ const MainNavBar = () => {
 					<span className="text-blue-400 group-hover:text-green-300 transition-colors">
 						{`<`}
 					</span>
-					<span className="text-white group-hover:text-blue-300 transition-colors">
-						EdwinPeraza
+					<span className="text-white group-hover:text-blue-300 transition-colors font-mono">
+						EP
 					</span>
 					<span className="text-blue-400 group-hover:text-green-300 transition-colors">
 						{` />`}
@@ -81,11 +81,11 @@ const MainNavBar = () => {
 				</Link>
 
 				{/* Right Side: Navigation Links (Hidden on small screens) */}
-				<ul className="hidden md:flex space-x-4 text-base lg:text-lg font-medium">
+				<ul className="hidden md:flex space-x-5 text-base lg:text-lg font-medium">
 					<li>
 						<Link
 							href="/#hero"
-							className="relative p-2 md:p-4 text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
+							className="p-1 relative text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
 						>
 							Home
 						</Link>
@@ -93,7 +93,7 @@ const MainNavBar = () => {
 					<li>
 						<Link
 							href="/#projects"
-							className="relative p-2 md:p-4 text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
+							className="p-1 relative text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
 						>
 							Projects
 						</Link>
@@ -101,7 +101,7 @@ const MainNavBar = () => {
 					<li>
 						<Link
 							href="/#about"
-							className="relative p-2 md:p-4 text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
+							className="p-1 relative text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
 						>
 							About
 						</Link>
@@ -109,7 +109,7 @@ const MainNavBar = () => {
 					<li>
 						<Link
 							href="/#contact"
-							className="relative p-2 md:p-4 text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
+							className="p-1 relative text-white hover:text-blue-300 transition-colors after:absolute after:w-full after:h-[2px] after:bg-blue-300 after:bottom-0 after:left-0 after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100"
 						>
 							Contact
 						</Link>

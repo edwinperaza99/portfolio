@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import MainNavBar from "@/components/navigation/MainNavBar";
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
@@ -12,18 +13,19 @@ export default function Home() {
 			<section>
 				<Hero />
 			</section>
-			<section id="projects">
+			<section id="projects" className="border-t border-t-white/20">
 				<FeaturedProjects />
 			</section>
-			<section id="about">
+			<section id="about" className="border-t border-t-white/20">
 				<About />
 			</section>
-			<section id="skills">
+			<section id="skills" className="border-t border-t-white/20">
 				<Skills />
 			</section>
-			<section id="contact">
+			<section id="contact" className="border-t border-t-white/20">
 				<Contact />
 			</section>
+			<Footer />
 		</div>
 	);
 }

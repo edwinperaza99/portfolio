@@ -135,11 +135,20 @@ const config: Config = {
 					from: { opacity: "0", transform: "translateY(0.5rem)" },
 					to: { opacity: "1", transform: "translateY(0%)" },
 				},
+				meteor: {
+					"0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+					"70%": { opacity: "1" },
+					"100%": {
+						transform: "rotate(215deg) translateX(-500px)",
+						opacity: "0",
+					},
+				},
 			},
 			animation: {
 				"fade-in": "fade-in 750ms ease-in-out",
 				"fade-out": "fade-out 0.3s ease-in-out",
 				"appear-top": "appear-top 750ms ease-out",
+				"meteor-effect": "meteor 5s linear infinite",
 			},
 		},
 	},

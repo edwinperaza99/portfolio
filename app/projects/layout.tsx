@@ -1,4 +1,5 @@
 import MainNavBar from "@/components/navigation/MainNavBar";
+import SimpleFooter from "@/components/SimpleFooter";
 
 export default function RootLayout({
 	children,
@@ -9,6 +10,7 @@ export default function RootLayout({
 		<>
 			<MainNavBar />
 			{children}
+			<SimpleFooter />
 		</>
 	);
 }

@@ -9,6 +9,14 @@ const buttonVariants = cva(
 	{
 		variants: {
 			variant: {
+				ctaSolid:
+					"rounded-full px-7 py-3 text-sm font-semibold tracking-[0.25em] uppercase bg-white text-slate-900 shadow-[0_15px_40px_-20px_rgba(15,23,42,0.8)] hover:shadow-[0_20px_50px_-20px_rgba(15,23,42,0.9)] hover:-translate-y-0.5 transition-all duration-300 ease-out",
+				ctaOutline:
+					"rounded-full px-7 py-3 text-sm font-semibold tracking-[0.25em] uppercase border border-white/30 text-white hover:text-teal-200 hover:border-teal-200/60 bg-white/0 hover:bg-white/5 backdrop-blur-xl transition-all duration-300 ease-out",
+				heroPrimary:
+					"rounded-full px-6 sm:px-7 py-3 text-base font-semibold tracking-tight bg-white text-slate-900 shadow-[0_18px_40px_-20px_rgba(15,23,42,0.85)] hover:bg-white/90 hover:shadow-[0_28px_60px_-30px_rgba(15,23,42,0.85)] transition-all duration-300 ease-out",
+				heroSecondary:
+					"rounded-full px-6 sm:px-7 py-3 text-base font-semibold tracking-tight border border-white/35 text-white hover:text-teal-200 hover:border-teal-200/60 bg-white/5 hover:bg-white/10 shadow-[0_10px_30px_-25px_rgba(13,148,136,0.6)] hover:shadow-[0_18px_40px_-30px_rgba(13,148,136,0.75)] backdrop-blur-xl transition-all duration-300 ease-out",
 				default:
 					"bg-primary text-primary-foreground shadow hover:bg-primary/90",
 				destructive:
@@ -26,8 +34,6 @@ const buttonVariants = cva(
 
 				redGradient:
 					"bg-gradient-to-br hover:bg-gradient-to-b from-red-500 to-red-700 text-white hover:from-red-600 hover:to-red-800 shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 backdrop-filter backdrop-blur-lg",
-				glassy:
-					"relative bg-transparent backdrop-blur-lg border border-white/20 shadow-inner text-white transition-all duration-300 ease-in-out hover:bg-white/20 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner",
 			},
 			size: {
 				default: "h-9 px-4 py-2",
