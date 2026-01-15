@@ -4,7 +4,6 @@ import {
 	MotionH1,
 	MotionP,
 	MotionSpan,
-	scaleUp,
 } from "@/components/motionUtils";
 import TypingEffect from "@/components/TypingEffect";
 import { Button } from "@/components/ui/button";
